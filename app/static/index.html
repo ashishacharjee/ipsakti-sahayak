@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP-SAKTI Sahayak | Ayurveda IPR & Regulatory Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Government / Ministry Bar -->
+    <header class="top-nav">
+        <div class="header-container">
+            <div class="brand-group">
+                <div class="emblem-box">
+                    <span class="emblem-symbol">☸</span>
+                </div>
+                <div class="brand-titles">
+                    <div class="dept-title">Ministry of Ayush • All India Institute of Ayurveda (AIIA)</div>
+                    <h1 class="portal-title" id="lbl-title">IP-SAKTI Sahayak <span class="badge-sih">SIH 2026 • PS 26045</span></h1>
+                    <p class="portal-motto" id="lbl-motto">“AI Assists. Rules Decide. Evidence Proves — Or Defers to a Human.”</p>
+                </div>
+            </div>
+            
+            <div class="nav-controls">
+                <!-- Language Switcher (English / Hindi) -->
+                <div class="lang-switcher">
+                    <button class="lang-btn active" id="btn-lang-en" onclick="setLanguage('en')">English</button>
+                    <button class="lang-btn" id="btn-lang-hi" onclick="setLanguage('hi')">हिन्दी</button>
+                </div>
+                <!-- Corpus Explorer Modal Button -->
+                <button class="btn-secondary" onclick="openCorpusModal()">
+                    <span class="icon">📜</span> <span id="lbl-corpus-btn">Curated Corpus (25+)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Standing Mandatory Legal Disclaimer Banner -->
+    <div class="disclaimer-strip">
+        <div class="disclaimer-content">
+            <span class="disclaimer-tag">INFORMATION, NOT LEGAL ADVICE</span>
+            <span class="disclaimer-text" id="lbl-banner-text">
+                Authoritative statutory guidance grounded in D&C Act, Patents Act, BD Act (2023/2024), and International Treaties. Not a substitute for a registered Patent Agent.
+            </span>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="main-layout">
+        <!-- Left Column: Deterministic Rule Engine Inputs -->
+        <section class="panel input-panel">
+            <div class="panel-header">
+                <h2 class="panel-title">
+                    <span class="step-num">⚙️</span>
+                    <span id="lbl-wizard-title">Deterministic Classification Engine</span>
+                </h2>
+                <span class="pill pill-green">Zero-Hallucination Rules</span>
+            </div>
+
+            <form id="assessment-form" onsubmit="handleRunAssessment(event)">
+                <!-- Product Metadata -->
+                <div class="form-group">
+                    <label for="product-name" class="form-label">
+                        <strong>Formulation / Product Name</strong>
+                    </label>
+                    <input type="text" id="product-name" class="form-control" 
+                           placeholder="e.g. Modified-Extraction Ashwagandha & Guduchi Capsule" 
+                           value="Modified-Extraction Ashwagandha & Guduchi Extract">
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredients-input" class="form-label">
+                        <strong>Active Ingredients & Botanical Sources</strong>
+                    </label>
+                    <input type="text" id="ingredients-input" class="form-control" 
+                           placeholder="e.g. Ashwagandha (Withania somnifera), Guduchi (Tinospora cordifolia)" 
+                           value="Ashwagandha (Withania somnifera), Guduchi (Tinospora cordifolia)">
+                </div>
+
+                <!-- Step 1: Intended Application -->
+                <div class="form-group step-card">
+                    <div class="step-indicator">Question 1 of 4</div>
+                    <label class="form-label step-title" id="lbl-step1-q">
+                        Primary Intended Application:
+                    </label>
+                    <select id="step-intended-use" class="form-control form-select">
+                        <option value="Therapeutic / Medicinal Treatment or Cure">
+                            💊 Therapeutic / Medicinal Treatment or Cure (Disease Prevention/Alleviation)
+                        </option>
+                        <option value="Dietary / General Health & Nutritional Support">
+                            🥗 Dietary / Nutritional Supplement / Wellness Food (Ayurveda Aahar)
+                        </option>
+                        <option value="Topical Cleansing / Beautification / Skin Care">
+                            ✨ Topical Cleansing / Beautification / Skin & Hair Care (Cosmetic)
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Step 2: Formulation Source / Composition Basis -->
+                <div class="form-group step-card">
+                    <div class="step-indicator">Question 2 of 4</div>
+                    <label class="form-label step-title" id="lbl-step2-q">
+                        Formulation Source & Composition Basis:
+                    </label>
+                    <select id="step-formulation-basis" class="form-control form-select">
+                        <option value="First-Schedule Ingredients in Modified Ratio or Modern Dosage Form (Tablet/Capsule/Syrup)">
+                            ⚗️ Ingredients from First Schedule texts in Modified Ratio or Modern Dosage Form (Tablet/Capsule/Syrup)
+                        </option>
+                        <option value="First-Schedule Authoritative Text Formulation (Identical composition & method)">
+                            📜 Classical: Manufactured Exclusively as per 54 First-Schedule Texts (Identical Method)
+                        </option>
+                        <option value="Purified and Standardized Bioactive Fraction (≥4 active markers)">
+                            🔬 Phytopharmaceutical: Purified & Standardized Fraction (≥4 Bioactive Markers)
+                        </option>
+                        <option value="Novel / Unlisted Botanical Combination or Synthetic Admixture">
+                            🧪 Novel Unlisted Plant Combination or Synthetic Bio-enhancer
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Step 3: Therapeutic Claim Nature -->
+                <div class="form-group step-card">
+                    <div class="step-indicator">Question 3 of 4</div>
+                    <label class="form-label step-title" id="lbl-step3-q">
+                        Nature of Therapeutic or Commercial Claim:
+                    </label>
+                    <select id="step-claim-type" class="form-control form-select">
+                        <option value="Classical Ayurvedic Indication (as described in authoritative scriptures)">
+                            📖 Classical Indication (Rasayana, Deepana, Pachana, Jwara, etc.)
+                        </option>
+                        <option value="New Therapeutic Indication / Modern Disease Claim (e.g., Cancer, Diabetes, Alzheimer's)">
+                            🎯 New Therapeutic Indication / Modern Disease Claim (e.g. Diabetes, Cancer, Neuroprotection)
+                        </option>
+                        <option value="General Health, Digestion, Immunity, or Vitality (Non-therapeutic)">
+                            🌿 General Daily Wellness & Vitality (No disease claim)
+                        </option>
+                        <option value="External Cleansing, Glow, Moisturizing, Fragrance">
+                            🌺 External Cleansing, Radiance, Complexion, or Fragrance Only
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Step 4: Extraction & Clinical Evidence Level -->
+                <div class="form-group step-card">
+                    <div class="step-indicator">Question 4 of 4</div>
+                    <label class="form-label step-title" id="lbl-step4-q">
+                        Extraction Method & Clinical Evidence Status:
+                    </label>
+                    <select id="step-extraction-clinical" class="form-control form-select">
+                        <option value="Standard Hydro-ethanolic / Solvent Extraction">
+                            🧪 Standard Hydro-ethanolic / Solvent Aqueous Extraction
+                        </option>
+                        <option value="Traditional Aqueous / Kwath / Asava / Bhasma Method">
+                            🏺 Traditional Aqueous / Kwath / Asava-Arishta / Bhasma Method
+                        </option>
+                        <option value="Purified Bioactive Fraction with HPLC/HPTLC Fingerprint">
+                            📊 Purified Chromatographic Fraction with ≥4 Fingerprint Markers
+                        </option>
+                        <option value="Phase I/II/III Clinical Safety & Efficacy Trials Undertaken">
+                            🏥 Phase I/II/III Clinical Safety & Efficacy Trials Completed
+                        </option>
+                        <option value="Food Grade / Topical Formulation only">
+                            🍃 Food-Grade Kitchen Extraction / Simple Topical Blending
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Independent ABS & Biodiversity Gate Section -->
+                <div class="abs-gate-box">
+                    <div class="gate-header">
+                        <h3><span class="icon">🌿</span> <span id="lbl-abs-title">Independent ABS & Biodiversity Gate</span></h3>
+                        <span class="pill pill-gold">BDA 2023 / 2024 Rules</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" id="lbl-applicant-type">
+                            Applicant Category under Biological Diversity Act:
+                        </label>
+                        <select id="abs-applicant-type" class="form-control form-select">
+                            <option value="Indian Commercial Entity / Company / LLP (Sec 7 BDA)">
+                                🏢 Indian Commercial Entity / Company / Startup (Sec 7 SBB Intimation)
+                            </option>
+                            <option value="Registered AYUSH Practitioner / Vaidya / Hakim (Exempted)">
+                                👨‍⚕️ Registered AYUSH Practitioner / Vaidya / Hakim (STATUTORILY EXEMPTED)
+                            </option>
+                            <option value="Local Grower / Cultivator / Community (Exempted)">
+                                🌾 Local Cultivator / Medicinal Plant Farmer (STATUTORILY EXEMPTED)
+                            </option>
+                            <option value="Foreign Entity / NRI / Foreign Participation (Sec 3 BDA)">
+                                🌐 Foreign Entity / NRI / Indian Co. with Foreign Equity (STRICT SEC 3/6 NBA)
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="checkbox-row">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-ipr-india" checked>
+                            <span class="checkmark"></span>
+                            Filing IPR in India
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="chk-ipr-abroad">
+                            <span class="checkmark"></span>
+                            Filing Patent Abroad (PCT / US / EU)
+                        </label>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button type="submit" class="btn-primary" id="btn-run">
+                        ⚡ <span id="lbl-btn-classify">Run Deterministic Assessment</span>
+                    </button>
+                    <button type="button" class="btn-outline" onclick="resetForm()">
+                        🔄 <span id="lbl-btn-reset">Reset</span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Right Column: Dual-Jurisdiction Output & Evidence Strength Engine -->
+        <section class="panel output-panel">
+            <!-- Evidence Strength Gauge Header -->
+            <div class="score-card" id="score-card">
+                <div class="score-main">
+                    <div class="score-circle-wrapper">
+                        <div class="score-circle" id="score-circle">
+                            <span class="score-number" id="score-number">--</span>
+                            <span class="score-out-of">/100</span>
+                        </div>
+                    </div>
+                    <div class="score-details">
+                        <div class="score-header-tag">100-PT EVIDENCE STRENGTH ENGINE</div>
+                        <div class="score-level-badge badge-high" id="score-level-badge">AWAITING ASSESSMENT</div>
+                        <p class="score-desc" id="score-desc">Objective retrieval-based score (Agreement 35 • Authority 20 • Currency 20 • Jurisdiction 15 • Classification 10). Never a self-reported AI guess.</p>
+                    </div>
+                </div>
+
+                <!-- 5-Factor Score Breakdown Bar -->
+                <div class="score-breakdown-bar" id="score-breakdown-container">
+                    <div class="sub-score-item">
+                        <span class="sub-label">Agreement</span>
+                        <span class="sub-val" id="val-agreement">--/35</span>
+                    </div>
+                    <div class="sub-score-item">
+                        <span class="sub-label">Authority</span>
+                        <span class="sub-val" id="val-authority">--/20</span>
+                    </div>
+                    <div class="sub-score-item">
+                        <span class="sub-label">Currency</span>
+                        <span class="sub-val" id="val-currency">--/20</span>
+                    </div>
+                    <div class="sub-score-item">
+                        <span class="sub-label">Jurisdiction</span>
+                        <span class="sub-val" id="val-jurisdiction">--/15</span>
+                    </div>
+                    <div class="sub-score-item">
+                        <span class="sub-label">Classification</span>
+                        <span class="sub-val" id="val-classification">--/10</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Safe Abstention Notice Banner (Shown dynamically when triggered) -->
+            <div class="safe-abstention-box hidden" id="safe-abstention-banner">
+                <div class="abstention-title">
+                    <span class="icon">🛡️</span>
+                    <span>SAFE ABSTENTION TRIGGERED</span>
+                </div>
+                <p id="abstention-reason-text">Evidence strength is below statutory confidence threshold. An auditable Facilitator Review Brief has been automatically pre-assembled for human review.</p>
+                <button class="btn-brief-action" onclick="openReviewBriefModal()">View & Download Facilitator Review Brief</button>
+            </div>
+
+            <!-- Regulatory Category Result Card -->
+            <div class="classification-badge-card" id="classification-result-card">
+                <div class="card-meta">
+                    <span class="badge-tag" id="res-badge-tag">DETERMINISTIC CATEGORY</span>
+                    <span class="statute-tag" id="res-statute-citation">Run assessment to view classification</span>
+                </div>
+                <h3 class="category-name" id="res-category-name">Select formulation parameters and click Run</h3>
+                <p class="category-summary" id="res-category-summary">The deterministic decision tree classifies ASU products into one of 6 mandated legal pathways.</p>
+            </div>
+
+            <!-- Dual Jurisdiction Switch Tabs -->
+            <div class="jurisdiction-tabs">
+                <button class="tab-btn active" id="tab-india" onclick="switchJurisdictionTab('india')">
+                    🇮🇳 India (National Regime)
+                </button>
+                <button class="tab-btn" id="tab-intl" onclick="switchJurisdictionTab('intl')">
+                    🌐 International (WIPO / PCT / Nagoya)
+                </button>
+                <button class="tab-btn" id="tab-both" onclick="switchJurisdictionTab('both')">
+                    ⚖️ Dual Side-by-Side View
+                </button>
+            </div>
+
+            <!-- Jurisdiction Tab Content Panes -->
+            <div class="jurisdiction-content-box">
+                <!-- National Pane (India) -->
+                <div class="pane-section" id="pane-india">
+                    <div class="pane-header">
+                        <h4>🇮🇳 National Regulatory & IP Findings (India)</h4>
+                        <span class="pill pill-outline">D&C Act • Patents Act • BD Act</span>
+                    </div>
+
+                    <div class="guidance-grid">
+                        <div class="guide-item">
+                            <span class="guide-key">Patentability Posture:</span>
+                            <div class="guide-val highlight-val" id="in-patent-verdict">--</div>
+                        </div>
+                        <div class="guide-item">
+                            <span class="guide-key">Statutory Bars Evaluated:</span>
+                            <ul class="bars-list" id="in-bars-list">
+                                <li>Patents Act §3(p) — Traditional Knowledge Exclusion</li>
+                                <li>Patents Act §3(e) — Mere Admixture Bar</li>
+                                <li>Patents Act §10(4) — Mandatory Bioresource Disclosure</li>
+                            </ul>
+                        </div>
+                        <div class="guide-item">
+                            <span class="guide-key">ABS & Biodiversity Status:</span>
+                            <div class="guide-val" id="in-abs-posture">--</div>
+                        </div>
+                        <div class="guide-item">
+                            <span class="guide-key">Regulatory Licensing Pathway:</span>
+                            <ul class="reg-list" id="in-reg-list">
+                                <li>Awaiting assessment...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- International Pane (WIPO / PCT / Treaties) -->
+                <div class="pane-section" id="pane-intl">
+                    <div class="pane-header">
+                        <h4>🌐 International Frameworks & Market Access</h4>
+                        <span class="pill pill-outline">WIPO • Nagoya • Export</span>
+                    </div>
+
+                    <div class="guidance-grid">
+                        <div class="guide-item intl-card">
+                            <span class="guide-key">WIPO GRATK Treaty (2024 Status):</span>
+                            <div class="guide-val" id="intl-gratk-status">
+                                Adopted May 2024; Awaiting 15 ratifications to enter into force. Mandatory origin disclosure will apply globally upon entry.
+                            </div>
+                        </div>
+                        <div class="guide-item intl-card">
+                            <span class="guide-key">Hague Agreement Warning (Designs):</span>
+                            <div class="guide-val warning-box" id="intl-hague-status">
+                                ⚠️ Factual Reality: India is NOT a member of the Hague Agreement. Bottle/packaging designs cannot designate India via Hague; file directly under Indian Designs Act 2000.
+                            </div>
+                        </div>
+                        <div class="guide-item intl-card">
+                            <span class="guide-key">PCT & Foreign Patent Filings:</span>
+                            <div class="guide-val" id="intl-pct-status">
+                                Section 6 BDA requires NBA approval BEFORE applying for a patent outside India.
+                            </div>
+                        </div>
+                        <div class="guide-item intl-card">
+                            <span class="guide-key">Target Export Regimes:</span>
+                            <div class="guide-val" id="intl-export-status">
+                                US FDA Botanical Drug Guidance (IND/NDA) vs DSHEA; EU THMPD (30-yr proof required, 15 yrs within EU).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Toolbar: TKDL Bridge & Review Brief -->
+            <div class="tools-toolbar">
+                <button class="btn-tool" onclick="openTKDLModal()">
+                    <span class="icon">🔍</span>
+                    <span>TKDL Search Bridge & Query Builder</span>
+                </button>
+                <button class="btn-tool" onclick="openReviewBriefModal()">
+                    <span class="icon">📋</span>
+                    <span>Facilitator Review Brief</span>
+                </button>
+            </div>
+
+            <!-- Cited Authorities Footnote -->
+            <div class="cited-sources-box" id="cited-sources-box">
+                <div class="sources-title">Verified Primary Authorities Cited in Assessment:</div>
+                <div class="sources-chips" id="sources-chips-container">
+                    <span class="source-chip">D&C Act §3(a)/3(h)</span>
+                    <span class="source-chip">Patents Act §3(p)/3(e)/10(4)</span>
+                    <span class="source-chip">BD (Amdt) Act 2023 §3/6/7</span>
+                    <span class="source-chip">WIPO GRATK Treaty 2024</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL 1: TKDL SEARCH BRIDGE & QUERY BUILDER -->
+    <div class="modal-overlay hidden" id="modal-tkdl">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><span class="icon">🔍</span> TKDL Prior-Art Search Bridge</h3>
+                <button class="btn-close" onclick="closeModal('modal-tkdl')">✕</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-intro">
+                    Converts formulation terminology into structured Traditional Knowledge Resource Classification (TKRC) codes,
+                    IPC subclasses (Section A61K), and InPASS boolean search strings.
+                </p>
+                <div class="form-group">
+                    <label class="form-label">Formulation & Botanical Terms:</label>
+                    <input type="text" id="tkdl-input-terms" class="form-control" value="Ashwagandha, Guduchi">
+                </div>
+                <button class="btn-primary btn-sm" onclick="runTKDLBuilder()">Generate Structured Query</button>
+
+                <div class="tkdl-results" id="tkdl-results-box">
+                    <div class="result-block">
+                        <strong>Identified Binomial Taxonomy:</strong>
+                        <div id="tkdl-botanicals-list" class="taxonomy-tags">Withania somnifera, Tinospora cordifolia</div>
+                    </div>
+                    <div class="result-block">
+                        <strong>TKRC Codes & IPC Classifications:</strong>
+                        <div id="tkdl-codes-list" class="code-tags">AK02-B/112, AK02-B/503 • IPC: A61K 36/81, A61K 36/59</div>
+                    </div>
+                    <div class="result-block">
+                        <strong>Constructed Boolean Search Query (InPASS & Patentscope):</strong>
+                        <div class="code-box-container">
+                            <pre id="tkdl-query-string">((Withania somnifera OR Ashwagandha) AND (Tinospora cordifolia OR Guduchi)) AND (A61K36/81 OR A61K36/59) AND (extract OR formulation)</pre>
+                            <button class="btn-copy" onclick="copyQueryToClipboard()">📋 Copy Query</button>
+                        </div>
+                    </div>
+                    <div class="notice-box" id="tkdl-bridge-notice">
+                        <strong>Honest Bridge Notice:</strong> Full TKDL database access is restricted under confidential NDAs exclusively to partner patent examiners. This bridge builds targeted queries for IP India InPASS, WIPO Patentscope, and public prior-art databases.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2: FACILITATOR REVIEW BRIEF -->
+    <div class="modal-overlay hidden" id="modal-brief">
+        <div class="modal-card modal-lg">
+            <div class="modal-header">
+                <h3><span class="icon">📋</span> IP Facilitator Review Brief</h3>
+                <button class="btn-close" onclick="closeModal('modal-brief')">✕</button>
+            </div>
+            <div class="modal-body" id="brief-content-body">
+                <div class="brief-header-meta">
+                    <div class="brief-id" id="brief-modal-id">SAKTI-BRIEF-2026-XXXX</div>
+                    <div class="brief-timestamp" id="brief-modal-time">UTC</div>
+                </div>
+                <div class="brief-section">
+                    <h4>1. Case Summary & Regulatory Classification</h4>
+                    <p id="brief-case-summary">Pre-assembled legal classification and statutory grounds.</p>
+                </div>
+                <div class="brief-section">
+                    <h4>2. ABS & Biodiversity Gate Rationale</h4>
+                    <p id="brief-abs-summary">Applicant track, exemption grounds, and mandated NBA/SBB forms.</p>
+                </div>
+                <div class="brief-section">
+                    <h4>3. Open Questions for Human Examiner / Facilitator</h4>
+                    <ul id="brief-open-questions-list" class="questions-list">
+                        <li>Has experimental synergy data been provided to overcome Section 3(e)?</li>
+                        <li>Has Section 10(4) biological source origin disclosure been prepared?</li>
+                    </ul>
+                </div>
+                <div class="brief-section">
+                    <h4>4. Escalation & Official Ayush Cell Contact</h4>
+                    <div class="contact-card">
+                        <strong>Ayush IP & Regulatory Facilitation Cell</strong><br>
+                        All India Institute of Ayurveda (AIIA) / Ministry of Ayush<br>
+                        Email: ip-facilitator@aiia.gov.in | NBA Portal: nbaindia.org | Hotline: 1800-11-AYUSH
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="downloadReviewBrief()">💾 Download Brief (JSON)</button>
+                <button class="btn-outline" onclick="window.print()">🖨️ Print Brief</button>
+                <button class="btn-secondary" onclick="closeModal('modal-brief')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3: STATUTORY CORPUS EXPLORER -->
+    <div class="modal-overlay hidden" id="modal-corpus">
+        <div class="modal-card modal-lg">
+            <div class="modal-header">
+                <h3><span class="icon">📜</span> Curated Statutory Corpus (25+ Provisions)</h3>
+                <button class="btn-close" onclick="closeModal('modal-corpus')">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="corpus-filter-bar">
+                    <input type="text" id="corpus-search-input" class="form-control" placeholder="Search statutes, sections, or keywords (e.g. 3(p), ABS, Phytopharmaceutical, WIPO)..." oninput="filterCorpusProvisions()">
+                    <select id="corpus-jurisdiction-filter" class="form-control form-select" onchange="filterCorpusProvisions()">
+                        <option value="all">All Jurisdictions</option>
+                        <option value="India">India (National)</option>
+                        <option value="International">International</option>
+                    </select>
+                </div>
+                <div class="corpus-list-container" id="corpus-items-list">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
