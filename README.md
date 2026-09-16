@@ -1,5 +1,6 @@
 <div align="center">
 
+<img src="20c6d951-ed62-4a56-95cb-3e64feee110c.png" alt="IP-SAKTI Sahayak logo" width="220">
 
 # ⚖️ IP-SAKTI Sahayak
 
