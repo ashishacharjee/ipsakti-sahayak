@@ -1,6 +1,6 @@
 """
 Facilitator Review Brief Service for IP-SAKTI Sahayak
-Problem Statement 26045 - SIH 2026
+Problem Statement 26045 - Astra Coders
 
 Generates structured, auditable briefs for human IP facilitators, patent examiners,
 and AYUSH regulatory officers when uncertainty or hard gates are triggered.

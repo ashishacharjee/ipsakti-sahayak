@@ -1,7 +1,7 @@
 """
 IP-SAKTI Sahayak - FastAPI Application
-Problem Statement 26045 - Smart India Hackathon 2026
-Team: Coders of GNIT
+Problem Statement 26045 - Astra Coders 2026
+Team: Astra Coders
 Theme: MedTech / BioTech / HealthTech
 Ministry of Ayush / All India Institute of Ayurveda
 """

@@ -1,6 +1,15 @@
+
+function safeSet(id, prop, val) {
+    const el = document.getElementById(id);
+    if (el) el[prop] = val;
+}
+function safeSetHtml(id, val) { safeSet(id, 'innerHTML', val); }
+function safeSetText(id, val) { safeSet(id, 'textContent', val); }
+function safeSetVal(id, val) { safeSet(id, 'value', val); }
+
 /**
  * IP-SAKTI Sahayak - Frontend Application Logic
- * Problem Statement 26045 - SIH 2026
+ * Problem Statement 26045 - Astra Coders
  * Team: Coders of GNIT
  */
 
@@ -25,20 +34,20 @@ async function setLanguage(lang) {
         const res = await fetch(`/api/i18n/${lang}`);
         if (res.ok) {
             const strings = await res.json();
-            document.getElementById('lbl-title').innerHTML = `${strings.title} <span class="badge-sih">SIH 2026 • PS 26045</span>`;
-            document.getElementById('lbl-motto').textContent = `“${strings.motto}”`;
-            document.getElementById('lbl-banner-text').textContent = strings.disclaimer_banner;
-            document.getElementById('lbl-wizard-title').textContent = strings.classification_wizard;
-            document.getElementById('lbl-step1-q').textContent = strings.step_1_q;
-            document.getElementById('lbl-step2-q').textContent = strings.step_2_q;
-            document.getElementById('lbl-step3-q').textContent = strings.step_3_q;
-            document.getElementById('lbl-step4-q').textContent = strings.step_4_q;
-            document.getElementById('lbl-abs-title').textContent = strings.abs_gate_title;
-            document.getElementById('lbl-applicant-type').textContent = strings.applicant_type_label;
-            document.getElementById('lbl-btn-classify').textContent = strings.btn_classify;
-            document.getElementById('lbl-btn-reset').textContent = strings.btn_reset;
-            document.getElementById('tab-india').textContent = strings.jurisdiction_india;
-            document.getElementById('tab-intl').textContent = strings.jurisdiction_intl;
+            safeSetHtml('lbl-title', `${strings.title} <span class="badge-sih">Astra Coders • PS 26045</span>`);
+            safeSetText('lbl-motto', `“${strings.motto}”`);
+            safeSetText('lbl-banner-text', strings.disclaimer_banner);
+            safeSetText('lbl-wizard-title', strings.classification_wizard);
+            safeSetText('lbl-step1-q', strings.step_1_q);
+            safeSetText('lbl-step2-q', strings.step_2_q);
+            safeSetText('lbl-step3-q', strings.step_3_q);
+            safeSetText('lbl-step4-q', strings.step_4_q);
+            safeSetText('lbl-abs-title', strings.abs_gate_title);
+            safeSetText('lbl-applicant-type', strings.applicant_type_label);
+            safeSetText('lbl-btn-classify', strings.btn_classify);
+            safeSetText('lbl-btn-reset', strings.btn_reset);
+            safeSetText('tab-india', strings.jurisdiction_india);
+            safeSetText('tab-intl', strings.jurisdiction_intl);
         }
     } catch (e) {
         console.error('Error fetching localization:', e);
@@ -118,7 +127,7 @@ function renderGuidanceResults(data, requestPayload) {
     const scoreBadge = document.getElementById('score-level-badge');
     const scoreCircle = document.getElementById('score-circle').parentElement;
 
-    scoreNum.textContent = Math.round(score.total_score);
+    if(scoreNum) scoreNum.textContent = Math.round(score.total_score);
 
     // Color code and gradient
     let badgeClass = 'badge-high';
@@ -127,44 +136,44 @@ function renderGuidanceResults(data, requestPayload) {
     if (score.confidence_level.includes('HIGH')) {
         badgeClass = 'badge-high';
         gradientColor = '#10b981';
-        scoreBadge.textContent = 'HIGH CONFIDENCE (≥ 75/100)';
+        if(scoreBadge) scoreBadge.textContent = 'HIGH CONFIDENCE (≥ 75/100)';
     } else if (score.confidence_level.includes('MODERATE')) {
         badgeClass = 'badge-mod';
         gradientColor = '#f59e0b';
-        scoreBadge.textContent = 'MODERATE (DEFERS TO HUMAN)';
+        if(scoreBadge) scoreBadge.textContent = 'MODERATE (DEFERS TO HUMAN)';
     } else {
         badgeClass = 'badge-low';
         gradientColor = '#ef4444';
-        scoreBadge.textContent = 'LOW (SAFE ABSTENTION)';
+        if(scoreBadge) scoreBadge.textContent = 'LOW (SAFE ABSTENTION)';
     }
 
-    scoreBadge.className = `score-level-badge ${badgeClass}`;
+    if(scoreBadge) scoreBadge.className = `score-level-badge ${badgeClass}`;
     const deg = Math.round((score.total_score / 100) * 360);
     scoreCircle.style.background = `conic-gradient(${gradientColor} 0deg ${deg}deg, #e2e8f0 ${deg}deg 360deg)`;
 
     // Breakdown
-    document.getElementById('val-agreement').textContent = `${score.source_agreement}/35`;
-    document.getElementById('val-authority').textContent = `${score.source_authority}/20`;
-    document.getElementById('val-currency').textContent = `${score.currency_score}/20`;
-    document.getElementById('val-jurisdiction').textContent = `${score.jurisdiction_match}/15`;
-    document.getElementById('val-classification').textContent = `${score.classification_certainty}/10`;
+    safeSetText('val-agreement', `${score.source_agreement}/35`);
+    safeSetText('val-authority', `${score.source_authority}/20`);
+    safeSetText('val-currency', `${score.currency_score}/20`);
+    safeSetText('val-jurisdiction', `${score.jurisdiction_match}/15`);
+    safeSetText('val-classification', `${score.classification_certainty}/10`);
 
     // 2. Safe Abstention Banner
     const abstentionBanner = document.getElementById('safe-abstention-banner');
     if (data.safe_abstention) {
         abstentionBanner.classList.remove('hidden');
-        document.getElementById('abstention-reason-text').textContent = data.abstention_reason || 'Evidence strength is below certainty threshold. Pre-assembled review brief ready for human IP facilitator.';
+        safeSetText('abstention-reason-text', data.abstention_reason || 'Evidence strength is below certainty threshold. Pre-assembled review brief ready for human IP facilitator.');
     } else {
         abstentionBanner.classList.add('hidden');
     }
 
     // 3. Classification Badge Card
-    document.getElementById('res-category-name').textContent = national.classification_category;
-    document.getElementById('res-statute-citation').textContent = national.statutory_citation;
-    document.getElementById('res-category-summary').textContent = national.ip_strategy;
+    safeSetText('res-category-name', national.classification_category);
+    safeSetText('res-statute-citation', national.statutory_citation);
+    safeSetText('res-category-summary', national.ip_strategy);
 
     // 4. National Pane
-    document.getElementById('in-patent-verdict').textContent = national.ip_patentability_assessment;
+    safeSetText('in-patent-verdict', national.ip_patentability_assessment);
     
     const barsList = document.getElementById('in-bars-list');
     barsList.innerHTML = '';
@@ -190,17 +199,13 @@ function renderGuidanceResults(data, requestPayload) {
     });
 
     // 5. International Pane
-    document.getElementById('intl-gratk-status').textContent = 
-        `${intl.wipo_gratk_treaty_status.treaty_name} — ${intl.wipo_gratk_treaty_status.status}. ${intl.wipo_gratk_treaty_status.impact}`;
+    safeSetText('intl-gratk-status', `${intl.wipo_gratk_treaty_status.treaty_name} — ${intl.wipo_gratk_treaty_status.status}. ${intl.wipo_gratk_treaty_status.impact}`);
     
-    document.getElementById('intl-hague-status').textContent = 
-        intl.trademark_and_design.hague_agreement_alert;
+    safeSetText('intl-hague-status', intl.trademark_and_design.hague_agreement_alert);
 
-    document.getElementById('intl-pct-status').textContent = 
-        `${intl.patent_filing_channels.pct_system} ${intl.patent_filing_channels.nba_foreign_filing_rule}`;
+    safeSetText('intl-pct-status', `${intl.patent_filing_channels.pct_system} ${intl.patent_filing_channels.nba_foreign_filing_rule}`);
 
-    document.getElementById('intl-export-status').textContent = 
-        `USA: ${intl.export_market_regulatory_access.united_states} | EU: ${intl.export_market_regulatory_access.european_union}`;
+    safeSetText('intl-export-status', `USA: ${intl.export_market_regulatory_access.united_states} | EU: ${intl.export_market_regulatory_access.european_union}`);
 
     // 6. Cited Authorities Chips
     const chipsContainer = document.getElementById('sources-chips-container');
@@ -214,7 +219,7 @@ function renderGuidanceResults(data, requestPayload) {
     });
 
     // Auto-update TKDL input box
-    document.getElementById('tkdl-input-terms').value = `${requestPayload.classification.product_name}, ${requestPayload.classification.ingredients.join(', ')}`;
+    safeSetVal('tkdl-input-terms', `${requestPayload.classification.product_name}, ${requestPayload.classification.ingredients.join(', ')}`);
 }
 
 // Switch Jurisdiction Tabs
@@ -246,7 +251,7 @@ function resetForm() {
 
 // TKDL Search Bridge Modal
 function openTKDLModal() {
-    document.getElementById('modal-tkdl').classList.remove('hidden');
+    const modalTkdl = document.getElementById('modal-tkdl'); if (modalTkdl) modalTkdl.classList.remove('hidden');
     runTKDLBuilder();
 }
 
@@ -268,10 +273,10 @@ async function runTKDLBuilder() {
         if (res.ok) {
             const data = await res.json();
             const botList = data.identified_botanicals.map(b => `${b.botanical_name} (${b.sanskrit_name})`).join(', ') || 'General ASU Botanicals';
-            document.getElementById('tkdl-botanicals-list').textContent = botList;
-            document.getElementById('tkdl-codes-list').textContent = `${data.tkrc_codes.join(', ')} • IPC: ${data.ipc_classes.join(', ')}`;
-            document.getElementById('tkdl-query-string').textContent = data.structured_search_query;
-            document.getElementById('tkdl-bridge-notice').textContent = data.disclaimer;
+            safeSetText('tkdl-botanicals-list', botList);
+            safeSetText('tkdl-codes-list', `${data.tkrc_codes.join(', ')} • IPC: ${data.ipc_classes.join(', ')}`);
+            safeSetText('tkdl-query-string', data.structured_search_query);
+            safeSetText('tkdl-bridge-notice', data.disclaimer);
         }
     } catch (e) {
         console.error('TKDL error:', e);
@@ -289,7 +294,7 @@ function copyQueryToClipboard() {
 
 // Facilitator Review Brief Modal
 async function openReviewBriefModal() {
-    document.getElementById('modal-brief').classList.remove('hidden');
+    const modalBrief = document.getElementById('modal-brief'); if (modalBrief) modalBrief.classList.remove('hidden');
 
     if (!lastGuidanceResult) return;
 
@@ -333,10 +338,10 @@ async function openReviewBriefModal() {
         if (res.ok) {
             const brief = await res.json();
             lastReviewBrief = brief;
-            document.getElementById('brief-modal-id').textContent = brief.brief_id;
-            document.getElementById('brief-modal-time').textContent = brief.generated_at;
-            document.getElementById('brief-case-summary').textContent = brief.case_summary;
-            document.getElementById('brief-abs-summary').textContent = `${brief.abs_summary.track}: ${brief.abs_summary.notes}`;
+            safeSetText('brief-modal-id', brief.brief_id);
+            safeSetText('brief-modal-time', brief.generated_at);
+            safeSetText('brief-case-summary', brief.case_summary);
+            safeSetText('brief-abs-summary', `${brief.abs_summary.track}: ${brief.abs_summary.notes}`);
 
             const qList = document.getElementById('brief-open-questions-list');
             qList.innerHTML = '';
@@ -379,7 +384,7 @@ async function loadCorpusData() {
 }
 
 function openCorpusModal() {
-    document.getElementById('modal-corpus').classList.remove('hidden');
+    const modalCorpus = document.getElementById('modal-corpus'); if (modalCorpus) modalCorpus.classList.remove('hidden');
     renderCorpusList(allCorpusProvisions);
 }
 
@@ -434,3 +439,85 @@ function renderCorpusList(provisions) {
 function closeModal(id) {
     document.getElementById(id).classList.add('hidden');
 }
+
+
+// --- NEW STITCH UI LOGIC ---
+const translations = {
+    en: {
+        sideSubtitle: "AYUSH Regulatory Jurist",
+        navStatutoryTitle: "Statutory Jurisdictions",
+        navDossiers: "Formulation Dossiers",
+        navTkdl: "TKDL Citation Search",
+        navStatute: "Statute Library",
+        navFacilitator: "Facilitator Review Brief",
+        rulingHeading: "Patent & Proprietary (P&P)",
+        rulingDesc: "Statutory categorization requires Form 25-D licensure.",
+        shlokaDesc: "Equipart Haritaki, Bibhitaki, and Amalaki constitute canonical Triphala."
+    },
+    hi: {
+        sideSubtitle: "आयुष विनियामक न्यायविद",
+        navStatutoryTitle: "वैधानिक क्षेत्राधिकार",
+        navDossiers: "फॉर्मूलेशन डोजियर",
+        navTkdl: "TKDL उद्धरण खोज",
+        navStatute: "कानून पुस्तकालय",
+        navFacilitator: "सुविधाकर्ता समीक्षा",
+        rulingHeading: "पेटेंट और मालिकाना (P&P)",
+        rulingDesc: "वैधानिक वर्गीकरण के लिए फॉर्म 25-डी लाइसेंस की आवश्यकता होती है।",
+        shlokaDesc: "हरितकी, बिभीतकी और आमलकी शास्त्रीय त्रिफला का निर्माण करते हैं।"
+    },
+    bn: {
+        sideSubtitle: "আয়ুষ নিয়ন্ত্রক জুরিস্ট",
+        navStatutoryTitle: "বিধিবদ্ধ এক্তিয়ার",
+        navDossiers: "ফর্মুলেশন ডসিয়ার",
+        navTkdl: "TKDL উদ্ধৃতি অনুসন্ধান",
+        navStatute: "আইন গ্রন্থাগার",
+        navFacilitator: "ফ্যাসিলিটেটর পর্যালোচনা",
+        rulingHeading: "পেটেন্ট এবং মালিকানাধীন (P&P)",
+        rulingDesc: "বিধিবদ্ধ শ্রেণীবিভাগের জন্য ফর্ম 25-ডি লাইসেন্স প্রয়োজন।",
+        shlokaDesc: "হরিতকী, বিভীতকি এবং আমলকী শাস্ত্রীয় ত্রিফলা গঠন করে।"
+    }
+};
+
+function switchLang(lang) {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.toLowerCase().includes(lang === 'hi' ? 'हिन्दी' : (lang === 'bn' ? 'বাংলা' : 'english')));
+    });
+    
+    // Use Google Translate Cookie trick for full-page instant translation!
+    const cookieName = 'googtrans';
+    const domainCookie = window.location.hostname;
+    if (lang === 'en') {
+        document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domainCookie;
+    } else {
+        document.cookie = cookieName + '=/en/' + lang + '; path=/';
+        document.cookie = cookieName + '=/en/' + lang + '; path=/; domain=' + domainCookie;
+    }
+    window.location.reload();
+}
+
+function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        if (id === 'tkdlModal') openTKDLModal();
+        if (id === 'facilitatorModal') openReviewBriefModal();
+        if (id === 'statuteModal') openCorpusModal();
+    }
+}
+
+function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+}
+
+window.addEventListener('click', function(e) {
+    if (e.target.classList.contains('modal-backdrop')) {
+        e.target.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+});

@@ -1,6 +1,6 @@
 """
 Evidence Strength Engine for IP-SAKTI Sahayak
-Problem Statement 26045 - SIH 2026
+Problem Statement 26045 - Astra Coders
 
 Calculates a 100-point retrieval-grounded evidence score based on:
 1. Source Agreement (Max 35 pts)

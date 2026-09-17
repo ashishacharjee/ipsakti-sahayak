@@ -1,6 +1,6 @@
 """
 Access and Benefit-Sharing (ABS) Gate for IP-SAKTI Sahayak
-Problem Statement 26045 - SIH 2026
+Problem Statement 26045 - Astra Coders
 
 Independent parallel check evaluating legal duties under:
 - Biological Diversity Act, 2002 (as amended by BD (Amendment) Act, 2023)

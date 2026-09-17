@@ -1,6 +1,6 @@
 """
 Internationalization (i18n) and Bhashini Integration Layer
-Problem Statement 26045 - SIH 2026
+Problem Statement 26045 - Astra Coders
 Provides English & Hindi core localization with Bhashini-ready schema.
 """
 
