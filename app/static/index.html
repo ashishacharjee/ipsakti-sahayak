@@ -94,15 +94,15 @@
 <!-- Interactive Language Switcher (EN / HI) -->
 
   <div class="lang-switcher" id="topLangSwitcher">
-  <button class="lang-btn active" onclick="switchLang('en')" type="button">English</button>
-  <button class="lang-btn" onclick="switchLang('hi')" type="button">हिन्दी</button>
-  <button class="lang-btn" onclick="switchLang('bn')" type="button">বাংলা</button>
+  <button class="lang-btn active" onclick="switchLang('en')" type="button"><span class="hidden sm:inline">English</span><span class="sm:hidden font-mono text-[9px]">EN</span></button>
+  <button class="lang-btn" onclick="switchLang('hi')" type="button"><span class="hidden sm:inline">हिन्दी</span><span class="sm:hidden font-mono text-[9px]">HI</span></button>
+  <button class="lang-btn" onclick="switchLang('bn')" type="button"><span class="hidden sm:inline">বাংলা</span><span class="sm:hidden font-mono text-[9px]">BN</span></button>
   </div>
 
 </div>
 </div>
 <!-- ================= 3. LEFT NAVIGATION SIDEBAR ================= -->
-<aside id="main-sidebar" class="transform -translate-x-full lg:translate-x-0 transition-transform duration-300 fixed left-0 flex top-[60px] bottom-0 w-64 bg-[#FCFAF7] border-r border-[#E5DCCD] z-30 flex flex-col justify-between shadow-[2px_0_8px_rgba(40,30,15,0.03)]">
+<aside id="main-sidebar" class="transform -translate-x-full lg:translate-x-0 transition-transform duration-300 fixed left-0 flex top-[60px] bottom-0 w-64 bg-[#FCFAF7] border-r border-[#E5DCCD] z-50 flex flex-col justify-between shadow-[2px_0_8px_rgba(40,30,15,0.03)]">
 <div class="flex flex-col">
 <!-- Sovereign Brand Header -->
 <div class="p-4 border-b border-[#E5DCCD] bg-gradient-to-b from-[#F5EFE6]/80 via-[#FCFAF7] to-[#FCFAF7]">
@@ -114,7 +114,7 @@
   <button onclick="document.getElementById('main-sidebar').classList.toggle('-translate-x-full')" class="lg:hidden w-8 h-8 flex items-center justify-center rounded-md bg-[#1B4931]/20 hover:bg-[#1B4931]/40 border border-[#F3D580]/20 text-[#F3D580] transition-colors ml-2" type="button">
     <span class="material-symbols-outlined text-[18px]">menu</span>
   </button>
-  <div class="flex items-center gap-2.5">
+  <div class="flex items-center gap-1 md:gap-2.5">
 
 <div class="w-9 h-9 rounded-lg bg-[#1B4931] text-white flex items-center justify-center shadow-sm shrink-0 border border-[#C59A3F]/50 group transition-transform hover:scale-105">
 <span class="material-symbols-outlined text-[20px] text-[#F3D580]">spa</span>
@@ -198,7 +198,7 @@
 </div>
 </aside>
 <!-- ================= 4. MAIN WORKSPACE CONTAINER ================= -->
-<div class="pl-0 lg:pl-64 flex flex-col min-h-screen pt-[60px] bg-[#FAF7F2]">
+<div class="pl-0 lg:pl-64 flex flex-col min-h-screen pt-[75px] bg-[#FAF7F2]">
 <!-- Sub-Header / Action Utilities -->
 
 <!-- Live Statutory Strip -->
@@ -293,7 +293,7 @@
 <!-- 1. Botanical Composition Matrix with Row Slide Hover -->
 <div class="bg-white rounded-xl border border-[#E5DCCD] shadow-[0_2px_10px_-2px_rgba(40,30,15,0.05)] p-6 interactive-card">
 <div class="flex items-center justify-between pb-4 border-b border-[#E5DCCD] mb-4">
-<div class="flex items-center gap-2.5">
+<div class="flex items-center gap-1 md:gap-2.5">
 <div class="w-8 h-8 rounded-lg bg-[#E8F2EC] text-[#1B7340] flex items-center justify-center border border-[#C6DDD0]">
 <span class="material-symbols-outlined text-[18px]">local_florist</span>
 </div>
@@ -383,7 +383,7 @@
 <!-- 2. Shloka & Prior Art Concordance Card -->
 <div class="concordance-card p-6 shadow-sm">
 <div class="flex items-center justify-between pb-4 border-b border-[#E5DCCD] mb-4">
-<div class="flex items-center gap-2.5">
+<div class="flex items-center gap-1 md:gap-2.5">
 <div class="w-8 h-8 rounded-lg bg-[#FDF7E7] text-[#8C531B] flex items-center justify-center border border-[#E2CE9F]">
 <span class="material-symbols-outlined text-[18px]">history_edu</span>
 </div>
@@ -743,7 +743,7 @@
 <div class="modal-dialog">
 <!-- Modal Header -->
 <div class="p-4 border-b border-[#E5DCCD] bg-[#163E2A] text-white flex items-center justify-between">
-<div class="flex items-center gap-2.5">
+<div class="flex items-center gap-1 md:gap-2.5">
 <span class="material-symbols-outlined text-[#F3D580]">auto_stories</span>
 <div>
 <h3 class="font-serif text-base font-bold text-white">CSIR-TKDL Shloka Concordance &amp; Prior Art Search</h3>
@@ -793,7 +793,7 @@
 <div aria-modal="true" class="modal-backdrop" id="facilitatorModal" role="dialog">
 <div class="modal-dialog">
 <div class="p-4 border-b border-[#E5DCCD] bg-[#163E2A] text-white flex items-center justify-between">
-<div class="flex items-center gap-2.5">
+<div class="flex items-center gap-1 md:gap-2.5">
 <span class="material-symbols-outlined text-[#F3D580]">assignment_turned_in</span>
 <div>
 <h3 class="font-serif text-base font-bold text-white">Facilitator Review Brief (Rule 158-B &amp; Form 25-D)</h3>
@@ -862,7 +862,7 @@
 <div aria-modal="true" class="modal-backdrop" id="statuteModal" role="dialog">
 <div class="modal-dialog">
 <div class="p-4 border-b border-[#E5DCCD] bg-[#163E2A] text-white flex items-center justify-between">
-<div class="flex items-center gap-2.5">
+<div class="flex items-center gap-1 md:gap-2.5">
 <span class="material-symbols-outlined text-[#F3D580]">gavel</span>
 <div>
 <h3 class="font-serif text-base font-bold text-white">Statutory Corpus &amp; Legal Gazette Explorer</h3>
