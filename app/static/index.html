@@ -102,7 +102,7 @@
 </div>
 </div>
 <!-- ================= 3. LEFT NAVIGATION SIDEBAR ================= -->
-<aside id="main-sidebar" class="hidden lg:flex fixed left-0 top-[60px] bottom-0 w-64 bg-[#FCFAF7] border-r border-[#E5DCCD] z-30 flex flex-col justify-between shadow-[2px_0_8px_rgba(40,30,15,0.03)]">
+<aside id="main-sidebar" class="transform -translate-x-full lg:translate-x-0 transition-transform duration-300 fixed left-0 flex top-[60px] bottom-0 w-64 bg-[#FCFAF7] border-r border-[#E5DCCD] z-30 flex flex-col justify-between shadow-[2px_0_8px_rgba(40,30,15,0.03)]">
 <div class="flex flex-col">
 <!-- Sovereign Brand Header -->
 <div class="p-4 border-b border-[#E5DCCD] bg-gradient-to-b from-[#F5EFE6]/80 via-[#FCFAF7] to-[#FCFAF7]">
@@ -111,7 +111,7 @@
 
 </div>
 
-  <button onclick="document.getElementById('main-sidebar').classList.toggle('hidden')" class="lg:hidden w-8 h-8 flex items-center justify-center rounded-md bg-[#1B4931]/20 hover:bg-[#1B4931]/40 border border-[#F3D580]/20 text-[#F3D580] transition-colors ml-2" type="button">
+  <button onclick="document.getElementById('main-sidebar').classList.toggle('-translate-x-full')" class="lg:hidden w-8 h-8 flex items-center justify-center rounded-md bg-[#1B4931]/20 hover:bg-[#1B4931]/40 border border-[#F3D580]/20 text-[#F3D580] transition-colors ml-2" type="button">
     <span class="material-symbols-outlined text-[18px]">menu</span>
   </button>
   <div class="flex items-center gap-2.5">
@@ -228,7 +228,7 @@
 </div>
 </div>
 <!-- Main Regulatory Dossier Content -->
-<main class="flex-1 p-8 space-y-6 max-w-[1720px] w-full mx-auto">
+<main class="flex-1 p-3 sm:p-4 md:p-8 space-y-4 md:space-y-6 max-w-[1720px] w-full mx-auto overflow-x-hidden">
 <!-- ================= HERO DOCKET BAR ================= -->
 <section class="bg-white rounded-xl opacity-0 animate-fade-in-up delay-100 border border-[#E5DCCD] shadow-[0_2px_12px_-3px_rgba(40,30,15,0.06)] p-6 relative overflow-hidden interactive-card animated-border-box">
 
