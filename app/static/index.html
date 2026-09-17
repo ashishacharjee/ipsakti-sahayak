@@ -102,7 +102,7 @@
 </div>
 </div>
 <!-- ================= 3. LEFT NAVIGATION SIDEBAR ================= -->
-<aside class="fixed left-0 top-[60px] bottom-0 w-64 bg-[#FCFAF7] border-r border-[#E5DCCD] z-30 flex flex-col justify-between shadow-[2px_0_8px_rgba(40,30,15,0.03)]">
+<aside id="main-sidebar" class="hidden lg:flex fixed left-0 top-[60px] bottom-0 w-64 bg-[#FCFAF7] border-r border-[#E5DCCD] z-30 flex flex-col justify-between shadow-[2px_0_8px_rgba(40,30,15,0.03)]">
 <div class="flex flex-col">
 <!-- Sovereign Brand Header -->
 <div class="p-4 border-b border-[#E5DCCD] bg-gradient-to-b from-[#F5EFE6]/80 via-[#FCFAF7] to-[#FCFAF7]">
@@ -110,7 +110,12 @@
 
 
 </div>
-<div class="flex items-center gap-2.5">
+
+  <button onclick="document.getElementById('main-sidebar').classList.toggle('hidden')" class="lg:hidden w-8 h-8 flex items-center justify-center rounded-md bg-[#1B4931]/20 hover:bg-[#1B4931]/40 border border-[#F3D580]/20 text-[#F3D580] transition-colors ml-2" type="button">
+    <span class="material-symbols-outlined text-[18px]">menu</span>
+  </button>
+  <div class="flex items-center gap-2.5">
+
 <div class="w-9 h-9 rounded-lg bg-[#1B4931] text-white flex items-center justify-center shadow-sm shrink-0 border border-[#C59A3F]/50 group transition-transform hover:scale-105">
 <span class="material-symbols-outlined text-[20px] text-[#F3D580]">spa</span>
 </div>
@@ -180,7 +185,7 @@
 <div class="flex items-center justify-between">
 <span class="text-[10px] font-bold uppercase tracking-wider text-[#163E2A] flex items-center gap-1.5">
 <span class="w-2 h-2 rounded-full bg-[#1B7340]"></span>
-          Team Shunya
+          Astra Coders
         </span>
 <span class="font-mono text-[9px] font-bold text-[#743E0C] bg-[#FDF7E7] px-1.5 py-0.5 rounded border border-[#E8C87A]">Grand Finale</span>
 </div>
@@ -193,7 +198,7 @@
 </div>
 </aside>
 <!-- ================= 4. MAIN WORKSPACE CONTAINER ================= -->
-<div class="pl-64 flex flex-col min-h-screen pt-[60px] bg-[#FAF7F2]">
+<div class="pl-0 lg:pl-64 flex flex-col min-h-screen pt-[60px] bg-[#FAF7F2]">
 <!-- Sub-Header / Action Utilities -->
 
 <!-- Live Statutory Strip -->
