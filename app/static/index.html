@@ -56,7 +56,17 @@
     }
 
     </style>
-    </head>
+    
+<style>
+/* Hide Google Translate Toolbar */
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0px !important; }
+.goog-tooltip { display: none !important; }
+.goog-tooltip:hover { display: none !important; }
+.goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+</style>
+
+</head>
 <body class="antialiased min-h-screen flex flex-col bg-[#FAF7F2] text-[#23201C]">
 
 <!-- ================= SPLASH SCREEN ================= -->
@@ -108,8 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 textEl.style.display = "none";
                 
                 // Cinematic flag morph animation!
-                flag.style.position = "fixed";
                 const rect = flag.getBoundingClientRect();
+                flag.style.position = "fixed";
                 flag.style.top = rect.top + "px";
                 flag.style.left = rect.left + "px";
                 flag.style.width = rect.width + "px";

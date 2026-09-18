@@ -484,14 +484,19 @@ function switchLang(lang) {
     });
     
     // Use Google Translate Cookie trick for full-page instant translation!
-    const cookieName = 'googtrans';
-    const domainCookie = window.location.hostname;
-    if (lang === 'en') {
-        document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-        document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domainCookie;
-    } else {
-        document.cookie = cookieName + '=/en/' + lang + '; path=/';
-        document.cookie = cookieName + '=/en/' + lang + '; path=/; domain=' + domainCookie;
+        const cookieName = 'googtrans';
+    const domain = window.location.hostname;
+    
+    // Clear existing cookies first
+    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domain;
+    document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + domain;
+    
+    if (lang !== 'en') {
+        const val = '/en/' + lang;
+        document.cookie = cookieName + '=' + val + '; path=/';
+        document.cookie = cookieName + '=' + val + '; path=/; domain=' + domain;
+        document.cookie = cookieName + '=' + val + '; path=/; domain=.' + domain;
     }
     window.location.reload();
 }
