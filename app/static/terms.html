@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | IP-SAKTI Sahayak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                vedic: {
+                  parchment: 'var(--color-bg)',
+                  surface: 'var(--color-surface)',
+                  dim: 'var(--color-dim)',
+                  border: 'var(--color-border)',
+                  borderLight: 'var(--color-border-light)',
+                  forest: 'var(--color-brand)',
+                  forestDark: 'var(--color-brand-dark)',
+                  textPrimary: 'var(--color-text-primary)',
+                  textSecondary: 'var(--color-text-secondary)',
+                  textMuted: 'var(--color-text-muted)'
+                }
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        :root {
+          --color-bg: #FFFFFF;
+          --color-surface: #F4F4F5;
+          --color-dim: #E4E4E7;
+          --color-border: #E5E7EB;
+          --color-border-light: #F3F4F6;
+          --color-brand: #18181B;
+          --color-brand-dark: #000000;
+          --color-text-primary: #09090B;
+          --color-text-secondary: #52525B;
+          --color-text-muted: #A1A1AA;
+        }
+        .dark-theme {
+          :root {
+            --color-bg: #121212;
+            --color-surface: #1E1E1E;
+            --color-dim: #2C2C2C;
+            --color-border: #3A3A3A;
+            --color-border-light: #2C2C2C;
+            --color-brand: #E0E0E0;
+            --color-brand-dark: #FFFFFF;
+            --color-text-primary: #F5F5F5;
+            --color-text-secondary: #A0A0A0;
+            --color-text-muted: #707070;
+          }
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark-theme');
+            const isDark = document.documentElement.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+    </script>
+</head>
+
+<body class="bg-vedic-parchment text-vedic-textPrimary antialiased selection:bg-indigo-500/30">
+
+    <!-- Header -->
+    <header class="h-16 border-b border-vedic-border bg-vedic-surface/80 backdrop-blur-md sticky top-0 z-50 flex items-center px-6">
+        <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            <span class="font-bold tracking-wider text-vedic-forest">IP-SAKTI Sahayak</span>
+        </a>
+    
+        <div class="flex items-center ml-auto">
+            <button aria-label="Toggle Theme Mode" class="p-2 text-vedic-textMuted hover:text-vedic-forest rounded-lg hover:bg-vedic-dim transition-colors" onclick="toggleDarkMode()">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+      </header>
+
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row gap-12 md:gap-20">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="md:w-64 flex-shrink-0">
+            <div class="sticky top-24 flex flex-col gap-1 pr-4 border-l border-vedic-border pl-4">
+                <h3 class="text-xs font-bold text-vedic-textMuted uppercase tracking-widest mb-4">Terms & Conditions</h3>
+                <a href="#term-acceptance" class="term-link text-sm font-semibold text-vedic-textPrimary border-l-2 border-indigo-600 -ml-[17px] pl-4 py-2 transition-colors">Acceptance of Terms</a>
+                <a href="#term-license" class="term-link text-sm font-medium text-vedic-textSecondary hover:text-vedic-textPrimary border-l-2 border-transparent -ml-[17px] pl-4 py-2 transition-colors">License Agreement</a>
+                <a href="#term-privacy" class="term-link text-sm font-medium text-vedic-textSecondary hover:text-vedic-textPrimary border-l-2 border-transparent -ml-[17px] pl-4 py-2 transition-colors">Data & Privacy</a>
+                <a href="#term-liability" class="term-link text-sm font-medium text-vedic-textSecondary hover:text-vedic-textPrimary border-l-2 border-transparent -ml-[17px] pl-4 py-2 transition-colors">Limitation of Liability</a>
+            </div>
+        </aside>
+        
+        <!-- Content -->
+        <article class="flex-1 flex flex-col gap-16 pb-32">
+            <div class="border-b border-vedic-border pb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-vedic-forest tracking-tight mb-4">Terms & Conditions</h1>
+                <p class="text-vedic-textSecondary">Last updated: September 2026</p>
+            </div>
+            
+            <section id="term-acceptance" class="term-section scroll-mt-28">
+                <h2 class="text-2xl font-bold mb-6 text-vedic-forest">Acceptance of Terms</h2>
+                <div class="prose max-w-none text-base text-vedic-textSecondary leading-relaxed space-y-4">
+                    <p>By accessing and using IP-SAKTI Sahayak, you agree to be bound by these terms and conditions. If you do not agree with these terms, please do not use our AI assistant.</p>
+                    <p>These terms constitute a binding agreement between you and the Ministry of AYUSH. Your continued use of our services indicates your acceptance of any updates or modifications to these terms.</p>
+                </div>
+            </section>
+            
+            <section id="term-license" class="term-section scroll-mt-28">
+                <h2 class="text-2xl font-bold mb-6 text-vedic-forest">License Agreement</h2>
+                <div class="prose max-w-none text-base text-vedic-textSecondary leading-relaxed space-y-4">
+                    <p>IP-SAKTI is provided under a strictly regulated governmental framework. Upon usage, you are granted a non-exclusive, non-transferable license to generate regulatory assessments.</p>
+                    <ul class="list-disc pl-5 space-y-2 mt-4">
+                        <li>You may not share, resell, rent, or sublicense the API outputs as formal legal advice.</li>
+                        <li>Reverse engineering, decompiling, or attempting to discover the source code of the backend classification engine is strictly prohibited.</li>
+                        <li>The tool must not be used to bypass formal statutory filings with the Patent Office or CDSCO.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="term-privacy" class="term-section scroll-mt-28">
+                <h2 class="text-2xl font-bold mb-6 text-vedic-forest">Data & Privacy</h2>
+                <div class="prose max-w-none text-base text-vedic-textSecondary leading-relaxed space-y-4">
+                    <p>All queries submitted through IP-SAKTI Sahayak are processed securely. However, users are advised not to submit highly sensitive, non-patented proprietary formulations without a prior NDA or provisional patent filing.</p>
+                    <p>The Ministry retains the right to analyze anonymized querying metadata to improve the classification engine's accuracy.</p>
+                </div>
+            </section>
+
+            <section id="term-liability" class="term-section scroll-mt-28">
+                <h2 class="text-2xl font-bold mb-6 text-vedic-forest">Limitation of Liability</h2>
+                <div class="prose max-w-none text-base text-vedic-textSecondary leading-relaxed space-y-4">
+                    <p>IP-SAKTI is provided "as is" without any warranties, express or implied. We do not warrant that the guidance will guarantee a patent grant or clinical trial approval.</p>
+                    <p>In no event shall the creators or the Ministry be liable for any indirect, incidental, special, or punitive damages arising out of your reliance on the AI's output. Always consult a registered Patent Agent.</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <script>
+        // Scroll Spy Logic
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.term-section');
+            const links = document.querySelectorAll('.term-link');
+            
+            let currentId = '';
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop <= 150) { 
+                    currentId = section.getAttribute('id');
+                }
+            });
+            
+            links.forEach(link => {
+                link.classList.remove('text-vedic-textPrimary', 'border-indigo-600', 'font-semibold');
+                link.classList.add('text-vedic-textSecondary', 'border-transparent', 'font-medium');
+                if (link.getAttribute('href') === `#${currentId}`) {
+                    link.classList.add('text-vedic-textPrimary', 'border-indigo-600', 'font-semibold');
+                    link.classList.remove('text-vedic-textSecondary', 'border-transparent', 'font-medium');
+                }
+            });
+        });
+
+        // Smooth scroll for links
+        document.querySelectorAll('.term-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+<script>
+class AsciiGlitchRipple {
+    constructor(el, options = {}) {
+        this.el = el;
+        this.origTxt = el.textContent;
+        this.origChars = this.origTxt.split("");
+        this.dur = options.dur || 1000;
+        this.chars = options.chars || '.,·-─~+:;=*π""┐┌┘┴┬╗╔╝╚╬╠╣╩╦║░▒▓█▄▀▌▐■!?&#$@0123456789*';
+        this.spread = options.spread || 1.2;
+        this.preserveSpaces = true;
+        
+        this.isAnim = false;
+        this.cursorPos = 0;
+        this.waves = [];
+        this.animId = null;
+        this.isHover = false;
+        this.origW = null;
+
+        this.WAVE_THRESH = 3;
+        this.CHAR_MULT = 3;
+        this.ANIM_STEP = 40;
+        this.WAVE_BUF = 5;
+
+        this.handleEnter = this.handleEnter.bind(this);
+        this.handleMove = this.handleMove.bind(this);
+        this.handleLeave = this.handleLeave.bind(this);
+        this.animate = this.animate.bind(this);
+
+        this.el.addEventListener('mouseenter', this.handleEnter);
+        this.el.addEventListener('mousemove', this.handleMove);
+        this.el.addEventListener('mouseleave', this.handleLeave);
+    }
+    
+    updateCursorPos(e) {
+        const rect = this.el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const len = this.origTxt.length;
+        const pos = Math.round((x / rect.width) * len);
+        this.cursorPos = Math.max(0, Math.min(pos, len - 1));
+    }
+    
+    stop() {
+        this.el.textContent = this.origTxt;
+        if (this.origW !== null) {
+            this.el.style.width = "";
+            this.origW = null;
+        }
+        this.isAnim = false;
+        if (this.animId) {
+            cancelAnimationFrame(this.animId);
+            this.animId = null;
+        }
+    }
+    
+    start() {
+        if (this.isAnim) return;
+        if (this.origW === null) {
+            this.origW = this.el.getBoundingClientRect().width;
+            this.el.style.width = this.origW + "px";
+        }
+        this.isAnim = true;
+        this.animId = requestAnimationFrame(this.animate);
+    }
+    
+    startWave() {
+        this.waves.push({
+            startPos: this.cursorPos,
+            startTime: Date.now(),
+            id: Math.random()
+        });
+        if (!this.isAnim) this.start();
+    }
+    
+    calcWaveEffect(charIdx, t) {
+        let shouldAnim = false;
+        let resultChar = this.origChars[charIdx];
+        
+        for (const w of this.waves) {
+            const age = t - w.startTime;
+            const prog = Math.min(age / this.dur, 1);
+            const dist = Math.abs(charIdx - w.startPos);
+            const maxDist = Math.max(w.startPos, this.origChars.length - w.startPos - 1);
+            const rad = (prog * (maxDist + this.WAVE_BUF)) / this.spread;
+            
+            if (dist <= rad) {
+                shouldAnim = true;
+                const intens = Math.max(0, rad - dist);
+                if (intens <= this.WAVE_THRESH && intens > 0) {
+                    const index = Math.floor(dist * this.CHAR_MULT + age / this.ANIM_STEP) % this.chars.length;
+                    resultChar = this.chars[index];
+                }
+            }
+        }
+        return { shouldAnim, char: resultChar };
+    }
+    
+    animate() {
+        const t = Date.now();
+        this.waves = this.waves.filter(w => (t - w.startTime) < this.dur);
+        if (this.waves.length === 0) {
+            this.stop();
+            return;
+        }
+        
+        let newTxt = "";
+        for (let i = 0; i < this.origChars.length; i++) {
+            const char = this.origChars[i];
+            if (this.preserveSpaces && char === " ") {
+                newTxt += " ";
+            } else {
+                const res = this.calcWaveEffect(i, t);
+                newTxt += res.shouldAnim ? res.char : char;
+            }
+        }
+        this.el.textContent = newTxt;
+        this.animId = requestAnimationFrame(this.animate);
+    }
+    
+    handleEnter(e) {
+        this.isHover = true;
+        this.updateCursorPos(e);
+        this.startWave();
+    }
+    
+    handleMove(e) {
+        if (!this.isHover) return;
+        const old = this.cursorPos;
+        this.updateCursorPos(e);
+        if (this.cursorPos !== old) this.startWave();
+    }
+    
+    handleLeave() {
+        this.isHover = false;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Only apply to the main H1 title. 
+    // Applying to paragraphs destroys their inner HTML (links, bold tags) and causes massive lag!
+    const mainTitle = document.querySelector('h1');
+    if (mainTitle) {
+        new AsciiGlitchRipple(mainTitle, { spread: 1.0, dur: 800 });
+    }
+});
+</script>
+
+
+    <!-- FAQ Section -->
+    <div class="w-full max-w-3xl mx-auto py-16 relative font-sans">
+      <h2 class="text-center font-bold text-2xl md:text-3xl mb-10 text-vedic-forest">
+        IP-SAKTI Sahayak FAQs
+      </h2>
+      <ul class="w-full mx-auto list-none p-0 flex flex-col" id="faq-list">
+        <!-- FAQ 1 -->
+        <li class="w-full relative transition-all duration-300 ease-in border-b-2 border-vedic-border/50 faq-item">
+          <button class="flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface" onclick="toggleFaq(this)">
+            <span class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon">+</span>
+            <span class="pr-8 font-semibold">What is IP-SAKTI Sahayak?</span>
+            <span class="absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron"></span>
+          </button>
+          <div class="grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content">
+            <div class="overflow-hidden">
+              <div class="flex flex-row items-start justify-start w-full px-4 pl-14 pb-6 pt-2 text-base font-normal text-vedic-textSecondary">
+                <span class="opacity-90">IP-SAKTI Sahayak is an advanced AI assistant designed to navigate the complex AYUSH regulatory compliance frameworks, Traditional Knowledge Digital Library (TKDL) cross-referencing, and Indian Patents Act IP strategy.</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- FAQ 2 -->
+        <li class="w-full relative transition-all duration-300 ease-in border-b-2 border-vedic-border/50 faq-item">
+          <button class="flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface" onclick="toggleFaq(this)">
+            <span class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon">+</span>
+            <span class="pr-8 font-semibold">Is my proprietary formulation data safe?</span>
+            <span class="absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron"></span>
+          </button>
+          <div class="grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content">
+            <div class="overflow-hidden">
+              <div class="flex flex-row items-start justify-start w-full px-4 pl-14 pb-6 pt-2 text-base font-normal text-vedic-textSecondary">
+                <span class="opacity-90">Yes! We employ strict enterprise-grade encryption. Your proprietary formulations and trade secrets are securely sandboxed, never used to train the base model, and immediately wiped post-session.</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- FAQ 3 -->
+        <li class="w-full relative transition-all duration-300 ease-in border-b-2 border-vedic-border/50 faq-item">
+          <button class="flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface" onclick="toggleFaq(this)">
+            <span class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon">+</span>
+            <span class="pr-8 font-semibold">Does it replace my legal counsel?</span>
+            <span class="absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron"></span>
+          </button>
+          <div class="grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content">
+            <div class="overflow-hidden">
+              <div class="flex flex-row items-start justify-start w-full px-4 pl-14 pb-6 pt-2 text-base font-normal text-vedic-textSecondary">
+                <span class="opacity-90">No. IP-SAKTI Sahayak provides data-driven regulatory intelligence and automated form drafting, but it does not constitute binding legal advice. Always consult with a registered IP attorney before filing patents or clinical trials.</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function toggleFaq(btn) {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active-faq');
+        
+        // Reset all
+        document.querySelectorAll('.faq-item').forEach(li => {
+          li.classList.remove('active-faq');
+          li.querySelector('button').className = "flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface";
+          li.querySelector('.faq-content').className = "grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content";
+          li.querySelector('.faq-icon').innerText = "+";
+          li.querySelector('.faq-icon').className = "absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon";
+          li.querySelector('.faq-chevron').className = "absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron";
+        });
+
+        if (!isActive) {
+          item.classList.add('active-faq');
+          btn.className = "flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-forest bg-vedic-forest/5 text-vedic-forest font-semibold";
+          item.querySelector('.faq-content').className = "grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[1fr] border-l-vedic-forest bg-vedic-forest/5 faq-content";
+          item.querySelector('.faq-icon').innerText = "-";
+          item.querySelector('.faq-icon').className = "absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[32px] md:text-[40px] font-normal text-vedic-forest faq-icon";
+          item.querySelector('.faq-chevron').className = "absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[-44deg] border-vedic-forest faq-chevron";
+        }
+      }
+    </script>
+
+</body>
+</html>

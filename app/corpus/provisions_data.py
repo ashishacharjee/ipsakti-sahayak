@@ -1,6 +1,6 @@
 """
 Curated Statutory Corpus for IP-SAKTI Sahayak
-Problem Statement 26045 - Astra Coders
+Problem Statement 26045 - SIH 2026
 Verified primary legal provisions with version-tracking, authority weighting, and currency dates.
 """
 

@@ -1,6 +1,6 @@
 """
 TKDL Search Bridge & Query Builder for IP-SAKTI Sahayak
-Problem Statement 26045 - Astra Coders
+Problem Statement 26045 - SIH 2026
 
 Transforms plain-language formulation inputs into structured prior-art queries,
 Traditional Knowledge Resource Classification (TKRC) codes, and IPC subclasses.

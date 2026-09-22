@@ -1,7 +1,7 @@
 """
 IP-SAKTI Sahayak - FastAPI Application
-Problem Statement 26045 - Astra Coders 2026
-Team: Astra Coders
+Problem Statement 26045 - Smart India Hackathon 2026
+Team: Coders of GNIT
 Theme: MedTech / BioTech / HealthTech
 Ministry of Ayush / All India Institute of Ayurveda
 """
@@ -34,6 +34,7 @@ from app.rules.abs_gate import abs_gate
 from app.services.guidance_service import guidance_service
 from app.services.tkdl_bridge import tkdl_bridge
 from app.services.review_brief import review_brief_service
+from app.services.query_parser import query_parser
 from app.corpus.corpus_manager import corpus_manager
 from app.i18n.localization import localization_service
 
@@ -120,6 +121,15 @@ async def generate_guidance(payload: FullGuidanceRequest):
     abs_req = payload.abs_check or ABSCheckRequest(
         applicant_type=ApplicantType.INDIAN_COMMERCIAL
     )
+    
+    if payload.query:
+        # Dynamically infer the actual parameters to fix hardcoded frontend values
+        payload.classification, abs_req = query_parser.parse_query_to_overrides(
+            payload.query, 
+            payload.classification, 
+            abs_req
+        )
+
     return guidance_service.process_guidance(
         classification_req=payload.classification,
         abs_req=abs_req,

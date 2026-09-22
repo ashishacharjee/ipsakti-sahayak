@@ -1,6 +1,6 @@
 """
 Data models and schemas for IP-SAKTI Sahayak
-Problem Statement 26045 - Astra Coders 2026
+Problem Statement 26045 - Smart India Hackathon 2026
 """
 
 from enum import Enum

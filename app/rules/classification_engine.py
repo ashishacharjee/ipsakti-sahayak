@@ -1,6 +1,6 @@
 """
 Deterministic Classification Engine for IP-SAKTI Sahayak
-Problem Statement 26045 - Astra Coders
+Problem Statement 26045 - SIH 2026
 
 Rule tree decides the category — the LLM only asks questions, never rules.
 Sorts product formulations into 1 of 6 legal categories in max 4 steps:

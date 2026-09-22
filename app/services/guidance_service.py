@@ -1,6 +1,6 @@
 """
 Integrated Guidance Service for IP-SAKTI Sahayak
-Problem Statement 26045 - Astra Coders
+Problem Statement 26045 - SIH 2026
 
 Orchestrates classification, ABS check, dual-jurisdiction retrieval,
 evidence scoring, safe abstention, and review brief compilation.

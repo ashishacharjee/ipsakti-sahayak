@@ -1,1023 +1,948 @@
-<!DOCTYPE html>
-
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>IP-SAKTI Sahayak | National Sovereign AYUSH Regulatory AI &amp; TKDL Defense Platform</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Rozha+One&amp;family=Yatra+One&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link rel="stylesheet" href="/static/styles.css?v=3">
-<style>
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(15px); }
-        to { opacity: 1; transform: translateY(0); }
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Noto+Serif:ital,wght@0,400;0,600;1,400&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = { darkMode: "class", theme: { extend: { "colors": {"surface-dim": "var(--color-surface-dim)", "on-primary": "var(--color-on-primary)", "on-secondary-container": "var(--color-on-secondary-container)", "outline": "var(--color-outline)", "secondary-fixed": "var(--color-secondary-fixed)", "tertiary-fixed-dim": "var(--color-tertiary-fixed-dim)", "on-secondary": "var(--color-on-secondary)", "on-primary-container": "var(--color-on-primary-container)", "surface-container-low": "var(--color-surface-container-low)", "on-secondary-fixed": "var(--color-on-secondary-fixed)", "secondary-fixed-dim": "var(--color-secondary-fixed-dim)", "surface-container-high": "var(--color-surface-container-high)", "inverse-on-surface": "var(--color-inverse-on-surface)", "accent-gold-container": "var(--color-accent-gold-container)", "secondary": "var(--color-secondary)", "primary-container": "var(--color-primary-container)", "on-secondary-fixed-variant": "var(--color-on-secondary-fixed-variant)", "text-tertiary": "var(--color-text-tertiary)", "border-strong": "var(--color-border-strong)", "on-tertiary": "var(--color-on-tertiary)", "primary": "var(--color-primary)", "secondary-container": "var(--color-secondary-container)", "on-tertiary-fixed-variant": "var(--color-on-tertiary-fixed-variant)", "warning": "var(--color-warning)", "surface-container-lowest": "var(--color-surface-container-lowest)", "on-surface": "var(--color-on-surface)", "surface-bright": "var(--color-surface-bright)", "success": "var(--color-success)", "primary-fixed-dim": "var(--color-primary-fixed-dim)", "accent-gold": "var(--color-accent-gold)", "on-primary-fixed": "var(--color-on-primary-fixed)", "on-primary-fixed-variant": "var(--color-on-primary-fixed-variant)", "tertiary": "var(--color-tertiary)", "surface-container-highest": "var(--color-surface-container-highest)", "outline-variant": "var(--color-outline-variant)", "on-error-container": "var(--color-on-error-container)", "on-tertiary-fixed": "var(--color-on-tertiary-fixed)", "primary-fixed": "var(--color-primary-fixed)", "error": "var(--color-error)", "surface-variant": "var(--color-surface-variant)", "on-surface-variant": "var(--color-on-surface-variant)", "border-subtle": "var(--color-border-subtle)", "on-error": "var(--color-on-error)", "surface": "var(--color-surface)", "tertiary-fixed": "var(--color-tertiary-fixed)", "on-background": "var(--color-on-background)", "on-tertiary-container": "var(--color-on-tertiary-container)", "surface-container": "var(--color-surface-container)", "surface-tint": "var(--color-surface-tint)", "background": "var(--color-background)", "text-primary": "var(--color-text-primary)", "text-secondary": "var(--color-text-secondary)", "inverse-surface": "var(--color-inverse-surface)", "error-container": "var(--color-error-container)", "tertiary-container": "var(--color-tertiary-container)", "inverse-primary": "var(--color-inverse-primary)"},
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.375rem",
+          "xl": "0.625rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "2.5rem",
+          "margin-mobile": "1rem",
+          "space-xl": "2.5rem",
+          "gutter": "1.5rem",
+          "space-xs": "0.25rem",
+          "gutter-mobile": "1rem",
+          "space-sm": "0.5rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "label-md": ["Plus Jakarta Sans"],
+          "display-lg": ["Playfair Display"],
+          "title-md": ["Plus Jakarta Sans"],
+          "headline-lg": ["Playfair Display"],
+          "headline-md": ["Playfair Display"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Playfair Display"],
+          "display-lg-mobile": ["Playfair Display"],
+          "title-lg": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Playfair Display"],
+          "label-sm": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "code": ["JetBrains Mono"]
+        },
+        "fontSize": {
+          "label-md": ["11px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600"}],
+          "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+          "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-md": ["26px", {"lineHeight": "34px", "fontWeight": "500"}],
+          "label-lg": ["13px", {"lineHeight": "18px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+          "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "500"}],
+          "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+          "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}],
+          "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "0", "fontWeight": "600"}],
+          "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+          "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+          "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+          "code": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+        }
+      }
     }
-    .animate-fade-in-up {
-        animation: fadeInUp 0.6s ease-out forwards;
-    }
-    .delay-100 { animation-delay: 0.1s; }
-    .delay-200 { animation-delay: 0.2s; }
-    .delay-300 { animation-delay: 0.3s; }
-    
-    /* Make buttons bounce slightly on click */
-    button:active {
-        transform: scale(0.95);
-    }
-    
-    @keyframes spinBorder {
-        100% { transform: rotate(360deg); }
-    }
-    .animated-border-box {
-        position: relative;
-        overflow: hidden;
-    }
-    .animated-border-box::before {
-        content: '';
-        position: absolute;
-        top: -50%; left: -50%; width: 200%; height: 200%;
-        background: conic-gradient(transparent, transparent, transparent, #C59A3F);
-        animation: spinBorder 4s linear infinite;
-        z-index: 0;
-    }
-    .animated-border-box::after {
-        content: '';
-        position: absolute;
-        inset: 2px;
-        background: white;
-        border-radius: inherit;
-        z-index: 1;
-    }
-    .animated-border-box > div {
-        position: relative;
-        z-index: 2;
-    }
-
-    </style>
-    
-<style>
-/* Hide Google Translate Toolbar */
-.goog-te-banner-frame.skiptranslate { display: none !important; }
-body { top: 0px !important; }
-.goog-tooltip { display: none !important; }
-.goog-tooltip:hover { display: none !important; }
-.goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+  }
+</script><style id="theme-vars">
+  :root {
+    --color-surface-dim: #EFE9DE;
+    --color-on-primary: #ffffff;
+    --color-on-secondary-container: #79430b;
+    --color-outline: #717972;
+    --color-secondary-fixed: #ffdcc2;
+    --color-tertiary-fixed-dim: #ffb59d;
+    --color-on-secondary: #ffffff;
+    --color-on-primary-container: #0B291A;
+    --color-surface-container-low: #F5EFE6;
+    --color-on-secondary-fixed: #2e1500;
+    --color-secondary-fixed-dim: #ffb77a;
+    --color-surface-container-high: #eee7e0;
+    --color-inverse-on-surface: #f7efe9;
+    --color-accent-gold-container: #FDF7E7;
+    --color-secondary: #895119;
+    --color-primary-container: #E3EFE7;
+    --color-on-secondary-fixed-variant: #6d3a01;
+    --color-text-tertiary: #8C8375;
+    --color-border-strong: #C9BDAA;
+    --color-on-tertiary: #FFFFFF;
+    --color-primary: #00321c;
+    --color-secondary-container: #FBEEDE;
+    --color-on-tertiary-fixed-variant: #7d2c0e;
+    --color-warning: #B46808;
+    --color-surface-container-lowest: #ffffff;
+    --color-on-surface: #1e1b17;
+    --color-surface-bright: #FFFDF9;
+    --color-success: #1B7340;
+    --color-primary-fixed-dim: #a1d2b1;
+    --color-accent-gold: #C59A3F;
+    --color-on-primary-fixed: #002111;
+    --color-on-primary-fixed-variant: #224f37;
+    --color-tertiary: #531500;
+    --color-surface-container-highest: #D8CBB5;
+    --color-outline-variant: #c1c9c0;
+    --color-on-error-container: #93000a;
+    --color-on-tertiary-fixed: #390b00;
+    --color-primary-fixed: #bceecd;
+    --color-error: #BA1A1A;
+    --color-surface-variant: #e9e1db;
+    --color-on-surface-variant: #414943;
+    --color-border-subtle: #E3DACB;
+    --color-on-error: #ffffff;
+    --color-surface: #FAF7F2;
+    --color-tertiary-fixed: #ffdbd0;
+    --color-on-background: #1e1b17;
+    --color-on-tertiary-container: #451606;
+    --color-surface-container: #f4ede6;
+    --color-surface-tint: #3a684d;
+    --color-background: #fff8f3;
+    --color-text-primary: #24211D;
+    --color-text-secondary: #5C5449;
+    --color-inverse-surface: #33302c;
+    --color-error-container: #ffdad6;
+    --color-tertiary-container: #FDECE6;
+    --color-inverse-primary: #a1d2b1;
+  }
+  .dark {
+    --color-surface-dim: #071410;
+    --color-on-primary: #00321c;
+    --color-on-secondary-container: #79430b;
+    --color-outline: #717972;
+    --color-secondary-fixed: #ffdcc2;
+    --color-tertiary-fixed-dim: #ffb59d;
+    --color-on-secondary: #ffffff;
+    --color-on-primary-container: #bceecd;
+    --color-surface-container-low: #081712;
+    --color-on-secondary-fixed: #2e1500;
+    --color-secondary-fixed-dim: #ffb77a;
+    --color-surface-container-high: #11271f;
+    --color-inverse-on-surface: #f7efe9;
+    --color-accent-gold-container: #2f2408;
+    --color-secondary: #ffb77a;
+    --color-primary-container: #063d28;
+    --color-on-secondary-fixed-variant: #6d3a01;
+    --color-text-tertiary: #6b7b75;
+    --color-border-strong: #2a5948;
+    --color-on-tertiary: #FFFFFF;
+    --color-primary: #4edea3;
+    --color-secondary-container: #FBEEDE;
+    --color-on-tertiary-fixed-variant: #7d2c0e;
+    --color-warning: #B46808;
+    --color-surface-container-lowest: #050f0c;
+    --color-on-surface: #e1e3df;
+    --color-surface-bright: #0e221b;
+    --color-success: #3f9c68;
+    --color-primary-fixed-dim: #a1d2b1;
+    --color-accent-gold: #e8bd6d;
+    --color-on-primary-fixed: #002111;
+    --color-on-primary-fixed-variant: #224f37;
+    --color-tertiary: #531500;
+    --color-surface-container-highest: #163328;
+    --color-outline-variant: #c1c9c0;
+    --color-on-error-container: #93000a;
+    --color-on-tertiary-fixed: #390b00;
+    --color-primary-fixed: #bceecd;
+    --color-error: #ff6b6b;
+    --color-surface-variant: #e9e1db;
+    --color-on-surface-variant: #bfc9c2;
+    --color-border-subtle: #1c3d31;
+    --color-on-error: #ffffff;
+    --color-surface: #0a1814;
+    --color-tertiary-fixed: #ffdbd0;
+    --color-on-background: #1e1b17;
+    --color-on-tertiary-container: #451606;
+    --color-surface-container: #0c1f18;
+    --color-surface-tint: #3a684d;
+    --color-background: #050f0c;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #a0aab0;
+    --color-inverse-surface: #33302c;
+    --color-error-container: #ffdad6;
+    --color-tertiary-container: #FDECE6;
+    --color-inverse-primary: #a1d2b1;
+  }
 </style>
+</head><body class="bg-surface font-body-md text-on-surface antialiased">
+<div id="words-preloader" class="fixed inset-0 z-[1000] flex items-center justify-center pointer-events-none transform transition-transform duration-[1200ms] ease-[cubic-bezier(0.76,0,0.24,1)]" style="background: linear-gradient(to bottom, #FF671F 0%, #FF671F 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #046A38 66.66%, #046A38 100%);">
+    <h1 id="preloader-text" class="text-4xl md:text-5xl font-display font-bold text-black drop-shadow-md opacity-0 transition-opacity duration-150 text-center px-4">Hello</h1>
 
-</head>
-<body class="antialiased min-h-screen flex flex-col bg-[#FAF7F2] text-[#23201C]">
 
-<!-- ================= SPLASH SCREEN ================= -->
-<div id="splash-screen" class="fixed inset-0 z-[1000] bg-white flex flex-col items-center justify-center transition-opacity duration-1000">
-    <div id="splash-text-container" class="relative h-16 w-full flex items-center justify-center mb-10 overflow-hidden">
-        <h2 id="splash-text" class="text-4xl md:text-5xl font-serif font-bold text-[#163E2A] transition-all duration-300 transform translate-y-0 opacity-100">Namaste</h2>
-    </div>
+
+
+    <svg class="absolute top-[99%] left-0 w-full h-[15vh] fill-[#046A38] pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path id="preloader-curve" d="M0,0 L100,0 L100,0 Q50,0 0,0 Z" />
     
-    <div id="splash-flag" class="relative w-40 h-28 shadow-2xl flex flex-col overflow-hidden transition-all duration-[1200ms] ease-[cubic-bezier(0.85,0,0.15,1)]">
-        <div class="h-1/3 w-full bg-[#FF9933]"></div>
-        <div class="h-1/3 w-full bg-white flex items-center justify-center relative">
-            <svg id="splash-chakra" class="h-full py-1 text-[#000080] transition-opacity duration-500" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="50" cy="50" r="45"></circle>
-                <g class="origin-center animate-[spin_4s_linear_infinite]">
-                    <!-- 24 spokes -->
-                    <line x1="50" y1="50" x2="50" y2="5" />
-                    <line x1="50" y1="50" x2="50" y2="95" />
-                    <line x1="50" y1="50" x2="5" y2="50" />
-                    <line x1="50" y1="50" x2="95" y2="50" />
-                    <line x1="50" y1="50" x2="18" y2="18" />
-                    <line x1="50" y1="50" x2="82" y2="82" />
-                    <line x1="50" y1="50" x2="18" y2="82" />
-                    <line x1="50" y1="50" x2="82" y2="18" />
-                </g>
-            </svg>
-        </div>
-        <div class="h-1/3 w-full bg-[#138808]"></div>
-    </div>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Array of greetings in various regional languages
-    const greetings = ["नमस्ते", "নমস্কার", "வணக்கம்", "నమస్కారం", "നമസ്കാരം", "નમસ્તે", "नमस्कार", "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ", "Hello"];
-    const textEl = document.getElementById("splash-text");
-    const container = document.getElementById("splash-screen");
-    const flag = document.getElementById("splash-flag");
-    const chakra = document.getElementById("splash-chakra");
-    
-    let i = 0;
-    const interval = setInterval(() => {
-        textEl.style.opacity = "0";
-        textEl.style.transform = "translateY(-30px)";
-        
-        setTimeout(() => {
-            i++;
-            if (i >= greetings.length) {
-                clearInterval(interval);
-                textEl.style.display = "none";
-                
-                // Cinematic flag morph animation!
-                const rect = flag.getBoundingClientRect();
-                flag.style.position = "fixed";
-                flag.style.top = rect.top + "px";
-                flag.style.left = rect.left + "px";
-                flag.style.width = rect.width + "px";
-                flag.style.height = rect.height + "px";
-                flag.style.boxShadow = "none";
-                flag.offsetHeight; // reflow
-                
-                // Morph to a top border stretching across the screen
-                chakra.style.opacity = "0";
-                flag.style.top = "0";
-                flag.style.left = "0";
-                flag.style.width = "100vw";
-                flag.style.height = "6px";
-                flag.style.zIndex = "2000";
-                
-                // Fade out white background
-                container.style.backgroundColor = "transparent";
-                container.style.pointerEvents = "none";
-                
-                setTimeout(() => {
-                    container.style.opacity = "0";
-                    setTimeout(() => {
-                        container.style.display = "none";
-                        // Blend it to the upper orange white and green part as original
-                        flag.style.opacity = "0"; // Fades into the existing tiranga-stripe!
-                    }, 1000);
-                }, 1000);
-                
-                return;
-            }
-            textEl.textContent = greetings[i];
-            textEl.style.transform = "translateY(30px)";
-            textEl.offsetHeight; // reflow
-            textEl.style.opacity = "1";
-            textEl.style.transform = "translateY(0)";
-        }, 150);
-    }, 450); // Speed of language cycling
-});
-</script>
-<!-- ================= END SPLASH ================= -->
-
-<!-- ================= 1. TRICOLOR NATIONAL BAND ================= -->
-<div class="fixed top-0 left-0 right-0 z-50 tiranga-stripe"></div>
-<!-- ================= 2. TOP GOVERNMENT / MINISTRY BAR ================= -->
-<div class="gov-topbar fixed top-1 left-0 right-0 z-40 flex items-center justify-between">
-<!-- Official Emblem & Sovereignty Credentials -->
-<div class="flex items-center gap-4 flex-wrap">
-<div class="flex items-center gap-2">
-<!-- National Emblem Stylized Lion / Classical Seal -->
-<div class="w-5 h-5 flex items-center justify-center text-[#E5C158] font-serif font-bold text-xs bg-white/10 rounded border border-[#C59A3F]/30 shadow-xs">
-<span>🏛️</span>
-</div>
-<div class="flex items-center gap-1.5 font-sans font-semibold tracking-wide">
-<span class="text-white font-medium">भारत सरकार</span>
-<span class="text-[#8EAE9B]">|</span>
-<span class="text-[#E2ECE5]">Government of India</span>
-</div>
-</div>
-<span class="text-[#4E755F] hidden sm:inline">•</span>
-<div class="hidden md:flex items-center gap-2 text-[#D2E2D7]">
-<span class="font-medium text-[#F4D98C]">आयुष मंत्रालय • अखिल भारतीय आयुर्वेद संस्थान (AIIA)</span>
-<span class="text-[#4E755F]">|</span>
-<span class="text-[#E2ECE5]">Ministry of Ayush • CSIR-TKDL Directorate</span>
-</div>
-</div>
-<!-- Right: Official Portal Credentials & Interactive Language Switcher -->
-<div class="flex items-center gap-3">
-<!-- Cloudflare Edge Tunnel Indicator with breathing glow -->
-<div class="tunnel-pill hidden lg:inline-flex group cursor-pointer" title="Cloudflare Tunnel via start_live_online.bat">
-<span class="tunnel-dot"></span>
-<span class="text-[#C6EBD5] font-mono text-[11px] group-hover:text-white transition-colors">FastAPI Live • Cloudflare Tunnel Active</span>
-</div>
-<!-- National Web Portal Link -->
-<span class="text-[10px] font-mono text-[#A1BEAF] hidden xl:inline">PORTAL: AYUSH.GOV.IN/IP-SAKTI</span>
-<!-- Interactive Language Switcher (EN / HI) -->
-
-  <div class="lang-switcher" id="topLangSwitcher">
-  <button class="lang-btn active" onclick="switchLang('en')" type="button"><span class="hidden sm:inline">English</span><span class="sm:hidden font-mono text-[9px]">EN</span></button>
-  <button class="lang-btn" onclick="switchLang('hi')" type="button"><span class="hidden sm:inline">हिन्दी</span><span class="sm:hidden font-mono text-[9px]">HI</span></button>
-  <button class="lang-btn" onclick="switchLang('bn')" type="button"><span class="hidden sm:inline">বাংলা</span><span class="sm:hidden font-mono text-[9px]">BN</span></button>
+      </svg>
+      
   </div>
 
-</div>
-</div>
-<!-- ================= 3. LEFT NAVIGATION SIDEBAR ================= -->
-<aside id="main-sidebar" class="transform -translate-x-full lg:translate-x-0 transition-transform duration-300 fixed left-0 flex top-[60px] bottom-0 w-64 bg-[#FCFAF7] border-r border-[#E5DCCD] z-50 flex flex-col justify-between shadow-[2px_0_8px_rgba(40,30,15,0.03)]">
-<div class="flex flex-col">
-<!-- Sovereign Brand Header -->
-<div class="p-4 border-b border-[#E5DCCD] bg-gradient-to-b from-[#F5EFE6]/80 via-[#FCFAF7] to-[#FCFAF7]">
-<div class="flex items-center justify-between mb-2">
 
 
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-surface-container-high py-1 px-4 lg:px-margin hidden sm:block"><div class="max-w-[1360px] mx-auto flex items-center justify-between font-label-sm text-label-sm text-text-secondary"><div><span class="font-semibold text-primary">GOVERNMENT OF INDIA</span> <span class="text-border-strong mx-2">|</span> <span class="">Ministry of AYUSH</span> <span class="text-border-strong mx-2">|</span> <span class="">CSIR-TKDL Statutory Interface</span></div><div class="flex items-center gap-space-md"><span class="flex items-center gap-1 font-code text-code text-secondary font-semibold"><span class="material-symbols-outlined text-[14px]">verified</span> IP-SAKTI Platform</span><span class="text-border-strong">|</span><button class="hover:text-primary transition-colors flex items-center gap-1" onclick="alert('Screen reader mode activated. Use Tab and Arrow keys to navigate.')"><span class="material-symbols-outlined text-[14px]">accessibility_new</span> Screen Reader Access</button><span class="text-border-strong">|</span><div class="flex items-center gap-1"><button class="text-primary font-bold hover:underline" onclick="document.body.style.fontSize='14px'">A-</button><button class="hover:underline" onclick="document.body.style.fontSize='16px'">A</button><button class="text-primary font-bold hover:underline" onclick="document.body.style.fontSize='18px'">A+</button></div></div></div></div>
+<div class="h-14 sm:h-20 max-w-[1360px] mx-auto px-4 lg:px-margin flex items-center justify-between gap-2 sm:gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img onclick="window.location.href='/static/index.html'" style="cursor:pointer" alt="Brand logo. - Primary color: #0f3e36
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-sm
+" class="h-6 sm:h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wma2t8y-qpb7CyjPWkBM-Hek4qG14B4ddsx5hJ3ayOC2zcnYERZg_uNb5Xf7q_4RN9oWps1rWuDdmUCVu80lmxDdyYpaIwLyrCK3Sg094o3mwurlpYa9ofE6mMyetlIb8_dv4JCq6hlnUDDklofT3p8dk02b4VpOEbTwtvv2PmX4tsmTtM4EMWCz_XSZpZbzUxygMh5V_LA5WGWJh8iDB6Fht1NoQcOrJeBuhi5nKTqAcr0n7Nt_G4oQ"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">IP-SAKTI Sahayak</span><span class="font-label-sm text-label-sm text-text-secondary tracking-wide uppercase hidden sm:block">Sovereign Ayurvedic IP &amp; Regulatory Assistant</span></div></div><nav class="hidden xl:flex items-center gap-space-sm font-label-md text-label-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded"><a class="px-3 py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sovereign-portal-landing" href="#" onclick="alert('Access Restricted: Requires Sovereign Portal Authentication.')">Statutory Overview</a><a class="px-3 py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tkdl-and-patent-search" href="#" onclick="alert('Access Restricted: Requires Sovereign Portal Authentication.')">TKDL &amp; Patent Search (Public)</a><a class="px-3 py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="product-classification-guide" href="#" onclick="alert('Access Restricted: Requires Sovereign Portal Authentication.')">Product Classification Guide</a><a class="px-3 py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="gazette-bulletins" href="#" onclick="alert('Access Restricted: Requires Sovereign Portal Authentication.')">Gazette Bulletins</a><a class="px-3 py-2 text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="sih-finalist-showcase" href="#" onclick="window.location.href='/static/about.html'">About Us</a></nav><div class="flex items-center gap-1 sm:gap-space-sm shrink-0"><button class="xl:hidden p-2 rounded hover:bg-surface-container-high transition-colors" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')" aria-label="Menu">
+<span class="material-symbols-outlined text-[24px] text-on-surface">menu</span>
+</button><div id="clerk-mount-point" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-border-subtle bg-surface-container-high flex items-center justify-center text-text-secondary cursor-pointer hover:bg-surface-bright hover:shadow-xs transition-all" onclick="document.getElementById('national-auth-gateway').scrollIntoView({behavior:'smooth'})">
+    <span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+</div></div></div>
+<!-- Realtime Sovereign Network Pulse Ticker -->
+<div class="w-full bg-surface-container-low px-4 lg:px-10 py-2 overflow-x-auto hidden sm:block border-b border-border-subtle">
+<div class="max-w-[1360px] mx-auto flex items-center justify-between gap-4 font-label-md text-label-md">
+<div class="flex items-center gap-3 shrink-0">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<span class="font-bold tracking-wider text-primary uppercase text-label-sm">SOVEREIGN NETWORK PULSE</span>
+</div>
+<div class="flex items-center gap-6 overflow-hidden whitespace-nowrap text-on-surface-variant text-body-sm">
+<span class="flex items-center gap-1.5"><span class="text-primary font-semibold">18,420+</span> Shlokas Parsed Today</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1.5">CSIR-TKDL v2.4 Sync: <span class="text-primary font-semibold">NOMINAL (99.98%)</span></span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1.5">Gazette Rule 158-B Docketing: <span class="text-secondary font-semibold">ACTIVE</span></span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1.5">256-Bit Air-Gapped Sovereign Node: <span class="text-primary font-semibold">NIC MEITY VERIFIED</span></span>
+</div>
+<div class="hidden lg:flex items-center gap-2 shrink-0 text-label-sm text-secondary font-bold">
+<span class="material-symbols-outlined text-[16px]">lock</span> STATUTORY JURISDICTION: SEC 3(p) IPA 1970
+</div>
+</div>
 </div>
 
-  <button onclick="document.getElementById('main-sidebar').classList.toggle('-translate-x-full')" class="lg:hidden w-8 h-8 flex items-center justify-center rounded-md bg-[#1B4931]/20 hover:bg-[#1B4931]/40 border border-[#F3D580]/20 text-[#F3D580] transition-colors ml-2" type="button">
-    <span class="material-symbols-outlined text-[18px]">menu</span>
-  </button>
-  <div class="flex items-center gap-1 md:gap-2.5">
-
-<div class="w-9 h-9 rounded-lg bg-[#1B4931] text-white flex items-center justify-center shadow-sm shrink-0 border border-[#C59A3F]/50 group transition-transform hover:scale-105">
-<span class="material-symbols-outlined text-[20px] text-[#F3D580]">spa</span>
-</div>
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-1.5">
-<span class="font-serif text-[18px] font-bold tracking-tight text-[#163E2A] leading-tight">IP-SAKTI</span>
-<span class="text-[10px] font-bold font-sans text-[#8C531B] uppercase tracking-wider">Sahayak</span>
-</div>
-<span class="font-mono text-[10px] text-[#7A6F60] truncate" id="sideSubtitle">AYUSH Regulatory Jurist</span>
-</div>
-</div>
-<!-- Problem Statement details pill -->
-<div class="mt-3 p-2 bg-[#F3EFE6] rounded-lg border border-[#E2D7C5] flex items-center gap-2 hover:border-[#C59A3F]/60 transition-colors">
-<span class="material-symbols-outlined text-[16px] text-[#1B4931]">balance</span>
-<div class="flex flex-col min-w-0">
-<span class="text-[10px] font-bold text-[#163E2A] uppercase tracking-wide">PS ID: AC-001</span>
-<span class="text-[10px] text-[#7A6F60] truncate">Open Innovation • MedTech / AYUSH</span>
-</div>
-</div>
-</div>
-<!-- Navigation Links -->
-<nav class="p-3 flex flex-col gap-1 overflow-y-auto">
-<div class="px-3 pt-2 pb-1.5 text-[10px] font-bold tracking-wider text-[#8E8373] uppercase" id="navStatutoryTitle">Statutory Jurisdictions</div>
-<!-- Active Formulation Dossier Link -->
-<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#1B4931] text-white font-semibold text-xs shadow-sm border-l-4 border-[#C59A3F] transition-all hover:translate-x-1" href="#" onclick="openModal('statuteModal'); return false;">
-<span class="material-symbols-outlined text-[18px] text-[#F3D580]">folder_special</span>
-<span id="navDossiers">Formulation Dossiers</span>
-<span class="ml-auto text-[9px] font-mono bg-[#C59A3F]/25 text-[#FDF7E7] px-1.5 py-0.5 rounded border border-[#C59A3F]/40">Active</span>
-</a>
-<!-- Modal trigger nav items -->
-<button class="w-full text-left flex items-center gap-3 px-3 py-2 rounded-lg text-[#554C40] hover:text-[#163E2A] hover:bg-[#F2ECE0] font-medium text-xs transition-all hover:translate-x-1" onclick="openModal('tkdlModal')" type="button">
-<span class="material-symbols-outlined text-[18px] text-[#B46808]">auto_stories</span>
-<span id="navTkdl">TKDL Citation Search</span>
-<span class="ml-auto text-[9px] font-mono text-[#8E8373]">⌘K</span>
-</button>
-<button class="w-full text-left flex items-center gap-3 px-3 py-2 rounded-lg text-[#554C40] hover:text-[#163E2A] hover:bg-[#F2ECE0] font-medium text-xs transition-all hover:translate-x-1" onclick="openModal('statuteModal')" type="button">
-<span class="material-symbols-outlined text-[18px] text-[#7A6F60]">gavel</span>
-<span id="navStatute">Statute Library (D&amp;C 1940)</span>
-</button>
-<button class="w-full text-left flex items-center gap-3 px-3 py-2 rounded-lg text-[#554C40] hover:text-[#163E2A] hover:bg-[#F2ECE0] font-medium text-xs transition-all hover:translate-x-1" onclick="openModal('facilitatorModal')" type="button">
-<span class="material-symbols-outlined text-[18px] text-[#1B7340]">assignment_turned_in</span>
-<span id="navFacilitator">Facilitator Review Brief</span>
-<span class="ml-auto text-[9px] font-mono text-[#1B4931] bg-[#E8F2EC] px-1 rounded border border-[#C6DDD0]">158-B</span>
-</button>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#554C40] hover:text-[#163E2A] hover:bg-[#F2ECE0] font-medium text-xs transition-all hover:translate-x-1" href="#" onclick="openModal('statuteModal'); return false;">
-<span class="material-symbols-outlined text-[18px] text-[#8E8373]">security</span>
-<span>Patent Matrix (Sec 3(p))</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#554C40] hover:text-[#163E2A] hover:bg-[#F2ECE0] font-medium text-xs transition-all hover:translate-x-1" href="#" onclick="openModal('statuteModal'); return false;">
-<span class="material-symbols-outlined text-[18px] text-[#8E8373]">biotech</span>
-<span>Schedule T GMP &amp; Toxicity</span>
-</a>
-<div class="px-3 pt-3 pb-1.5 text-[10px] font-bold tracking-wider text-[#8E8373] uppercase">National Statutory Desks</div>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#554C40] hover:text-[#163E2A] hover:bg-[#F2ECE0] font-medium text-xs transition-all hover:translate-x-1" href="#" onclick="openModal('statuteModal'); return false;">
-<span class="material-symbols-outlined text-[18px] text-[#8E8373]">domain</span>
-<span>CDSCO &amp; State SLA Portal</span>
-</a>
-<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#554C40] hover:text-[#163E2A] hover:bg-[#F2ECE0] font-medium text-xs transition-all hover:translate-x-1" href="#" onclick="openModal('statuteModal'); return false;">
-<span class="material-symbols-outlined text-[18px] text-[#1B7340]">eco</span>
-<span>National Biodiversity (NBA)</span>
-</a>
+</header>
+<div id="mobile-nav" class="hidden fixed top-14 sm:top-32 left-0 right-0 z-40 bg-surface/98 backdrop-blur-lg border-b border-border-subtle shadow-lg xl:hidden">
+<nav class="flex flex-col p-4 gap-1">
+<a class="px-4 py-3 rounded text-on-surface hover:bg-surface-container-high transition-all font-label-md text-label-md font-medium" href="#" onclick="alert('Access Restricted: Requires Sovereign Portal Authentication.'); document.getElementById('mobile-nav').classList.add('hidden')">Statutory Overview</a>
+<a class="px-4 py-3 rounded text-on-surface hover:bg-surface-container-high transition-all font-label-md text-label-md font-medium" href="#" onclick="alert('Access Restricted: Requires Sovereign Portal Authentication.'); document.getElementById('mobile-nav').classList.add('hidden')">TKDL &amp; Patent Search</a>
+<a class="px-4 py-3 rounded text-on-surface hover:bg-surface-container-high transition-all font-label-md text-label-md font-medium" href="#" onclick="alert('Access Restricted: Requires Sovereign Portal Authentication.'); document.getElementById('mobile-nav').classList.add('hidden')">Product Classification</a>
+<a class="px-4 py-3 rounded text-on-surface hover:bg-surface-container-high transition-all font-label-md text-label-md font-medium" href="#" onclick="alert('Access Restricted: Requires Sovereign Portal Authentication.'); document.getElementById('mobile-nav').classList.add('hidden')">Gazette Bulletins</a>
+<a class="px-4 py-3 rounded text-on-surface hover:bg-surface-container-high transition-all font-label-md text-label-md font-medium" href="/static/about.html" onclick="document.getElementById('mobile-nav').classList.add('hidden')">About Us</a>
+<div class="border-t border-border-subtle my-2"></div>
+<a class="px-4 py-3 rounded bg-primary text-on-primary font-label-md text-label-md font-bold text-center" href="/static/hub.html">Guest Demo Access</a>
 </nav>
 </div>
-<!-- Sidebar Team & Version Footer -->
-<div class="p-3 border-t border-[#E5DCCD] bg-[#F5EFE6]/60">
-<div class="p-3 rounded-lg bg-white border border-[#E5DCCD] shadow-xs flex flex-col gap-1.5">
-<div class="flex items-center justify-between">
-<span class="text-[10px] font-bold uppercase tracking-wider text-[#163E2A] flex items-center gap-1.5">
-<span class="w-2 h-2 rounded-full bg-[#1B7340]"></span>
-          Astra Coders
-        </span>
-<span class="font-mono text-[9px] font-bold text-[#743E0C] bg-[#FDF7E7] px-1.5 py-0.5 rounded border border-[#E8C87A]">Grand Finale</span>
-</div>
-<p class="text-[11px] text-[#7A6F60] leading-snug">Sovereign AYUSH Legal Stack</p>
-<div class="flex items-center justify-between text-[10px] pt-1.5 border-t border-[#F0E8DC] font-mono text-[#8E8373]">
-<span>FastAPI v4.2</span>
-<span class="text-[#1B7340] font-semibold">SSL Edge Synced</span>
-</div>
-</div>
-</div>
-</aside>
-<!-- ================= 4. MAIN WORKSPACE CONTAINER ================= -->
-<div class="pl-0 lg:pl-64 flex flex-col min-h-screen pt-[75px] bg-[#FAF7F2]">
-<!-- Sub-Header / Action Utilities -->
-
-<!-- Live Statutory Strip -->
-<div class="h-10 bg-[#F4EFE5] border-b border-[#E5DCCD] px-8 flex items-center justify-between text-xs text-[#554C40]">
-<div class="flex items-center gap-5">
-<div class="flex items-center gap-2">
-<span class="text-[10px] font-bold text-[#7A6F60] uppercase tracking-wider">Governing Act:</span>
-<span class="font-semibold text-[#163E2A]">Drugs &amp; Cosmetics Act 1940 (Sec 33EEB / Sched E1 &amp; T)</span>
-</div>
-<span class="text-[#D9CEBD]">•</span>
-<div class="flex items-center gap-2">
-<span class="text-[10px] font-bold text-[#7A6F60] uppercase tracking-wider">TKDL Shloka Corpus:</span>
-<span class="font-mono font-bold text-[#743E0C] bg-[#FDF7E7] px-1.5 py-0.5 rounded border border-[#E2CE9F]">542,108 Shlokas Indexed</span>
-</div>
-<span class="text-[#D9CEBD] hidden md:inline">•</span>
-<div class="hidden md:flex items-center gap-1.5 text-[#554C40]">
-<span class="text-[10px] font-bold text-[#7A6F60] uppercase tracking-wider">Backend Service:</span>
-<span class="font-mono text-[#1B7340] font-semibold flex items-center gap-1">
-<span class="w-1.5 h-1.5 rounded-full bg-[#1B7340] animate-pulse"></span>
-  FastAPI Live Tunnel
-</span>
-</div>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[15px] text-[#1B7340]">lock</span>
-<span class="text-[11px] font-medium text-[#4A4135]">ISO-27001 • Sovereign SHA-256 Seal</span>
-</div>
-</div>
-<!-- Main Regulatory Dossier Content -->
-<main class="flex-1 p-3 sm:p-4 md:p-8 space-y-4 md:space-y-6 max-w-[1720px] w-full mx-auto overflow-x-hidden">
-<!-- ================= HERO DOCKET BAR ================= -->
-<section class="bg-white rounded-xl opacity-0 animate-fade-in-up delay-100 border border-[#E5DCCD] shadow-[0_2px_12px_-3px_rgba(40,30,15,0.06)] p-6 relative overflow-hidden interactive-card animated-border-box">
-
-<div class="relative z-10 w-full h-full"><div class="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-5">
-<!-- Left: Dossier Identity -->
-<div class="flex items-start gap-4 min-w-0">
-<div class="w-13 h-13 p-2.5 rounded-xl bg-[#1B4931] text-white flex items-center justify-center shrink-0 shadow-md border-2 border-[#C59A3F] mt-0.5 group transition-transform hover:rotate-3">
-<span class="material-symbols-outlined text-[28px] text-[#F3D580]">balance</span>
-</div>
-<div class="flex flex-col min-w-0">
-<div class="flex flex-wrap items-center gap-2 mb-1.5">
-<span class="font-mono text-xs font-bold text-white px-2.5 py-0.5 rounded bg-[#163E2A] border border-[#235F40]">DOCKET #AY-2025-098</span>
-<span class="font-mono text-xs font-bold text-[#743E0C] px-2.5 py-0.5 rounded bg-[#FDF7E7] border border-[#E2CE9F]">Astra Coders PROBLEM STATEMENT: AC-001</span>
-<span class="text-xs font-semibold text-[#5A5042]">Form 25-D Statutory Dossier</span>
-<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#E8F2EC] text-[#1B4931] border border-[#C6DDD0] text-xs font-medium">
-<span class="w-1.5 h-1.5 rounded-full bg-[#1B7340]"></span>
-                Gazette Active: Vol. 42 / 2024
-              </span>
-</div>
-<h1 class="font-serif text-2xl lg:text-3xl font-bold text-[#163E2A] tracking-tight">
-              Amrita-Triphala Plus™ <span class="font-sans text-base font-semibold text-[#7A6F60] font-normal" id="heroSubtitle">(P&amp;P Medicine Sec 3(h))</span>
-</h1>
-</div>
-</div>
-<!-- Right: Key Metrics & Primary CTAs with Shimmer -->
-<div class="flex flex-wrap items-center gap-3 w-full xl:w-auto justify-start xl:justify-end">
-<div class="badge-bounce flex items-center gap-2.5 px-3.5 py-2 rounded-lg bg-[#F9F6F0] border border-[#E5DCCD] cursor-default">
-<span class="material-symbols-outlined text-[#1B7340] text-[20px]">verified</span>
-<div class="flex flex-col">
-<span class="text-[10px] uppercase font-bold tracking-wider text-[#7A6F60] leading-none">Defensibility</span>
-<span class="font-mono text-xs font-bold text-[#163E2A] mt-1">84 / 100 • HIGH</span>
-</div>
-</div>
-<div class="badge-bounce flex items-center gap-2.5 px-3.5 py-2 rounded-lg bg-[#F9F6F0] border border-[#E5DCCD] cursor-default">
-<span class="material-symbols-outlined text-[#7A6F60] text-[20px]">schedule</span>
-<div class="flex flex-col">
-<span class="text-[10px] uppercase font-bold tracking-wider text-[#7A6F60] leading-none">SLA Timeline</span>
-<span class="font-mono text-xs font-bold text-[#554C40] mt-1">90 - 120 Days</span>
-</div>
-</div>
-<div class="flex flex-wrap items-center gap-2 ml-1">
-<button class="btn-shimmer px-3.5 py-2 rounded-lg bg-white border border-[#D9CEBD] text-[#4A4135] text-xs font-semibold hover:bg-[#F5EFE6] hover:text-[#163E2A] hover:border-[#C59A3F] transition-all transform hover:-translate-y-0.5 flex items-center gap-1.5 shadow-sm" onclick="openModal('facilitatorModal')" type="button">
-<span class="material-symbols-outlined text-[16px] text-[#1B7340]">description</span>
-<span>Draft Form 25-D</span>
-</button>
-<button class="btn-shimmer px-3.5 py-2 rounded-lg bg-[#1B4931] text-white text-xs font-semibold hover:bg-[#163E2A] transition-all transform hover:-translate-y-0.5 flex items-center gap-1.5 shadow-sm border border-[#235F40]" onclick="openModal('tkdlModal')" type="button">
-<span class="material-symbols-outlined text-[16px] text-[#F3D580]">travel_explore</span>
-<span>Simulate Prior Art (TKDL)</span>
-</button>
-<button class="btn-shimmer px-4 py-2 rounded-lg bg-gradient-to-r from-[#8C531B] via-[#A86420] to-[#743E0C] text-white text-xs font-bold hover:brightness-110 transition-all transform hover:-translate-y-0.5 flex items-center gap-1.5 shadow-sm border border-[#6D3D0A]/30" onclick="openModal('statuteModal')" type="button">
-<span class="material-symbols-outlined text-[17px] text-[#FDF7E7]">picture_as_pdf</span>
-<span>Statutory Corpus &amp; Dossier</span>
-</button>
-</div>
-</div>
-</div></div>
-</section>
-<!-- ================= WORKBENCH 2-ZONE GRID ================= -->
-<div class="workbench-grid">
-<!-- ================= LEFT WORKBENCH (5 COLS) ================= -->
-<div class="xl:col-span-5 space-y-6">
-<!-- 1. Botanical Composition Matrix with Row Slide Hover -->
-<div class="bg-white rounded-xl border border-[#E5DCCD] shadow-[0_2px_10px_-2px_rgba(40,30,15,0.05)] p-6 interactive-card">
-<div class="flex items-center justify-between pb-4 border-b border-[#E5DCCD] mb-4">
-<div class="flex items-center gap-1 md:gap-2.5">
-<div class="w-8 h-8 rounded-lg bg-[#E8F2EC] text-[#1B7340] flex items-center justify-center border border-[#C6DDD0]">
-<span class="material-symbols-outlined text-[18px]">local_florist</span>
-</div>
-<div>
-<h2 class="font-serif text-lg font-bold text-[#163E2A]">Botanical Composition Matrix</h2>
-<p class="text-xs text-[#7A6F60]">Indexed against AFI-Part I &amp; Ayurvedic Pharmacopoeia of India (API)</p>
-</div>
-</div>
-<span class="badge-bounce font-mono text-xs font-semibold px-2.5 py-1 rounded-full bg-[#FDF7E7] text-[#743E0C] border border-[#E2CE9F]">
-              4 Actives + Carrier
-            </span>
-</div>
-<div class="overflow-x-auto">
-<table class="w-full text-left text-xs matrix-table">
-<thead>
-<tr>
-<th>Constituent / Botanical</th>
-<th class="font-mono">Ratio / Dose</th>
-<th class="font-mono">Monograph</th>
-<th class="text-right">Status</th>
-</tr>
-</thead>
-<tbody>
-<tr class="matrix-row">
-<td>
-<span class="font-semibold text-[#163E2A] block">Phyllanthus emblica <span class="text-[#8C531B] font-normal text-[11px] font-sans">(Amalaki)</span></span>
-<span class="text-[11px] text-[#7A6F60] italic">Dried fruit pericarp</span>
-</td>
-<td class="font-mono text-[#4A4135]">33.3% (1:1:1)</td>
-<td class="font-mono text-[#7A6F60]">AFI-I, p. 48</td>
-<td class="text-right">
-<span class="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-[#E8F2EC] text-[#1B4931] border border-[#C6DDD0]">Classical Monograph</span>
-</td>
-</tr>
-<tr class="matrix-row">
-<td>
-<span class="font-semibold text-[#163E2A] block">Terminalia chebula <span class="text-[#8C531B] font-normal text-[11px] font-sans">(Haritaki)</span></span>
-<span class="text-[11px] text-[#7A6F60] italic">Dried fruit pericarp</span>
-</td>
-<td class="font-mono text-[#4A4135]">33.3% (1:1:1)</td>
-<td class="font-mono text-[#7A6F60]">AFI-I, p. 48</td>
-<td class="text-right">
-<span class="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-[#E8F2EC] text-[#1B4931] border border-[#C6DDD0]">Classical Monograph</span>
-</td>
-</tr>
-<tr class="matrix-row">
-<td>
-<span class="font-semibold text-[#163E2A] block">Terminalia bellirica <span class="text-[#8C531B] font-normal text-[11px] font-sans">(Bibhitaki)</span></span>
-<span class="text-[11px] text-[#7A6F60] italic">Dried fruit pericarp</span>
-</td>
-<td class="font-mono text-[#4A4135]">33.3% (1:1:1)</td>
-<td class="font-mono text-[#7A6F60]">AFI-I, p. 48</td>
-<td class="text-right">
-<span class="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-[#E8F2EC] text-[#1B4931] border border-[#C6DDD0]">Classical Monograph</span>
-</td>
-</tr>
-<tr class="matrix-row bg-[#FDF7E7]/60">
-<td>
-<span class="font-semibold text-[#163E2A] block">Piperine Isolate (&gt;95%) <span class="text-[#8C531B] font-normal text-[11px] font-sans">(Maricha/Pippali)</span></span>
-<span class="text-[11px] text-[#7A6F60] italic">Piper nigrum alkaloid</span>
-</td>
-<td class="font-mono font-bold text-[#8C531B]">5.0 mg / dose</td>
-<td class="font-mono text-[#7A6F60]">API-Vol IV</td>
-<td class="text-right">
-<span class="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-[#FBEEDE] text-[#743E0C] border border-[#E7C5A3]">Novel Bio-enhancer</span>
-</td>
-</tr>
-<tr class="matrix-row bg-[#F6EFE5]/40">
-<td>
-<span class="font-semibold text-[#163E2A] block">SNEDDS Lipid Carrier</span>
-<span class="text-[11px] text-[#7A6F60] italic">MCT + Phospholipon 90G</span>
-</td>
-<td class="font-mono font-bold text-[#163E2A]">Carrier Matrix</td>
-<td class="font-mono text-[#7A6F60]">IP 2022 Add.</td>
-<td class="text-right">
-<span class="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-[#EAE2D2] text-[#4A4135] border border-[#D9CEBD]">Carrier Matrix</span>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="mt-4 pt-3.5 border-t border-[#E5DCCD] flex items-center justify-between text-xs text-[#7A6F60]">
-<span>Bioavailability Enhancement: <strong class="text-[#163E2A] font-semibold font-mono">3.8x Plasma AUC</strong></span>
-<span class="font-mono text-[11px] text-[#1B7340] font-semibold">Sourcing: Western Ghats (KA-MH)</span>
-</div>
-</div>
-<!-- 2. Shloka & Prior Art Concordance Card -->
-<div class="concordance-card p-6 shadow-sm">
-<div class="flex items-center justify-between pb-4 border-b border-[#E5DCCD] mb-4">
-<div class="flex items-center gap-1 md:gap-2.5">
-<div class="w-8 h-8 rounded-lg bg-[#FDF7E7] text-[#8C531B] flex items-center justify-center border border-[#E2CE9F]">
-<span class="material-symbols-outlined text-[18px]">history_edu</span>
-</div>
-<div>
-<h2 class="font-serif text-lg font-bold text-[#163E2A]">TKDL Shloka &amp; Patent Concordance</h2>
-<p class="text-xs text-[#7A6F60]">CSIR-TKDL &amp; Ayush Corpus vs Indian Patent Office (IPO) Claims</p>
-</div>
-</div>
-<span class="badge-bounce font-mono text-[11px] font-semibold px-2.5 py-1 rounded-full bg-[#FDF7E7] text-[#743E0C] border border-[#E2CE9F]">
-              Section 3(p) Scan
-            </span>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-<!-- Classical Shastra Column with Sacred Glow Bhojpatra -->
-<div class="p-4 rounded-lg bg-[#FAF7F2] border border-[#E5DCCD] flex flex-col justify-between hover:border-[#C59A3F]/50 transition-colors">
-<div>
-<div class="flex items-center justify-between mb-2.5">
-<span class="font-mono text-[10px] font-bold uppercase tracking-wider text-[#7A6F60]">Charaka Samhita 1:1</span>
-<span class="badge-bounce font-mono text-[10px] text-[#743E0C] bg-[#FDF7E7] px-2 py-0.5 rounded border border-[#E2CE9F] font-semibold">TKDL: JA02/114B</span>
-</div>
-<div class="p-3 shloka-parchment rounded mb-3 shadow-xs">
-<div class="text-[10px] font-mono text-[#8C531B] uppercase tracking-wider flex items-center gap-1 mb-1">
-<span class="material-symbols-outlined text-[13px] text-[#C59A3F]">eco</span>
-<span class="font-bold">प्रामाणिक चरक संहिता सूत्र</span>
-</div>
-<p class="font-serif text-sm text-[#3E240C] leading-relaxed font-semibold italic">
-                    “हरीतकी बिभीतकी चैवामलकी तथा। समभागेन संयोज्य त्रिफला रसायनं स्मृतम्॥”
-                  </p>
-</div>
-<p class="text-xs text-[#554C40] leading-relaxed" id="shlokaDesc">
-                  Equipart Haritaki, Bibhitaki, and Amalaki constitute canonical Triphala Rasayana for metabolic equilibrium.
-                </p>
-</div>
-<div class="mt-4 pt-2.5 border-t border-[#E5DCCD] flex items-center justify-between">
-<span class="text-[11px] font-bold text-[#1B7340] flex items-center gap-1">
-<span class="w-1.5 h-1.5 rounded-full bg-[#1B7340]"></span>
-  Public Domain Baseline
-</span>
-<span class="text-[10px] font-mono text-[#7A6F60]">Sec 3(p) Restricted</span>
-</div>
-</div>
-<!-- Patent Claim Scope Column -->
-<div class="p-4 rounded-lg bg-[#FAF7F2] border border-[#E5DCCD] flex flex-col justify-between hover:border-[#C59A3F]/50 transition-colors">
-<div>
-<div class="flex items-center justify-between mb-2.5">
-<span class="font-mono text-[10px] font-bold uppercase tracking-wider text-[#7A6F60]">Claim Scope Navigated</span>
-<span class="badge-bounce font-mono text-[10px] text-[#163E2A] bg-white px-2 py-0.5 rounded border border-[#E5DCCD] font-semibold">IPO Claims 1–4</span>
-</div>
-<div class="space-y-2 text-xs">
-<p class="text-[#4A4135] leading-relaxed">
-<strong class="text-[#163E2A] font-semibold">Statutory Bar:</strong> Section 3(p) bars patenting Triphala + piperine as traditional knowledge aggregation.
-                  </p>
-<p class="text-[#4A4135] leading-relaxed">
-<strong class="text-[#8C531B] font-semibold">Approved Scope:</strong> Strictly limited to self-nanoemulsifying lipid carrier matrix with &lt;80nm droplet size.
-                  </p>
-</div>
-</div>
-<div class="mt-4 pt-2.5 border-t border-[#E5DCCD] flex items-center justify-between">
-<span class="text-[11px] font-semibold text-[#163E2A]">IPO Status: Examination</span>
-<button class="text-[10px] font-mono text-[#8C531B] font-bold hover:underline hover:text-[#743E0C] transition-colors" onclick="openModal('tkdlModal')" type="button">Launch TKDL View →</button>
-</div>
-</div>
-</div>
-</div>
-<!-- 3. Formulation Counsel Terminal (Interactive AI Engine) -->
-<div class="bg-white rounded-xl border border-[#E5DCCD] shadow-sm p-6 interactive-card">
-<div class="flex items-center justify-between pb-3 border-b border-[#E5DCCD] mb-3">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[20px] text-[#8C531B]">smart_toy</span>
-<h2 class="font-serif text-base font-bold text-[#163E2A]">Formulation Counsel Terminal (AI Engine)</h2>
-</div>
-<span class="badge-bounce font-mono text-[11px] font-semibold px-2 py-0.5 rounded bg-[#FDF7E7] text-[#743E0C] border border-[#E2CE9F]">
-              Rule Engine 4.2 Live
-            </span>
-</div>
-<div class="p-3.5 rounded-lg bg-[#FAF7F2] border border-[#E5DCCD] mb-3 text-xs leading-relaxed flex items-start gap-3">
-<span class="material-symbols-outlined text-[#8C531B] text-[18px] shrink-0 mt-0.5 animate-pulse">psychology</span>
-<div>
-<span class="font-semibold text-[#163E2A] block mb-0.5">Extraction Verified (Docket #AY-2025-098 • PS: AC-001):</span>
-<p class="text-[#62584C]">Triphala Churna base (AFI-I) detected + novel additive (Piperine &gt;95%) + lipid matrix. D&amp;C 1940 Rule 158-B and BDA 2002 gates triggered.</p>
-</div>
-</div>
-<div class="terminal-input-wrap relative flex items-center bg-[#FAF7F2] rounded-lg p-1 border border-[#E5DCCD]">
-<input class="w-full bg-transparent px-3 py-2 text-[#23201C] font-sans text-xs focus:outline-none placeholder:text-[#8E8373]" id="product-name" placeholder="Enter Product Name or Query..." type="text" value="Amrita-Triphala Plus"/> <input type="hidden" id="ingredients-input" value="Triphala, Piperine"/>
-<span class="typing-cursor"></span>
-<button id="btn-run" onclick="handleRunAssessment()" class="terminal-send-btn w-8 h-8 rounded bg-[#1B4931] text-white flex items-center justify-center shrink-0 hover:bg-[#163E2A] transition ml-1 shadow-sm border border-[#235F40]" type="button">
-<span class="material-symbols-outlined text-[16px] text-[#F3D580]">send</span>
-</button>
-</div>
-<div class="flex flex-wrap gap-1.5 mt-3">
-<button class="px-2.5 py-1 rounded bg-[#F5EFE6] border border-[#D9CEBD] text-[11px] font-medium text-[#554C40] hover:text-[#163E2A] hover:border-[#C59A3F] hover:bg-[#FDF7E7] transition-all transform hover:-translate-y-0.5" onclick="openModal('statuteModal')" type="button">Section 3(h) Eligibility</button>
-<button class="px-2.5 py-1 rounded bg-[#F5EFE6] border border-[#D9CEBD] text-[11px] font-medium text-[#554C40] hover:text-[#163E2A] hover:border-[#C59A3F] hover:bg-[#FDF7E7] transition-all transform hover:-translate-y-0.5" onclick="openModal('facilitatorModal')" type="button">Rule 158-B Checklist</button>
-<button class="px-2.5 py-1 rounded bg-[#F5EFE6] border border-[#D9CEBD] text-[11px] font-medium text-[#554C40] hover:text-[#163E2A] hover:border-[#C59A3F] hover:bg-[#FDF7E7] transition-all transform hover:-translate-y-0.5" onclick="openModal('statuteModal')" type="button">Schedule E1 Toxicity Limits</button>
-</div>
-</div>
-</div>
-<!-- ================= RIGHT WORKBENCH (7 COLS) ================= -->
-<div class="xl:col-span-7 space-y-6">
-<!-- 1. Deterministic Statutory Ruling Card -->
-<div class="bg-white rounded-xl border border-[#E5DCCD] shadow-sm p-6 interactive-card">
-<div class="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-[#E5DCCD] mb-4">
-<div class="flex items-center gap-2">
-<span class="px-2.5 py-0.5 rounded bg-[#163E2A] text-white font-mono text-[11px] font-semibold tracking-wider uppercase border border-[#235F40]">
-                Statutory Determination
-              </span>
-<span class="font-mono text-xs text-[#7A6F60]">Authority: SLA / Central CoC</span>
-</div>
-<span class="font-mono text-xs font-semibold text-[#554C40] bg-[#F5EFE6] px-2.5 py-0.5 rounded border border-[#D9CEBD]">
-              Governing Act: D&amp;C Act 1940
-            </span>
-</div>
-<h2 class="font-serif text-2xl font-bold text-[#163E2A] tracking-tight mb-1.5" id="rulingHeading">
-            Patent &amp; Proprietary (P&amp;P) Ayurvedic Medicine (Sec 3(h))
-          </h2>
-<p class="text-xs text-[#62584C] leading-relaxed mb-4 font-body-serif" id="rulingDesc">
-            Statutory categorization requires Form 25-D licensure backed by Rule 158-B safety, toxicological, and pilot clinical proof-of-effectiveness dossier.
-          </p>
-<!-- Warning Notice -->
-<div class="p-4 rounded-lg bg-[#FDF7E7] border-l-4 border-[#8C531B] border-y border-r border-[#E8C87A] mb-5 transition-all hover:bg-[#FDF5E1]">
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-[#8C531B] text-[22px] shrink-0 mt-0.5">warning</span>
-<div>
-<span class="font-sans text-xs font-bold text-[#5C320A] tracking-wide uppercase block">Classical Shastra Exemption (Sec 3(a)) Barred</span>
-<p class="text-xs text-[#5C320A]/90 leading-relaxed mt-1 font-body-serif">
-                  Formulation incorporates an isolated botanical alkaloid (<strong class="font-semibold text-[#451606]">Piperine &gt;95%</strong>) and an engineered lipid nano-carrier matrix. It deviates from First Schedule classical texts, invalidating manufacturing exemptions under Section 3(a).
-                </p>
-</div>
-</div>
-</div>
-<!-- Metric Triad -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-<div class="p-3.5 rounded-lg bg-[#FAF7F2] border border-[#E5DCCD] hover:border-[#C59A3F] transition-all transform hover:-translate-y-0.5">
-<span class="text-[10px] uppercase font-bold tracking-wider text-[#7A6F60] block mb-1">Licensing Route</span>
-<span class="font-mono text-base font-bold text-[#163E2A] block">Rule 158-B</span>
-<span class="text-[11px] text-[#7A6F60] mt-0.5 block">Safety &amp; Efficacy Dossier</span>
-</div>
-<div class="p-3.5 rounded-lg bg-[#FDF7E7] border border-[#E2CE9F] hover:border-[#8C531B] transition-all transform hover:-translate-y-0.5">
-<span class="text-[10px] uppercase font-bold tracking-wider text-[#7A6F60] block mb-1">Patent Section</span>
-<span class="font-mono text-base font-bold text-[#8C531B] block">Sec 3(p) Bar</span>
-<span class="text-[11px] text-[#7A6F60] mt-0.5 block">TKDL Restriction Applied</span>
-</div>
-<div class="p-3.5 rounded-lg bg-[#FAF7F2] border border-[#E5DCCD] hover:border-[#C59A3F] transition-all transform hover:-translate-y-0.5">
-<span class="text-[10px] uppercase font-bold tracking-wider text-[#7A6F60] block mb-1">Statutory Fee</span>
-<span class="font-mono text-base font-bold text-[#163E2A] block">₹15,000</span>
-<span class="text-[11px] text-[#7A6F60] mt-0.5 block">State Ayush Licensing</span>
-</div>
-</div>
-</div>
-<!-- 2. Evidence Strength & Biodiversity Gate -->
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-<!-- Defensibility Gauge with Animated Circular SVG and Pulsing Radar Aura -->
-<div class="bg-white rounded-xl border border-[#E5DCCD] shadow-sm p-6 flex flex-col justify-between interactive-card">
-<div>
-<div class="flex items-center justify-between pb-3 border-b border-[#E5DCCD] mb-4">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[20px] text-[#1B7340]">speed</span>
-<h3 class="font-serif text-base font-bold text-[#163E2A]">Evidence Strength</h3>
-</div>
-<span class="badge-bounce font-mono text-[11px] font-semibold px-2 py-0.5 rounded bg-[#FDF7E7] text-[#743E0C] border border-[#E2CE9F]">
-                  Defensibility
-                </span>
-</div>
-<!-- Gauge & Score with Animated SVG Dash-Offset and Radar Ring -->
-<div class="flex items-center gap-5 my-3">
-<div class="relative w-24 h-24 shrink-0 flex items-center justify-center">
-<!-- Pulsing ambient glow aura -->
-<div class="radar-aura absolute inset-0 rounded-full bg-[#1B7340]/20 blur-md pointer-events-none"></div>
-<svg class="w-full h-full transform -rotate-90 relative z-10" viewbox="0 0 120 120">
-<circle class="text-[#EFE7DA]" cx="60" cy="60" fill="transparent" r="50" stroke="currentColor" stroke-width="9"></circle>
-<circle id="stitch-score-gauge" class="gauge-circle text-[#1B7340]" cx="60" cy="60" fill="transparent" r="50" stroke="currentColor" stroke-linecap="round" stroke-width="9"></circle>
-</svg>
-<div class="absolute flex flex-col items-center justify-center z-20">
-<span id="stitch-score-num" class="font-serif text-2xl font-bold text-[#163E2A] leading-none">84</span>
-<span class="font-mono text-[10px] text-[#7A6F60] mt-0.5">/ 100</span>
-</div>
-</div>
-<div class="flex flex-col">
-<span id="stitch-score-badge" class="text-xs font-bold text-[#163E2A]">High Defensibility Tier</span>
-<p class="text-[11px] text-[#62584C] leading-relaxed mt-1 font-body-serif">
-                    Classical botanical baseline fully supported; residual risk isolated to novel lipid matrix carrier proof.
-                  </p>
-</div>
-</div>
-<!-- Animated Progress Bars with Shimmer -->
-<div class="space-y-3 mt-4">
-<div>
-<div class="flex justify-between text-xs mb-1">
-<span class="font-medium text-[#4A4135]">Classical Alignment (AFI-I)</span>
-<span class="font-mono font-bold text-[#1B7340]">94%</span>
-</div>
-<div class="w-full h-1.5 rounded-full bg-[#EFE7DA] overflow-hidden">
-<div class="progress-fill h-full bg-[#1B7340] rounded-full" style="width: 94%;"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between text-xs mb-1">
-<span class="font-medium text-[#4A4135]">Toxicological &amp; Safety Data</span>
-<span class="font-mono font-bold text-[#163E2A]">88%</span>
-</div>
-<div class="w-full h-1.5 rounded-full bg-[#EFE7DA] overflow-hidden">
-<div class="progress-fill h-full bg-[#1B4931] rounded-full" style="width: 88%;"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between text-xs mb-1">
-<span class="font-medium text-[#4A4135]">Schedule T GMP Compliance</span>
-<span class="font-mono font-bold text-[#1B7340]">91%</span>
-</div>
-<div class="w-full h-1.5 rounded-full bg-[#EFE7DA] overflow-hidden">
-<div class="progress-fill h-full bg-[#1B7340] rounded-full" style="width: 91%;"></div>
-</div>
-</div>
-<div>
-<div class="flex justify-between text-xs mb-1">
-<span class="font-medium text-[#4A4135]">Bioavailability Novelty Proof</span>
-<span class="font-mono font-bold text-[#B46808]">72%</span>
-</div>
-<div class="w-full h-1.5 rounded-full bg-[#EFE7DA] overflow-hidden">
-<div class="progress-fill h-full bg-[#B46808] rounded-full" style="width: 72%;"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- NBA Clearance Gate with Micro-Hover -->
-<div class="bg-white rounded-xl border border-[#E5DCCD] shadow-sm p-6 flex flex-col justify-between interactive-card">
-<div>
-<div class="flex items-center justify-between pb-3 border-b border-[#E5DCCD] mb-4">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[20px] text-[#1B7340]">policy</span>
-<h3 class="font-serif text-base font-bold text-[#163E2A]">NBA Clearance Gate</h3>
-</div>
-<span class="badge-bounce font-mono text-[11px] font-bold px-2 py-0.5 rounded bg-[#FDF7E7] text-[#743E0C] border border-[#E2CE9F]">
-                  BDA 2002 Mandate
-                </span>
-</div>
-<p class="text-xs text-[#62584C] leading-relaxed mb-4 font-body-serif">
-                Botanicals sourced from Western Ghats require statutory Access &amp; Benefit Sharing (ABS) compliance under Section 3 &amp; Section 7.
-              </p>
-<div class="space-y-2.5 p-3.5 rounded-lg bg-[#FAF7F2] border border-[#E5DCCD] text-xs">
-<div class="flex justify-between items-center">
-<span class="text-[#7A6F60]">SBB Intimation Notice:</span>
-<span class="font-semibold text-[#163E2A]">Mandatory 90-day prior filing</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="text-[#7A6F60]">ABS Royalty Assessment:</span>
-<span class="font-mono font-semibold text-[#8C531B]">0.1% – 0.5% ex-factory</span>
-</div>
-<div class="flex justify-between items-center">
-<span class="text-[#7A6F60]">Statutory Instrument:</span>
-<span class="font-semibold text-[#163E2A]">Form 1 (Rule 14 ABS)</span>
-</div>
-</div>
-</div>
-<div class="mt-4 pt-3 border-t border-[#E5DCCD] flex items-center justify-between text-xs">
-<span class="flex items-center gap-1.5 text-[#1B7340] font-semibold">
-<span class="material-symbols-outlined text-[16px]">check_circle</span>
-                State SBB Active
-              </span>
-<span class="font-mono text-[11px] text-[#7A6F60]">National Biodiversity Portal</span>
-</div>
-</div>
-</div>
-<!-- 3. Statutory Filing Pipeline Progression with Active Glowing Stage -->
-<div class="bg-white rounded-xl border border-[#E5DCCD] shadow-sm p-6 interactive-card">
-<div class="flex items-center justify-between pb-4 border-b border-[#E5DCCD] mb-4">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[20px] text-[#163E2A]">linear_scale</span>
-<h3 class="font-serif text-base font-bold text-[#163E2A]">Statutory Filing Pipeline Progression</h3>
-</div>
-<span class="font-mono text-xs text-[#743E0C] font-semibold bg-[#FDF7E7] px-2 py-0.5 rounded border border-[#E2CE9F]">Stage 3 of 5 In-Progress</span>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-5 gap-3">
-<div class="pipeline-step completed">
-<div class="flex items-center justify-between mb-2">
-<span class="font-mono text-[10px] font-bold text-[#7A6F60] uppercase">Stage 01</span>
-<span class="material-symbols-outlined text-[#1B7340] text-[18px]">check_circle</span>
-</div>
-<div>
-<span class="text-xs font-semibold text-[#163E2A] block leading-snug">Monograph Sync</span>
-<span class="text-[10px] text-[#1B7340] font-medium block mt-0.5">AFI-I Cleared</span>
-</div>
-</div>
-<div class="pipeline-step completed">
-<div class="flex items-center justify-between mb-2">
-<span class="font-mono text-[10px] font-bold text-[#7A6F60] uppercase">Stage 02</span>
-<span class="material-symbols-outlined text-[#1B7340] text-[18px]">check_circle</span>
-</div>
-<div>
-<span class="text-xs font-semibold text-[#163E2A] block leading-snug">Schedule T GMP</span>
-<span class="text-[10px] text-[#1B7340] font-medium block mt-0.5">Batch Certified</span>
-</div>
-</div>
-<div class="pipeline-step active active-stage-pulse relative overflow-hidden">
-<div class="absolute -right-3 -top-3 w-8 h-8 bg-[#C59A3F] rotate-45"></div>
-<div class="flex items-center justify-between mb-2 relative z-10">
-<span class="font-mono text-[10px] font-bold text-[#F4D98C] uppercase">Stage 03</span>
-<span class="material-symbols-outlined text-[#F4D98C] text-[18px] animate-pulse">pending</span>
-</div>
-<div class="relative z-10">
-<span class="text-xs font-bold text-white block leading-snug">SLA Form 25-D</span>
-<span class="text-[10px] text-[#E2ECE5] block mt-0.5">Rule 158-B Dossier</span>
-</div>
-</div>
-<div class="pipeline-step completed opacity-60">
-<div class="flex items-center justify-between mb-2">
-<span class="font-mono text-[10px] font-bold text-[#8E8373] uppercase">Stage 04</span>
-<span class="material-symbols-outlined text-[#8E8373] text-[18px]">radio_button_unchecked</span>
-</div>
-<div>
-<span class="text-xs font-semibold text-[#554C40] block leading-snug">CDSCO Review</span>
-<span class="text-[10px] text-[#8E8373] block mt-0.5">Central CoC</span>
-</div>
-</div>
-<div class="pipeline-step completed opacity-60">
-<div class="flex items-center justify-between mb-2">
-<span class="font-mono text-[10px] font-bold text-[#8E8373] uppercase">Stage 05</span>
-<span class="material-symbols-outlined text-[#8E8373] text-[18px]">radio_button_unchecked</span>
-</div>
-<div>
-<span class="text-xs font-semibold text-[#554C40] block leading-snug">IPO Examination</span>
-<span class="text-[10px] text-[#8E8373] block mt-0.5">Carrier Claims</span>
-</div>
-</div>
-</div>
-</div>
-<!-- 4. Cryptographic Sovereign Vault Digest with Rotating Tick Shimmer -->
-<div class="bg-white rounded-xl border border-[#E5DCCD] shadow-sm p-4 flex flex-col sm:flex-row items-center justify-between gap-4 interactive-card">
+<main class="w-full pt-16 sm:pt-32 bg-surface min-h-[calc(100vh-280px)]"><div class="flex flex-col w-full">
+<!-- Sovereign National Flag & Institutional Masthead Sub-Bar -->
+<div class="w-full bg-surface-container-lowest px-4 lg:px-10 py-2.5">
+<div class="max-w-[1360px] mx-auto flex flex-wrap items-center justify-between gap-3 font-label-md text-label-md text-on-surface-variant">
 <div class="flex items-center gap-3">
-<div class="relative w-9 h-9 rounded-lg bg-[#FDF7E7] text-[#743E0C] flex items-center justify-center shrink-0 border border-[#E2CE9F] overflow-hidden">
-<span class="crypto-spin material-symbols-outlined text-[20px] text-[#8C531B] opacity-70">sync</span>
-<span class="material-symbols-outlined text-[16px] absolute inset-0 m-auto text-[#743E0C] flex items-center justify-center">fingerprint</span>
+<!-- Indian National Flag Tricolor Ribbon with Chakra Badge -->
+<div class="flex flex-col shadow-md overflow-hidden rounded-[2px] w-5 h-4" title="National Flag of India">
+<div class="w-full h-1/3 bg-[#FF9933]"></div>
+<div class="w-full h-1/3 bg-white flex items-center justify-center relative">
+<svg class="w-2 h-2 text-[#000080]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"></path>
+</svg>
 </div>
-<div class="flex flex-col min-w-0">
+<div class="w-full h-1/3 bg-[#138808]"></div>
+</div>
+<span class="font-bold text-on-surface tracking-wide text-xs sm:text-sm">भारत सरकार • GOI</span>
+<span class="text-outline-variant hidden sm:inline">|</span>
+<span class="hidden md:inline text-secondary font-medium">Ministry of AYUSH • CSIR-TKDL Statutory Interface</span>
+</div>
+<div class="flex items-center gap-2 sm:gap-4">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold text-label-sm">
+<span class="material-symbols-outlined text-[14px]">military_tech</span> IP-SAKTI Platform
+        </span>
+<span class="text-outline-variant hidden sm:inline">|</span>
 <div class="flex items-center gap-2">
-<span class="text-xs font-bold text-[#163E2A] tracking-wide uppercase font-sans">Sovereign Vault Digest</span>
-<span class="px-2 py-0.5 rounded-full bg-[#E8F2EC] text-[#1B4931] text-[10px] font-mono font-bold border border-[#C6DDD0]">e-Sign 3.0 Verified</span>
-<span class="px-2 py-0.5 rounded-full bg-[#F5EFE6] text-[#554C40] text-[10px] font-mono font-semibold border border-[#D9CEBD] hidden md:inline">DigiLocker Linked</span>
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-bright transition-colors font-bold text-label-sm" onclick="if(typeof switchLang==='function')switchLang('en')">EN</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface transition-colors font-medium text-label-sm" onclick="if(typeof switchLang==='function')switchLang('hi')">हिन्दी</button>
 </div>
-<span class="font-mono text-xs text-[#7A6F60] truncate block mt-0.5">
-                SHA-256: 8bf2c9d0126938a192f72bda091176b92a472c1c981928374a49e1 • NIC Grid Sync
-              </span>
-</div>
-</div>
-<div class="flex items-center gap-3 shrink-0 text-xs font-mono">
-<span class="text-[#7A6F60]">Bar: <strong class="text-[#163E2A] font-semibold">#DL-AY-882</strong></span>
-<span class="px-2.5 py-1 rounded bg-[#F5EFE6] text-[#163E2A] font-semibold border border-[#D9CEBD]">ISO-27001 Certified</span>
+<span class="text-outline-variant hidden sm:inline">|</span>
+<span class="inline-flex items-center gap-1 text-label-sm text-secondary font-semibold cursor-pointer hover:text-primary transition-colors" onclick="toggleTheme()">
+<span class="material-symbols-outlined text-[15px]">dark_mode</span> Sovereign Dark
+        </span>
 </div>
 </div>
 </div>
+<!-- Hero Section (Unauthenticated Guest View) -->
+<section class="relative w-full px-4 lg:px-10 py-8 lg:py-16 overflow-hidden bg-gradient-to-b from-surface to-surface-container-lowest">
+<!-- Atmospheric Ambient Glows -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1360px] mx-auto flex flex-col items-center text-center relative z-10">
+<!-- Statutory Intelligence Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-primary font-label-md text-label-md mb-6 shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">gavel</span>
+<span class="font-bold tracking-widest text-on-surface">STATUTORY INTELLIGENCE UNIT</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-semibold text-primary">AIR-GAPPED v2.4</span>
 </div>
-</main>
+<!-- Main Headline with Typographic Gravitas -->
+<h1 class="font-headline-lg text-headline-sm sm:text-headline-lg lg:text-display-lg text-on-surface max-w-5xl leading-tight mb-4 sm:mb-6">
+        Sovereign AI for <span class="text-primary italic">Ayurvedic Intellectual Property</span> &amp; Statutory Licensing
+      </h1>
+<!-- Precise Subtitle -->
+<p class="font-body-md sm:font-body-lg text-body-md sm:text-body-lg text-on-surface-variant max-w-3xl mb-6 sm:mb-8 leading-relaxed">
+        Democratizing patent clearance under Section 3(p), traditional knowledge cross-examination with CSIR-TKDL (542,000+ Shlokas), and automated Form 25-D &amp; Rule 158-B licensing for bio-innovators, patent attorneys, and AYUSH manufacturers.
+      </p>
+<!-- Dual Call-to-Actions -->
+<div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full">
+<a class="inline-flex items-center gap-2.5 px-5 sm:px-6 py-3 sm:py-3.5 rounded bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-fixed transition-all shadow-md font-bold w-full sm:w-auto justify-center" href="#national-auth-gateway" onclick="event.preventDefault(); document.getElementById('national-auth-gateway').scrollIntoView({behavior:'smooth'});">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+<span class="">Access Sovereign Portal (MeriPehchan)</span>
+</a>
+<a class="inline-flex items-center gap-2.5 px-5 sm:px-6 py-3 sm:py-3.5 rounded bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-bright transition-all shadow-sm font-semibold w-full sm:w-auto justify-center" href="/static/hub.html">
+<span class="material-symbols-outlined text-[20px] text-secondary">science</span>
+<span class="">Try Guest Sandbox (Instant Preview)</span>
+</a>
 </div>
-<!-- ================= 5. DEDICATED MODAL CONTAINERS ================= -->
-<!-- Modal 1: TKDL Search Bridge Modal -->
-<div aria-modal="true" class="modal-backdrop" id="tkdlModal" role="dialog">
-<div class="modal-dialog">
-<!-- Modal Header -->
-<div class="p-4 border-b border-[#E5DCCD] bg-[#163E2A] text-white flex items-center justify-between">
-<div class="flex items-center gap-1 md:gap-2.5">
-<span class="material-symbols-outlined text-[#F3D580]">auto_stories</span>
+<!-- Live KPI Metrics Bar -->
+<div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+<div class="bg-surface-container p-5 rounded shadow-sm flex items-start gap-4">
+<div class="p-2.5 rounded bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[26px]">menu_book</span>
+</div>
 <div>
-<h3 class="font-serif text-base font-bold text-white">CSIR-TKDL Shloka Concordance &amp; Prior Art Search</h3>
-<p class="text-[11px] text-[#D2E2D7] font-mono">Gateway: Traditional Knowledge Digital Library (Govt of India)</p>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">542,898</div>
+<div class="font-title-md text-title-md text-primary">TKDL Canonical Shlokas</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Digitally indexed from 14 ancient Samhitas</div>
 </div>
 </div>
-<button class="w-8 h-8 rounded text-[#D2E2D7] hover:text-white hover:bg-white/10 flex items-center justify-center transition-colors" onclick="closeModal('tkdlModal')" type="button">
-<span class="material-symbols-outlined text-[20px]">close</span>
+<div class="bg-surface-container p-5 rounded shadow-sm flex items-start gap-4">
+<div class="p-2.5 rounded bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[26px]">balance</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">96.8%</div>
+<div class="font-title-md text-title-md text-secondary">Sec 3(p) Defense Concordance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Obviousness &amp; traditional efficacy validation</div>
+</div>
+</div>
+<div class="bg-surface-container p-5 rounded shadow-sm flex items-start gap-4">
+<div class="p-2.5 rounded bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[26px]">speed</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">&lt; 3.5 Min</div>
+<div class="font-title-md text-title-md text-primary">Rule 158-B Docketing</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Form 25-D AYUSH dossier pre-assembly</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Public Guest Sandbox ("Try Without Login") -->
+<section class="w-full px-4 lg:px-10 py-12 bg-surface-container-lowest" id="guest-sandbox">
+<div class="max-w-[1360px] mx-auto">
+<div class="mb-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary-container/20 text-secondary font-label-sm text-label-sm uppercase font-bold tracking-wider mb-2">
+<span class="material-symbols-outlined text-[14px]">psychology</span> Public Sandbox • No Login Required
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Instant Ayurvedic Formulation &amp; Patentability Pre-Check</h2>
+<a href="/static/hub.html" class="block font-body-lg text-body-lg text-on-surface-variant max-w-3xl cursor-pointer hover:text-primary transition-colors">
+          <a href="/static/hub.html" class="hover:text-primary transition-colors cursor-pointer block underline decoration-primary/30 underline-offset-4">Test unpatented herbal combinations against traditional canonical texts (Charaka, Sushruta, AFI) and determine regulatory clearance pathways in real-time.</a>
+        </a>
+</div>
+<!-- Search & Sandbox Formulation Query Bar -->
+<div class="bg-surface-container p-6 rounded-lg shadow-md mb-8">
+<div class="flex flex-col md:flex-row gap-3">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-4 top-3.5 text-on-surface-variant text-[22px]">search</span>
+<input class="w-full h-12 pl-12 pr-4 bg-surface-container-high rounded text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-bright transition-all" id="sandbox-input" placeholder="e.g., Withania somnifera standardized extract with Shilajit..." type="text" value="Curcumin nano-formulation with Piperine (Bio-enhancer)">
+</div>
+<button class="h-12 px-4 sm:px-6 rounded bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-fixed transition-colors flex items-center justify-center gap-2 shadow-sm shrink-0" id="run-precheck-btn" onclick="var q=document.getElementById('sandbox-input').value; if(q) { localStorage.setItem('initial_query', q); } window.location.href='/static/hub.html'">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span class="">Execute Pre-Check</span>
 </button>
 </div>
-<!-- Modal Body -->
-<div class="p-6 overflow-y-auto space-y-4 text-xs" id="corpus-items-list">
-<div class="p-3.5 bg-[#FDF7E7] border border-[#E2CE9F] rounded-lg text-[#5C320A]">
-<span class="font-bold block mb-1" id="tkdl-botanicals-list">Target Formulation: Amrita-Triphala Plus™ (Docket #AY-2025-098)</span>
-<p class="font-body-serif" id="tkdl-query-string">TKDL query engine evaluated 542,108 shlokas across Charaka Samhita, Sushruta Samhita, and Ashtanga Hridaya. 3 canonical references confirmed for Triphala rasayana; piperine bio-enhancement cross-referenced against API Vol-IV.</p>
+<!-- Sample Formulation Pills -->
+<div class="flex flex-wrap items-center gap-2 mt-4 pt-4 border-t border-outline-variant/20">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Test Sample Formulations:</span>
+<button class="sample-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:text-primary text-body-sm transition-colors" data-val="Triphala Nano-Lipid Oral Suspension">
+            Triphala Nano-Lipid
+          </button>
+<button class="sample-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:text-primary text-body-sm transition-colors" data-val="Swarna Bhasma Nanoparticle Conjugate for Immunomodulation">
+            Bhasma Nanoparticle
+          </button>
+<button class="sample-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:text-primary text-body-sm transition-colors" data-val="Single Herb Aqueous Extract of Ashwagandha (Withania)">
+            Single Herb Aqueous Extract
+          </button>
+<button class="sample-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface hover:text-primary text-body-sm transition-colors" data-val="Ayush Aahar Herbal Nutrition Blend with Guduchi">
+            Ayush Aahar Health Supplement
+          </button>
 </div>
-<div class="border border-[#E5DCCD] rounded-lg p-4 bg-[#FAF7F2]">
+</div>
+<!-- Live Interactive Result Preview Card -->
+<div class="bg-surface-container rounded-lg shadow-xl overflow-hidden">
+<!-- Result Header / Risk Banner -->
+<div class="bg-surface-container-high p-6 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="p-3 rounded-full bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[26px]">warning</span>
+</div>
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold uppercase tracking-wider">
+                  HIGH OBVIOUSNESS RISK
+                </span>
+<span class="font-code text-label-sm text-secondary font-semibold bg-surface-container px-2 py-0.5 rounded">
+                  IPO Objection Code: SEC-3P-TKDL
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="sandbox-result-title">
+                Curcuma longa (Haridra) + Piper nigrum (Maricha) Synergy Formulation
+              </h3>
+</div>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">CSIR-TKDL Concordance Index</div>
+<div class="font-headline-md text-headline-md text-primary font-bold">98.4% Matched</div>
+</div>
+</div>
+<!-- 3-Column Detailed Analysis Breakdown -->
+<div class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Col 1: TKDL Prior Art -->
+<div class="bg-surface-container-low p-5 rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wide">01 • Prior Art Citation</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">auto_stories</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mb-2 font-bold">AFI Vol. 1, 16:4 Canonical Match</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Haridra combined with Maricha is explicitly documented in <span class="text-primary italic">Bhavaprakasha Nighantu (Haritakyadi Varga, Shloka 197)</span> as a bioavailability enhancer and anti-inflammatory yogavahi formulation.
+              </p>
+</div>
+<div class="p-3 rounded bg-surface-container text-on-surface text-body-sm">
+<span class="font-semibold text-primary">Canonical Status:</span> Public Domain Traditional Knowledge (Unpatentable per se).
+            </div>
+</div>
+<!-- Col 2: Section 3(e) Synergism Defense -->
+<div class="bg-surface-container-low p-5 rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wide">02 • Patentability Defense</span>
+<span class="material-symbols-outlined text-primary text-[20px]">biotech</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mb-2 font-bold">Section 3(e) Synergism Doctrine</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Mere mechanical mixing will be barred under Sec 3(e). However, lipid nano-encapsulation proving <span class="text-primary font-semibold">&gt; 2000% cellular bioavailability</span> exceeds mere aggregation and qualifies for innovative patent defense.
+              </p>
+</div>
+<div class="p-3 rounded bg-surface-container text-on-surface text-body-sm">
+<span class="font-semibold text-secondary">Rebuttal Strategy:</span> Comparative in-vitro pharmacokinetic synergy dossier required.
+            </div>
+</div>
+<!-- Col 3: Regulatory Licensing Pathway -->
+<div class="bg-surface-container-low p-5 rounded flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface font-bold uppercase tracking-wide">03 • AYUSH Regulatory Route</span>
+<span class="material-symbols-outlined text-on-surface text-[20px]">domain_verification</span>
+</div>
+<h4 class="font-title-md text-title-md text-on-surface mb-2 font-bold">Rule 158-B • Form 25-D</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Direct statutory licensing eligible as <span class="text-on-surface font-semibold">Ayurvedic Proprietary Medicine</span> under Drugs &amp; Cosmetics Rules. Accelerated SLA approval without full phase-3 clinical trials.
+              </p>
+</div>
+<div class="p-3 rounded bg-surface-container text-on-surface text-body-sm">
+<span class="font-semibold text-primary">License Format:</span> Form 25-D (Ayush State Licensing Authority).
+            </div>
+</div>
+</div>
+<!-- Locked State Call to Action Banner -->
+<div class="bg-surface-container-high p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="p-3 rounded bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[28px]">lock</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-on-surface font-bold mb-1">Unlock Complete Legal Dossier &amp; Section 3(p) Rebuttal Draft</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl">
+                Guest queries are limited to high-level concordance. Authenticate via Jan Parichay to access complete verbatim Sanskrit shlokas, legal objection precedents, and 1-click IPO Form-18 reply drafts.
+              </p>
+</div>
+</div>
+<a class="px-5 py-3 rounded bg-secondary text-on-secondary font-label-md text-label-md font-bold hover:bg-secondary-fixed transition-colors shrink-0 shadow-md flex items-center gap-2" href="#national-auth-gateway" onclick="event.preventDefault(); document.getElementById('national-auth-gateway').scrollIntoView({behavior:'smooth'});">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="">Sign In to Download Dossier</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- National Access Gateway - Unified Sovereign Authentication Architecture (Multi-Track SSO) -->
+<section class="w-full px-4 lg:px-10 py-8 sm:py-16 bg-surface" id="national-auth-gateway">
+<div class="max-w-[1360px] mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-12">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-primary/10 text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider mb-2">
+<span class="material-symbols-outlined text-[14px]">shield</span> Sovereign Single Sign-On Infrastructure
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-3">NATIONAL ACCESS GATEWAY</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Select your statutory jurisdiction. Certified via National Single Sign-On (MeriPehchan / Jan Parichay) and DigiLocker Credential Exchange.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: 4 Statutory Stakeholder Cards (7 cols) -->
+<div class="lg:col-span-7 space-y-4">
+<!-- Track 01 -->
+<div class="group bg-surface-container p-5 rounded-lg hover:bg-surface-container-high transition-all shadow-sm cursor-pointer relative overflow-hidden" onclick="window.location.href='/static/hub.html'">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">person_check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wider uppercase">Track 01 • Citizen &amp; Innovator</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-semibold">Jan Parichay Level 1</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-1">MeriPehchan / Jan Parichay</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+                  For individual herbalists, start-ups, bio-entrepreneurs, and academic researchers seeking free prior-art clearance and formulation verification.
+                </p>
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Aadhaar OTP</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> DigiLocker Sync</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Parichay SSO</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Track 02 -->
+<div class="group bg-surface-container p-5 rounded-lg hover:bg-surface-container-high transition-all shadow-sm cursor-pointer relative overflow-hidden" onclick="window.location.href='/static/hub.html'">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded bg-surface-container-high group-hover:bg-secondary group-hover:text-on-secondary text-secondary transition-colors">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wider uppercase">Track 02 • Legal Counsel</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-semibold">Bar Council / IPO Token</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-1">Patent Attorney &amp; Legal Agents</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+                  For registered Indian Patent Agents and IP counsels drafting Section 3(p) objections, FER responses, and pre-grant opposition briefs against biopiracy.
+                </p>
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span> Class 3 DSC</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span> IPO Agent Reg. No</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span> Form-18 Generator</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Track 03 -->
+<div class="group bg-surface-container p-5 rounded-lg hover:bg-surface-container-high transition-all shadow-sm cursor-pointer relative overflow-hidden" onclick="window.location.href='/static/hub.html'">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded bg-surface-container-high group-hover:bg-primary group-hover:text-on-primary text-primary transition-colors">
+<span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wider uppercase">Track 03 • Industry &amp; Manufacturing</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-semibold">e-Aushadhi / GMP</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-1">AYUSH Drug Manufacturer (SLA Portal)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+                  For ASU&amp;H pharmaceutical enterprises generating automated Rule 158-B proof packages, Form 24-D manufacturing licenses, and COPP export filings.
+                </p>
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Form 25-D Pre-Docket</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> e-Aushadhi Bridge</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Batch COA Validator</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Track 04 -->
+<div class="group bg-surface-container p-5 rounded-lg hover:bg-surface-container-high transition-all shadow-sm cursor-pointer relative overflow-hidden" onclick="window.location.href='/static/hub.html'">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded bg-surface-container-high group-hover:bg-secondary group-hover:text-on-secondary text-secondary transition-colors">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm text-secondary font-bold tracking-wider uppercase">Track 04 • Sovereign Research</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-semibold">Air-Gapped Access</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-1">Institutions &amp; CSIR / CCRAS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-3 leading-relaxed">
+                  For botanical taxonomy scientists, national pharmacopoeia committees, and CSIR-TKDL officers auditing classified Sanskrit prior art transcripts.
+                </p>
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span> CSIR-TKDL Direct Node</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span> Sanskrit OCR Corpus</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span> NBA-SBB Clearances</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Sovereign Auth Panel (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container p-6 lg:p-8 rounded-lg shadow-xl relative">
+<!-- Auth Badge -->
+<div class="flex items-center justify-between mb-6 pb-4 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">Jan Parichay SSO</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-primary/10 px-2 py-0.5 rounded">NIC Sovereign Node</span>
+</div>
+<!-- Auth Mode Toggle Tabs -->
+<div class="grid grid-cols-2 gap-2 bg-surface-container-high p-1 rounded mb-6" id="auth-tabs">
+<button id="tab-otp" class="py-2 rounded bg-surface text-on-surface font-label-md text-label-md font-bold shadow-sm flex items-center justify-center gap-1.5" onclick="document.getElementById('form-otp').classList.remove('hidden');document.getElementById('form-dsc').classList.add('hidden');this.classList.add('bg-surface','shadow-sm','font-bold');this.classList.remove('text-on-surface-variant','font-medium');document.getElementById('tab-dsc').classList.remove('bg-surface','shadow-sm','font-bold');document.getElementById('tab-dsc').classList.add('text-on-surface-variant','font-medium')"><span class="material-symbols-outlined text-[16px] text-primary">smartphone</span> Mobile OTP</button>
+<button id="tab-dsc" class="py-2 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium flex items-center justify-center gap-1.5 transition-colors" onclick="document.getElementById('form-dsc').classList.remove('hidden');document.getElementById('form-otp').classList.add('hidden');this.classList.add('bg-surface','shadow-sm','font-bold');this.classList.remove('text-on-surface-variant','font-medium');document.getElementById('tab-otp').classList.remove('bg-surface','shadow-sm','font-bold');document.getElementById('tab-otp').classList.add('text-on-surface-variant','font-medium')">
+<span class="material-symbols-outlined text-[16px]">token</span> Digital Token (DSC)
+            </button>
+</div>
+
+<!-- Mobile OTP Form -->
+<form id="form-otp" class="space-y-4" onsubmit="event.preventDefault();">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold mb-1">
+                Registered Mobile Number for OTP
+              </label>
+<div class="relative">
+<input class="w-full h-11 px-3.5 bg-surface-container-high rounded text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary font-mono" placeholder="+91 ••••• •••92" type="tel">
+<span class="material-symbols-outlined absolute right-3 top-3 text-[18px] text-on-surface-variant">lock</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1 text-on-surface-variant">
+<input checked="" class="rounded accent-primary w-4 h-4 bg-surface-container" id="terms-auth" type="checkbox">
+<label class="font-body-sm text-body-sm cursor-pointer" for="terms-auth">
+                Consent to fetch verified AYUSH/Bar Council credentials
+              </label>
+</div>
+<button class="w-full h-12 rounded bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-fixed transition-colors flex items-center justify-center gap-2 shadow-md mt-2" type="button" onclick="window.location.href='/static/hub.html'"><span class="material-symbols-outlined text-[18px]">login</span> Authenticate & Enter Portal</button>
+</form>
+
+<!-- Digital Token (DSC) Form -->
+<form id="form-dsc" class="space-y-4 hidden" onsubmit="event.preventDefault();">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold mb-1">
+                Enter 4-Digit Sovereign Access Token
+              </label>
+<div class="flex items-center justify-center gap-3 my-4">
+<input id="dsc-1" class="w-14 h-14 text-center bg-surface-container-high rounded-lg text-on-surface font-headline-md text-headline-md focus:outline-none focus:ring-2 focus:ring-primary font-mono border border-border-subtle" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" oninput="this.value=this.value.replace(/[^0-9]/g,'');if(this.value)document.getElementById('dsc-2').focus()">
+<input id="dsc-2" class="w-14 h-14 text-center bg-surface-container-high rounded-lg text-on-surface font-headline-md text-headline-md focus:outline-none focus:ring-2 focus:ring-primary font-mono border border-border-subtle" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" oninput="this.value=this.value.replace(/[^0-9]/g,'');if(this.value)document.getElementById('dsc-3').focus()">
+<input id="dsc-3" class="w-14 h-14 text-center bg-surface-container-high rounded-lg text-on-surface font-headline-md text-headline-md focus:outline-none focus:ring-2 focus:ring-primary font-mono border border-border-subtle" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" oninput="this.value=this.value.replace(/[^0-9]/g,'');if(this.value)document.getElementById('dsc-4').focus()">
+<input id="dsc-4" class="w-14 h-14 text-center bg-surface-container-high rounded-lg text-on-surface font-headline-md text-headline-md focus:outline-none focus:ring-2 focus:ring-primary font-mono border border-border-subtle" maxlength="1" type="text" inputmode="numeric" pattern="[0-9]" oninput="this.value=this.value.replace(/[^0-9]/g,'');if(this.value)document.getElementById('dsc-verify-btn').focus()">
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center">Demo access code: <span class="font-mono font-bold text-primary">1234</span></p>
+</div>
+<div id="dsc-error" class="hidden text-center font-label-sm text-error font-bold py-2">Invalid token. Please try again.</div>
+<button id="dsc-verify-btn" class="w-full h-12 rounded bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-fixed transition-colors flex items-center justify-center gap-2 shadow-md mt-2" type="button" onclick="var code=document.getElementById('dsc-1').value+document.getElementById('dsc-2').value+document.getElementById('dsc-3').value+document.getElementById('dsc-4').value;if(code==='1234'){window.location.href='/static/hub.html'}else{document.getElementById('dsc-error').classList.remove('hidden');document.getElementById('dsc-1').value='';document.getElementById('dsc-2').value='';document.getElementById('dsc-3').value='';document.getElementById('dsc-4').value='';document.getElementById('dsc-1').focus()}"><span class="material-symbols-outlined text-[18px]">verified_user</span> Verify Token & Enter Portal</button>
+</form>
+<!-- Divider -->
+<div class="relative my-6 text-center">
+<div class="absolute inset-0 flex items-center"><div class="w-full border-t border-outline-variant/30"></div></div>
+<span class="relative px-3 bg-surface-container font-label-sm text-label-sm text-on-surface-variant uppercase">OR SANDBOX TRIAL</span>
+</div>
+<!-- Quick Guest Access CTA -->
+<button class="w-full h-11 rounded bg-surface-container-high text-on-surface font-label-md text-label-md font-semibold hover:bg-surface-bright transition-colors flex items-center justify-center gap-2" onclick="window.location.href='/static/hub.html'">
+<span class="material-symbols-outlined text-secondary text-[18px]">visibility</span>
+<span class="">Enter Read-Only Evaluator Mode (3 Queries/Day)</span>
+</button>
+<!-- National Informatics Security Seal -->
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">security</span>
+<span class="">Secured in compliance with National Cyber Security Policy &amp; IT Act 2000. 256-Bit TLS Sovereign Tunnel.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Codified Pillars of Ayurvedic Jurisprudence (4 Card Grid in Dark Theme) -->
+<section class="w-full px-4 lg:px-10 py-16 bg-surface-container-lowest">
+<div class="max-w-[1360px] mx-auto">
+<div class="mb-12">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Codified Jurisprudence</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1 mb-2">Four Sovereign Pillars of Traditional Knowledge Defense</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Engineered to prevent biopiracy, protect sovereign biological resources, and accelerate authentic AYUSH commercialization under Indian statute.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-success">verified</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">94% Clearance</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Patent Defense</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">Section 3(p) Patent Evaluation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Evaluate patentability constraints under Section 3(p) of the Indian Patents Act, 1970. Overcome traditional knowledge obviousness objections with codified synergistic bioavailability evidence.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">IPO Manual 2019 • Sec 3(e) Synergism</div>
+<div class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="localStorage.setItem('initial_query', 'Section 3(p) IPA 1970 patent evaluation and Sec 3(e) Synergism guidelines for Ayurvedic formulation'); window.location.href='/static/hub.html'">
+<span class="">Run Claim Audit</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">translate</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">menu_book</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">542K Shlokas</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">CSIR Corpus</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">TKDL Prior Art Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Cross-reference formulation components against Sanskrit, Unani, Siddha & Sowa-Rigpa canonical literature. Instantly detect shloka concordance in Charaka, Sushruta, and AFI-Vol I to IV.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">WIPO IPC A61K 36/00 Concurrence</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="localStorage.setItem('initial_query', 'Cross-reference formulation with TKDL prior art, check Charaka Samhita and WIPO IPC A61K 36/00'); window.location.href='/static/hub.html'">
+<span class="">Inspect Shlokas</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">location_on</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">NBA Form I</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">ABS Clearance</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">Geographical Indication (GI) & ABS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Analyze origin-based botanical IP protections, endemic habitat claims, and State Biodiversity Board (SBB) revenue sharing mandates under the Biological Diversity (Amendment) Act 2023.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">382 Registered Botanical GIs</div>
+<div class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="localStorage.setItem('initial_query', 'Evaluate Geographical Indication (GI) and ABS clearance mandates under NBA Form I'); window.location.href='/static/hub.html'">
+<span class="">Analyze Provenance</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">category</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-accent-gold">category</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">Form 25-D Wizard</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Statutory Map</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">Classify Your Ayurvedic Product</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Multi-step guided wizard to determine whether your item classifies as Shastric Classical, Patent & Proprietary (P&P), Nutraceutical (FSSAI AYUSH Aahar), or Topical Cosmetic.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">Drugs & Cosmetics Sec 3(a)</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="var q=document.getElementById('formulation-input').value; if(q) { localStorage.setItem('initial_query', q); } else { localStorage.setItem('initial_query', 'Classify my Ayurvedic product (Shastric, P&P, Aahar or Cosmetic)'); } window.location.href='/static/hub.html'">
+<span class="">Start Classifier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bio-Cultural Heritage & Anti-Biopiracy Case Studies -->
+<section class="w-full px-4 lg:px-10 py-16 bg-surface">
+<div class="max-w-[1360px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Historical Precedents</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1 mb-2">Preserving India's Bio-Heritage Against Biopiracy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Landmark international patent revocations driven by CSIR-TKDL statutory evidence, safeguarding ancient formulations from illicit commercial monopolies.
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">1,820+ Global Revocations</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Landmark Case 1: Curcuma Longa Turmeric Patent Revocation -->
+<div class="bg-surface-container rounded-lg overflow-hidden shadow-md flex flex-col sm:flex-row">
+<div class="sm:w-2/5 relative min-h-[220px]">
+<img class="w-full h-full object-cover" data-alt="Rich macro photography of vibrant raw Curcuma longa turmeric rhizomes and powdered golden spice on deep midnight emerald slate with warm gold lighting, representing authentic Indian traditional ayurvedic medicine botanical specimen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_liVzbnoVlFxdt3Shhe8vZeeaX_75m2FD4bKX6YqI5HH5lVeyTqmDghOtP7joR6-uRess4KuVMYtm509z7BB4g8RoP6cetN1GjKmgiiZkDxFMbbOVio44IpZ1I3Wb2xuX81kRBF0F34xDFuZ_2b_ccYzuF9iJM4hdfWXjnxvrGVrsgM7ymohrJCEUpVKNByg_tCQ1JJWiuBXUD7cLukAOD8RTLi1H-qPNvfTVCZxIOUgpsAj6eMhm">
+<div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-surface-container to-transparent opacity-60"></div>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-primary font-label-sm text-label-sm font-bold">
+              US Patent #5,401,504 Revoked
+            </div>
+</div>
+<div class="p-6 sm:w-3/5 flex flex-col justify-between">
+<div>
 <div class="flex items-center justify-between mb-2">
-<span class="font-mono text-xs font-bold text-[#163E2A]">Direct TKDL Shloka Match: JA02/114B</span>
-<span class="px-2 py-0.5 rounded bg-[#E8F2EC] text-[#1B4931] font-bold font-mono text-[10px] border border-[#C6DDD0]">100% Shastra Hit</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">USPTO Landmark Ruling</span>
+<span class="text-body-sm text-on-surface-variant font-mono">CSIR-1997</span>
 </div>
-<p class="font-serif text-sm font-semibold text-[#3E240C] p-3 bg-white rounded border border-[#E2CE9F] mb-2 shadow-xs">
-          “हरीतकी बिभीतकी चैवामलकी तथा। समभागेन संयोज्य त्रिफला रसायनं स्मृतम्॥”
-        </p>
-<p class="text-[#62584C] font-body-serif">Classical reference clearly documents 1:1:1 pericarp ratio for bowel and metabolic balance. Under Section 3(p) of the Patents Act, 1970, this composition cannot be claimed as an invention.</p>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-2">Turmeric (Curcuma longa) Wound Healing Doctrine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                The milestone defense demonstrating wound healing using Haridra had been documented for millennia in the Ayurvedic Pharmacopoeia of India, leading to total patent revocation in the United States.
+              </p>
 </div>
-<div class="p-4 border border-[#E5DCCD] rounded-lg bg-white">
-<h4 class="font-serif font-bold text-[#163E2A] text-sm mb-1">Patent Claim Clearance Recommendations:</h4>
-<ul class="list-disc pl-5 space-y-1 text-[#4A4135] font-body-serif">
-<li><strong>Disclaim:</strong> Disclaim all raw combination claims for Triphala and Piperine.</li>
-<li><strong>Assert:</strong> Restrict inventive claims to the self-nanoemulsifying lipid matrix carrier yielding mean droplet diameter &lt;80 nm.</li>
-<li><strong>Statutory Proof:</strong> Submit pharmacokinetic AUC curve data proving 3.8x plasma concentration enhancement.</li>
-</ul>
-</div>
-</div>
-<!-- Modal Footer -->
-<div class="p-4 border-t border-[#E5DCCD] bg-[#FAF7F2] flex items-center justify-between">
-<span class="font-mono text-[11px] text-[#7A6F60]">CSIR-TKDL API v4.2 Connected</span>
-<div class="flex items-center gap-2">
-<button class="px-3 py-1.5 text-xs font-semibold text-[#62584C] hover:text-[#163E2A] transition-colors" onclick="closeModal('tkdlModal')" type="button">Close</button>
-<button class="btn-shimmer px-4 py-1.5 text-xs font-bold bg-[#1B4931] text-white rounded hover:bg-[#163E2A] border border-[#235F40] shadow-sm transition-all" onclick="alert('TKDL Concordance Report exported to sovereign vault.')" type="button">Export TKDL Audit Report</button>
+<div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<span class="text-on-surface font-semibold">Statutory Ground:</span>
+<span class="text-primary font-mono font-bold">35 U.S.C. § 102 Prior Art</span>
 </div>
 </div>
 </div>
+<!-- Landmark Case 2: Neem Fungicidal Patent Revocation at EPO -->
+<div class="bg-surface-container rounded-lg overflow-hidden shadow-md flex flex-col sm:flex-row">
+<div class="sm:w-2/5 relative min-h-[220px]">
+<img class="w-full h-full object-cover" data-alt="Detailed botanical close-up photograph of lush green Azadirachta indica neem leaves and seeds placed against dark moody forest background with rim lighting, highlighting Indian medicinal plant heritage and biological wealth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJQD_crQ3On4H_wI39IMDu1no1eFJE_whjyt8RAIgJ0rsXA3gO0801WMECAfxEPAzyI9IoA5ZyUNWTU_8IIguafNf8RAPuh1RZTISh7rGEYwv31FBrd09EkWS0WtcmEyykQ4007p2V-KTD0gO3_NjWOkRRm810cXGK4_BdxVLioB9zLUaggSTCGdAu9YmLPcRr3y2PJm5A70tri9C6Rd8gXEnsRd_no4nZOo59phog83FT5iccjbob">
+<div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-surface-container to-transparent opacity-60"></div>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-secondary font-label-sm text-label-sm font-bold">
+              EPO Patent #436,257 Revoked
+            </div>
 </div>
-<!-- Modal 2: Facilitator Review Brief Modal -->
-<div aria-modal="true" class="modal-backdrop" id="facilitatorModal" role="dialog">
-<div class="modal-dialog">
-<div class="p-4 border-b border-[#E5DCCD] bg-[#163E2A] text-white flex items-center justify-between">
-<div class="flex items-center gap-1 md:gap-2.5">
-<span class="material-symbols-outlined text-[#F3D580]">assignment_turned_in</span>
+<div class="p-6 sm:w-3/5 flex flex-col justify-between">
 <div>
-<h3 class="font-serif text-base font-bold text-white">Facilitator Review Brief (Rule 158-B &amp; Form 25-D)</h3>
-<p class="text-[11px] text-[#D2E2D7] font-mono">State Licensing Authority (SLA) Official Review Gate</p>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-primary font-bold">European Patent Office (EPO)</span>
+<span class="text-body-sm text-on-surface-variant font-mono">EPO-2000</span>
 </div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-2">Neem (Azadirachta indica) Fungicidal Properties</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Joint opposition by CSIR and RFSTE presented ancient Sanskrit references confirming hydrophobic neem extracts had protected crops across rural India for generations, defeating inventive step claims.
+              </p>
 </div>
-<button class="w-8 h-8 rounded text-[#D2E2D7] hover:text-white hover:bg-white/10 flex items-center justify-center transition-colors" onclick="closeModal('facilitatorModal')" type="button">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<div class="p-6 overflow-y-auto space-y-4 text-xs" id="corpus-items-list">
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-<div class="p-3 bg-[#FAF7F2] border border-[#E5DCCD] rounded">
-<span class="text-[#7A6F60] block text-[10px] uppercase font-bold">Category</span>
-<span class="font-bold text-[#163E2A] text-xs font-serif">P&amp;P Medicine</span>
-</div>
-<div class="p-3 bg-[#FAF7F2] border border-[#E5DCCD] rounded">
-<span class="text-[#7A6F60] block text-[10px] uppercase font-bold">Statute</span>
-<span class="font-bold text-[#163E2A] text-xs">Sec 3(h) / D&amp;C 1940</span>
-</div>
-<div class="p-3 bg-[#FAF7F2] border border-[#E5DCCD] rounded">
-<span class="text-[#7A6F60] block text-[10px] uppercase font-bold">Defensibility</span>
-<span class="font-bold text-[#1B7340] text-xs font-mono">84 / 100 (High)</span>
-</div>
-<div class="p-3 bg-[#FAF7F2] border border-[#E5DCCD] rounded">
-<span class="text-[#7A6F60] block text-[10px] uppercase font-bold">Filing Fee</span>
-<span class="font-bold text-[#163E2A] text-xs font-mono">₹15,000 Verified</span>
-</div>
-</div>
-<div class="border border-[#E5DCCD] rounded-lg p-4 bg-[#FAF7F2] space-y-2">
-<h4 class="font-serif font-bold text-[#163E2A] text-sm">Rule 158-B Mandatory Checklist:</h4>
-<div class="space-y-1.5 font-body-serif">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[#1B7340] text-[18px]">check_circle</span>
-<span class="text-[#4A4135]">Classical text references verified against First Schedule (AFI-I).</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[#1B7340] text-[18px]">check_circle</span>
-<span class="text-[#4A4135]">Heavy metal limits (Lead &lt;10ppm, Arsenic &lt;3ppm, Cadmium &lt;0.3ppm) passed.</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[#1B7340] text-[18px]">check_circle</span>
-<span class="text-[#4A4135]">Schedule T GMP valid manufacturing license attached.</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-[#8C531B] text-[18px]">pending</span>
-<span class="text-[#4A4135]">Pilot safety study (90-day sub-acute oral toxicity) final sign-off pending State CoC.</span>
-</div>
-</div>
-</div>
-<div class="p-3 bg-[#E8F2EC] border border-[#C6DDD0] rounded-lg text-[#163E2A]">
-<span class="font-bold block font-serif">Facilitator Recommendation:</span>
-<p class="font-body-serif">Dossier is recommended for Provisional Approval under Form 25-D with 1-year Phase-IV post-marketing surveillance submission mandate.</p>
-</div>
-</div>
-<div class="p-4 border-t border-[#E5DCCD] bg-[#FAF7F2] flex items-center justify-between">
-<span class="text-xs text-[#7A6F60]">Signoff by Dr. R. K. Sharma (State Drug Controller, AYUSH)</span>
-<div class="flex items-center gap-2">
-<button class="px-3 py-1.5 text-xs font-semibold text-[#62584C] hover:text-[#163E2A] transition-colors" onclick="closeModal('facilitatorModal')" type="button">Close</button>
-<button class="btn-shimmer px-4 py-1.5 text-xs font-bold bg-[#1B7340] text-white rounded hover:bg-[#124E2B] border border-[#124E2B] shadow-sm transition-all" onclick="alert('Form 25-D Statutory Facilitator Brief Approved and Sealed.')" type="button">Approve &amp; Seal Brief</button>
+<div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<span class="text-on-surface font-semibold">Statutory Ground:</span>
+<span class="text-secondary font-mono font-bold">Art. 56 EPC Lack of Inventive Step</span>
 </div>
 </div>
 </div>
 </div>
-<!-- Modal 3: Statutory Corpus Explorer Modal -->
-<div aria-modal="true" class="modal-backdrop" id="statuteModal" role="dialog">
-<div class="modal-dialog">
-<div class="p-4 border-b border-[#E5DCCD] bg-[#163E2A] text-white flex items-center justify-between">
-<div class="flex items-center gap-1 md:gap-2.5">
-<span class="material-symbols-outlined text-[#F3D580]">gavel</span>
-<div>
-<h3 class="font-serif text-base font-bold text-white">Statutory Corpus &amp; Legal Gazette Explorer</h3>
-<p class="text-[11px] text-[#D2E2D7] font-mono">Acts: D&amp;C Act 1940 • BDA 2002 • Patents Act 1970</p>
 </div>
-</div>
-<button class="w-8 h-8 rounded text-[#D2E2D7] hover:text-white hover:bg-white/10 flex items-center justify-center transition-colors" onclick="closeModal('statuteModal')" type="button">
-<span class="material-symbols-outlined text-[20px]">close</span>
-</button>
-</div>
-<div class="p-6 overflow-y-auto space-y-4 text-xs" id="corpus-items-list">
-<div class="border border-[#E5DCCD] rounded-lg p-3 bg-white">
-<div class="flex justify-between items-center mb-1">
-<span class="font-serif font-bold text-[#163E2A] text-sm">Drugs and Cosmetics Act, 1940 — Section 3(h)</span>
-<span class="px-2 py-0.5 rounded bg-[#F5EFE6] text-[#554C40] font-mono text-[10px] border border-[#D9CEBD]">Statutory Definition</span>
-</div>
-<p class="text-[#62584C] leading-relaxed font-body-serif">
-          "Patent or Proprietary medicine" means a formulation containing only ingredients mentioned in the formulae described in the authoritative books of Ayurveda, Siddha or Unani Tibb systems, but which is not a classical formulation specified in First Schedule.
+</section>
+<!-- Treatise Concordance Authority Banner (Luminous Sanskrit Inscription) -->
+<section class="w-full px-4 lg:px-10 py-14 bg-surface-container-lowest border-y border-outline-variant/20 relative overflow-hidden">
+  <div class="max-w-5xl mx-auto relative z-10">
+    <div class="relative rounded-2xl border border-primary/25 p-8 lg:p-12 shadow-2xl overflow-hidden" style="background: radial-gradient(circle at left top, rgba(16, 185, 129, 0.08), transparent 70%), rgb(13, 31, 25);">
+      <!-- Ambient Vedic Aura Glows -->
+      <div class="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center">
+        <!-- Sacred Emblem Header -->
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-12 h-12 rounded-full bg-surface-container-high border border-primary/30 flex items-center justify-center text-primary shadow-md">
+            <span class="material-symbols-outlined text-[28px]">menu_book</span>
+          </div>
+        </div>
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container border border-primary/30 text-primary font-label-sm text-label-sm tracking-widest uppercase font-bold mb-4">
+          <span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+          <span class="">आयुर्वेद शास्त्र प्रमाण • STATUTORY CANONICAL AUTHORITY</span>
+        </div>
+
+        <!-- Sanskrit Shloka Inscription in Radiant Glowing Soft Gold -->
+        <div class="my-2 px-2 max-w-4xl">
+          <blockquote class="font-serif text-[26px] md:text-[32px] lg:text-[36px] text-secondary font-bold tracking-wide leading-relaxed drop-shadow-[0_2px_12px_rgba(245,158,11,0.35)]">
+            "यथा विषं यथा शस्त्रं यथाऽग्निरशनिर्यथा।<br class="hidden md:inline">
+            तथौषधमविज्ञातं विज्ञातममृतं यथा॥"
+          </blockquote>
+        </div>
+
+        <!-- Citation Header in Vibrant Mint / Emerald -->
+        <div class="mt-3 mb-4 inline-flex items-center gap-2 px-3.5 py-1 rounded bg-surface-container-lowest/80 border border-primary/20 text-primary font-label-md text-label-md font-semibold tracking-wider uppercase">
+          <span class="material-symbols-outlined text-[16px]">auto_stories</span>
+          <span class="">चरक संहिता • सूत्रस्थानम् १.१२४ (CHARAKA SAMHITA, SUTRASTHANA 1.124)</span>
+        </div>
+
+        <!-- English Statutory Foundation Translation in High-Contrast Crisp Mint-Slate Text -->
+        <p class="font-body-md text-[15px] md:text-[17px] text-[#e2e8f0] max-w-3xl leading-relaxed italic mb-6 text-center">
+          “The flora and botanical medicine indigenous to the native soil of the living being constitutes the most efficacious remedy.” — The codified constitutional basis for sovereign bio-heritage preservation under Article 39(b) and the Biological Diversity Act, 2002.
         </p>
+
+        <!-- Interactive Action Strip with Dark Button and Live Badge -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a class="px-5 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary border border-primary/30 font-label-md text-label-md font-bold transition-all shadow-md flex items-center gap-2" href="/static/hub.html">
+            <span class="material-symbols-outlined text-[18px]">search</span>
+            <span class="">Search Shloka Lexicon</span>
+          </a>
+          <div class="px-4 py-2.5 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md font-semibold flex items-center gap-2 shadow-sm">
+            <span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+            <span class=""><span class="text-primary font-semibold">542,898</span> Shlokas Mapped • 100% CSIR Reconciled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Guest Onboarding Pathway / Quick FAQ Strip -->
+<section class="w-full px-4 lg:px-10 py-14 bg-surface-container-lowest">
+<div class="max-w-[1360px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container p-6 rounded">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Who can access IP-SAKTI?</h4>
 </div>
-<div class="border border-[#E5DCCD] rounded-lg p-3 bg-white">
-<div class="flex justify-between items-center mb-1">
-<span class="font-serif font-bold text-[#163E2A] text-sm">Biological Diversity Act, 2002 — Sections 3 &amp; 7 (NBA/SBB)</span>
-<span class="px-2 py-0.5 rounded bg-[#E8F2EC] text-[#1B4931] font-mono text-[10px] border border-[#C6DDD0]">Biodiversity Mandate</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Public guest users have instant access to pre-check formulation obviousness. Full statutory drafting and export licensing is accessible via MeriPehchan SSO for citizens, researchers, attorneys, and manufacturers.
+          </p>
 </div>
-<p class="text-[#62584C] leading-relaxed font-body-serif">
-          Commercial utilization of biological resources occurring in India requires prior intimation to the concerned State Biodiversity Board (SBB) and payment of Access &amp; Benefit Sharing (ABS) fees ranging from 0.1% to 0.5% ex-factory price.
-        </p>
+<div class="bg-surface-container p-6 rounded">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">lock_open</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Is TKDL Data Confidential?</h4>
 </div>
-<div class="border border-[#E5DCCD] rounded-lg p-3 bg-white">
-<div class="flex justify-between items-center mb-1">
-<span class="font-serif font-bold text-[#163E2A] text-sm">Indian Patent Act, 1970 — Section 3(p)</span>
-<span class="px-2 py-0.5 rounded bg-[#FDF7E7] text-[#743E0C] font-mono text-[10px] border border-[#E2CE9F]">Non-Patentable TK</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            IP-SAKTI exposes public domain canonical formulations from published texts. Confidential prior art references are strictly air-gapped and audited per CSIR-TKDL non-disclosure treaties with international patent offices.
+          </p>
 </div>
-<p class="text-[#62584C] leading-relaxed font-body-serif">
-          Inventions which, in effect, are traditional knowledge or which are an aggregation or duplication of known properties of traditionally known components are non-patentable.
-        </p>
+<div class="bg-surface-container p-6 rounded">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary text-[24px]">download</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">What is Form 25-D Docketing?</h4>
 </div>
-</div>
-<div class="p-4 border-t border-[#E5DCCD] bg-[#FAF7F2] flex items-center justify-between">
-<span class="font-mono text-xs text-[#7A6F60]">Ministry of Ayush Gazette Registry</span>
-<button class="btn-shimmer px-4 py-1.5 text-xs font-semibold bg-[#1B4931] text-white rounded hover:bg-[#163E2A] border border-[#235F40] shadow-sm transition-all" onclick="closeModal('statuteModal')" type="button">Dismiss</button>
-</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Under Rule 158-B of the Drugs and Cosmetics Rules, proprietary Ayurvedic medicines require citation evidence from First Schedule classical texts. IP-SAKTI automatically generates this compliance proof.
+          </p>
 </div>
 </div>
-<!-- ================= 6. INTERACTIVE SCRIPTS ================= -->
-<script src="/static/app.js?v=3"></script>
-<div id="google_translate_element" style="display:none;"></div>
-<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', autoDisplay: false}, 'google_translate_element');
-}
-</script>
+</div>
+</section>
+</div>
+<script>
+  // Interactive micro-interaction for the Sandbox Pre-Check
+  (function() {
+    const input = document.getElementById('sandbox-input');
+    const btn = document.getElementById('run-precheck-btn');
+    const resultTitle = document.getElementById('sandbox-result-title');
+    const samplePills = document.querySelectorAll('.sample-pill');
+
+    if (samplePills && input) {
+      samplePills.forEach(pill => {
+        pill.addEventListener('click', function() {
+          const val = this.getAttribute('data-val');
+          input.value = val;
+          localStorage.setItem('initial_query', val);
+          window.location.href = '/static/hub.html';
+        });
+      });
+    }
+
+    if (btn && input && resultTitle) {
+      btn.addEventListener('click', function() {
+        const val = input.value.trim();
+        if (val) {
+          resultTitle.textContent = val + ' — Prior Art Cross-Examination';
+        }
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low text-on-surface-variant"><div class="bg-surface-container-high/60 py-space-sm"><div class="max-w-[1360px] mx-auto px-margin flex flex-wrap items-center justify-between gap-space-sm font-label-sm text-label-sm text-text-secondary"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-success">verified_user</span><span class="">Official Sovereign Gateway under Section 3(p) Indian Patent Act &amp; Biological Diversity Act, 2002</span></div><div class="flex items-center gap-4"><span class="">National Single Sign-On (Jan Parichay) Compliant</span><span class="">•</span><span class="">DigiLocker Certified Credentials</span><span class="">•</span><span class="">WCAG 2.1 AA Accessible</span></div></div></div><div class="max-w-[1360px] mx-auto px-4 sm:px-margin py-space-lg sm:py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 gap-space-lg mb-space-lg"><div class="space-y-space-sm md:col-span-1"><div class="flex items-center gap-2 mb-2"><img alt="IP-SAKTI Sahayak Emblem" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wma2t8y-qpb7CyjPWkBM-Hek4qG14B4ddsx5hJ3ayOC2zcnYERZg_uNb5Xf7q_4RN9oWps1rWuDdmUCVu80lmxDdyYpaIwLyrCK3Sg094o3mwurlpYa9ofE6mMyetlIb8_dv4JCq6hlnUDDklofT3p8dk02b4VpOEbTwtvv2PmX4tsmTtM4EMWCz_XSZpZbzUxygMh5V_LA5WGWJh8iDB6Fht1NoQcOrJeBuhi5nKTqAcr0n7Nt_G4oQ"><span class="font-headline-sm text-headline-sm text-primary font-bold">IP-SAKTI Sahayak</span></div><p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">Autonomous Ayurvedic Prior-Art Intelligence, ASU&amp;H Regulatory Validation &amp; Bio-Cultural Defense Portal. Developed for Smart India Hackathon (SIH) 2024 #1482.</p><div class="pt-2 flex items-center gap-2"><span class="px-2 py-1 rounded bg-accent-gold-container text-secondary font-label-sm text-label-sm font-semibold">CSIR-TKDL Concordance</span><span class="px-2 py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold">AYUSH Ready</span></div></div><div class="space-y-space-xs"><h4 class="font-title-md text-title-md text-primary font-bold mb-2">Statutory &amp; Prior Art</h4><ul class="space-y-1 font-body-sm text-body-sm text-text-secondary"><li class=""><a class="hover:text-primary transition-colors" href="#guest-sandbox" onclick="event.preventDefault();document.getElementById('guest-sandbox').scrollIntoView({behavior:'smooth'})">TKDL Lexicon Concordance</a></li><li class=""><a class="hover:text-primary transition-colors" href="#guest-sandbox" onclick="event.preventDefault();document.getElementById('guest-sandbox').scrollIntoView({behavior:'smooth'})">ASU Formulations (D&amp;C First Sched.)</a></li><li class=""><a class="hover:text-primary transition-colors" href="#guest-sandbox" onclick="event.preventDefault();document.getElementById('guest-sandbox').scrollIntoView({behavior:'smooth'})">Section 3(p) Patent Ineligibility</a></li><li class=""><a class="hover:text-primary transition-colors" href="#guest-sandbox" onclick="event.preventDefault();document.getElementById('guest-sandbox').scrollIntoView({behavior:'smooth'})">NBA-SBB Access &amp; Benefit Sharing</a></li></ul></div><div class="space-y-space-xs"><h4 class="font-title-md text-title-md text-primary font-bold mb-2">Public Tools &amp; Gazettes</h4><ul class="space-y-1 font-body-sm text-body-sm text-text-secondary"><li class=""><a class="hover:text-primary transition-colors" href="#guest-sandbox" onclick="event.preventDefault();document.getElementById('guest-sandbox').scrollIntoView({behavior:'smooth'})">Classical vs Proprietary Navigator</a></li><li class=""><a class="hover:text-primary transition-colors" href="#guest-sandbox" onclick="event.preventDefault();document.getElementById('guest-sandbox').scrollIntoView({behavior:'smooth'})">Official Pharmacopoeia Bulletins</a></li><li class=""><a class="hover:text-primary transition-colors" href="/static/hub.html">Instant Formulation Pre-Check (Demo)</a></li><li class=""><a class="hover:text-primary transition-colors" href="/static/about.html">About IP-SAKTI Team</a></li></ul></div><div class="space-y-space-xs"><h4 class="font-title-md text-title-md text-primary font-bold mb-2">Sovereign Auth &amp; Governance</h4><p class="font-body-sm text-body-sm text-text-secondary leading-relaxed mb-3">Authorized ASU&amp;H Drug Inspectors, State Licensing Authorities, and Enterprise Exporters must authenticate via Jan Parichay.</p><a class="inline-flex items-center gap-2 px-3.5 py-2 rounded bg-surface-bright text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors font-semibold shadow-sm" href="/static/hub.html"><span class="material-symbols-outlined text-[16px]">lock</span> Access Sovereign Console</a></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-text-tertiary"><p class="">© 2024–2025 Ministry of AYUSH &amp; Council of Scientific and Industrial Research (CSIR). Hosted on National Informatics Centre sovereign cloud infrastructure.</p><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="/static/terms.html">Terms of Public Access</a><a class="hover:text-primary transition-colors" href="/static/terms.html">Hyperlink Policy</a><a class="hover:text-primary transition-colors" href="/static/about.html">TKDL Non-Disclosure Registry</a><a class="hover:text-primary transition-colors" href="/static/about.html">Sovereign Security Audit</a></div></div></div></footer>
+
+<script src="/static/app.js"></script>
 </body></html>
