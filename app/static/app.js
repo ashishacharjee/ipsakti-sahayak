@@ -1064,25 +1064,8 @@ function addHistoryItem(text) {
     list.prepend(item);
 }
 
-// Light/Dark Theme Toggle Logic
-function toggleTheme() {
-    const isDark = document.documentElement.classList.contains('dark');
-    if(isDark) {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-    } else {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-    }
-}
 
 document.addEventListener('DOMContentLoaded', () => {
-    // If they were on light mode, remove dark class
-    if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.classList.add('dark');
-    } else {
-        document.documentElement.classList.remove('dark');
-    }
     
     // Set up microphone button
     const micBtn = document.getElementById('mic-btn');
@@ -1127,9 +1110,6 @@ window.switchAuthTab = switchAuthTab;
 window.handleNewSession = handleNewSession;
 window.populatePrompt = populatePrompt;
 window.addHistoryItem = addHistoryItem;
-window.toggleTheme = toggleTheme;
-
-
 // Text-To-Speech Logic
 window.readAloud = function(btnElement, text) {
     if(!('speechSynthesis' in window)) {
