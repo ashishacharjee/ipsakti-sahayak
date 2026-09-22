@@ -1078,10 +1078,10 @@ function toggleTheme() {
 
 document.addEventListener('DOMContentLoaded', () => {
     // If they were on light mode, remove dark class
-    if (localStorage.getItem('theme') === 'light') {
-        document.documentElement.classList.remove('dark');
-    } else {
+    if (localStorage.getItem('theme') === 'dark') {
         document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark');
     }
     
     // Set up microphone button
