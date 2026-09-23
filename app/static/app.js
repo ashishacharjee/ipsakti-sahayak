@@ -102,6 +102,8 @@ let isAutoRead = false;
 
 // 1. Google Translate Logic
 function translateUI(lang) {
+    if (typeof switchLanguage === "function") { switchLanguage(lang); return; }
+
     const cookieName = 'googtrans';
     const domain = window.location.hostname;
     document.cookie = cookieName + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';

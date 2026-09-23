@@ -28,6 +28,8 @@ from app.services.evidence_scorer import evidence_engine
 from app.services.review_brief import review_brief_service
 from app.corpus.corpus_manager import corpus_manager
 
+from app.i18n.localization import localization_service
+
 MANDATORY_DISCLAIMER = (
     "DISCLAIMER: IP-SAKTI Sahayak provides statutory and regulatory informational guidance based on verified "
     "legal corpora (D&C Act, Patents Act, Biological Diversity Act 2023/2024, NDCT Rules, and International Treaties). "
@@ -42,7 +44,8 @@ class IntegratedGuidanceService:
         classification_req: ClassificationRequest,
         abs_req: ABSCheckRequest,
         free_text_query: Optional[str] = None,
-        jurisdiction_mode: str = "dual"
+        jurisdiction_mode: str = "dual",
+        language: str = "en"
     ) -> DualJurisdictionGuidance:
         
         # 1. Deterministic Classification
@@ -120,7 +123,7 @@ class IntegratedGuidanceService:
                     f"the 75-point statutory confidence threshold. Groundwork has been compiled into a Facilitator Review Brief."
                 )
 
-        return DualJurisdictionGuidance(
+        guidance = DualJurisdictionGuidance(
             national_guidance=national_layer,
             international_guidance=intl_layer,
             evidence_score=score_breakdown,
@@ -129,6 +132,25 @@ class IntegratedGuidanceService:
             abstention_reason=abstention_reason,
             mandatory_disclaimer=MANDATORY_DISCLAIMER
         )
+        
+        if language != "en":
+            # Translate text fields using Bhashini translation stub
+            try:
+                for k, v in guidance.national_guidance.items():
+                    if isinstance(v, str):
+                        guidance.national_guidance[k] = localization_service.bhashini_translate(v, "en", language)
+                for k, v in guidance.international_guidance.items():
+                    if isinstance(v, str):
+                        guidance.international_guidance[k] = localization_service.bhashini_translate(v, "en", language)
+                for prov in guidance.cited_provisions:
+                    if prov.key_excerpt:
+                        prov.key_excerpt = localization_service.bhashini_translate(prov.key_excerpt, "en", language)
+                    if prov.applicability_note:
+                        prov.applicability_note = localization_service.bhashini_translate(prov.applicability_note, "en", language)
+            except Exception as e:
+                print(f"Translation failed: {e}")
+                
+        return guidance
 
     def _assemble_national_layer(
         self,

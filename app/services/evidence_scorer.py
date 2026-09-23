@@ -31,23 +31,9 @@ class EvidenceStrengthEngine:
         is_borderline: bool = False
     ) -> EvidenceScoreBreakdown:
         
-        # Check Hard Gates first
-        hard_gate_triggered = False
-        hard_gate_reason = None
-
-        if has_stale_source:
-            hard_gate_triggered = True
-            hard_gate_reason = "Hard Gate Triggered: Stale or superseded statutory provision detected."
-        elif has_contradiction:
-            hard_gate_triggered = True
-            hard_gate_reason = "Hard Gate Triggered: Statutory contradiction or conflicting therapeutic claims detected."
-        elif is_borderline:
-            hard_gate_triggered = True
-            hard_gate_reason = "Hard Gate Triggered: Borderline classification requiring empirical clinical verification."
+        num_sources = len(retrieved_provisions)
 
         # 1. Source Agreement (Max 35 points)
-        # More independent concordant authorities backing the legal position yields higher score
-        num_sources = len(retrieved_provisions)
         if num_sources >= 4:
             agreement_score = 35.0
         elif num_sources == 3:
@@ -60,55 +46,70 @@ class EvidenceStrengthEngine:
             agreement_score = 0.0
 
         # 2. Statutory Authority (Max 20 points)
-        # Evaluates highest hierarchy level of governing sources
-        # Acts of Parliament / Multilateral Treaties = 20
-        # Statutory Rules / Regulations = 16-18
-        # Guidelines / Circulars = 10-12
         max_authority = 0
         for p in retrieved_provisions:
             weight = p.get("authority_weight", 12)
             if weight > max_authority:
                 max_authority = weight
-        authority_score = float(min(max_authority, 20))
+        authority_score = float(min(max_authority, 20)) if num_sources > 0 else 0.0
 
         # 3. Currency (Max 20 points)
-        # Evaluates whether the sources reflect the latest 2023/2024 legislative state
-        # (e.g. BD Amdt Act 2023, Patents Rules 2024, WIPO GRATK 2024)
         active_count = sum(1 for p in retrieved_provisions if p.get("is_active", True))
-        recent_count = sum(1 for p in retrieved_provisions if "2023" in p.get("year", "") or "2024" in p.get("year", ""))
+        recent_count = sum(1 for p in retrieved_provisions if "2023" in str(p.get("year", "")) or "2024" in str(p.get("year", "")))
         
-        if num_sources > 0 and (active_count / num_sources) >= 0.8:
-            currency_base = 15.0
-            if recent_count >= 1:
-                currency_score = 20.0
+        if num_sources > 0:
+            if (active_count / num_sources) >= 0.8:
+                if recent_count >= 1:
+                    currency_score = 20.0
+                else:
+                    currency_score = 15.0
             else:
-                currency_score = 15.0
-        elif num_sources > 0:
-            currency_score = 10.0
+                currency_score = 10.0
         else:
             currency_score = 0.0
 
         # 4. Jurisdiction Match (Max 15 points)
-        # Checks if retrieved evidence matches requested jurisdiction precisely
-        jur_norm = jurisdiction_requested.strip().lower()
-        if jur_norm in ["both", "dual"]:
-            has_in = any(p.get("jurisdiction") == "India" for p in retrieved_provisions)
-            has_intl = any(p.get("jurisdiction") == "International" for p in retrieved_provisions)
-            jurisdiction_score = 15.0 if (has_in and has_intl) else 10.0
-        elif jur_norm in ["india", "national"]:
-            has_in = any(p.get("jurisdiction") == "India" for p in retrieved_provisions)
-            jurisdiction_score = 15.0 if has_in else 5.0
+        if num_sources == 0:
+            jurisdiction_score = 0.0
         else:
-            has_intl = any(p.get("jurisdiction") == "International" for p in retrieved_provisions)
-            jurisdiction_score = 15.0 if has_intl else 5.0
+            jur_norm = jurisdiction_requested.strip().lower() if jurisdiction_requested else ""
+            has_in = any(str(p.get("jurisdiction", "")).lower() in ["india", "national"] for p in retrieved_provisions)
+            has_intl = any(str(p.get("jurisdiction", "")).lower() in ["international", "wipo", "foreign"] for p in retrieved_provisions)
+            
+            if jur_norm in ["both", "dual"]:
+                jurisdiction_score = 15.0 if (has_in and has_intl) else (10.0 if (has_in or has_intl) else 0.0)
+            elif jur_norm in ["india", "national"]:
+                jurisdiction_score = 15.0 if has_in else (5.0 if has_intl else 0.0)
+            else:
+                jurisdiction_score = 15.0 if has_intl else (5.0 if has_in else 0.0)
 
         # 5. Classification Certainty (Max 10 points)
-        # Deterministic leaf reached with clear statutory grounding
-        if category_id in ["CLASSICAL", "PATENT_PROPRIETARY", "NEW_DRUG", "PHYTOPHARMACEUTICAL", "NUTRACEUTICAL", "COSMETIC"]:
+        valid_categories = ["CLASSICAL", "PATENT_PROPRIETARY", "NEW_DRUG", "PHYTOPHARMACEUTICAL", "NUTRACEUTICAL", "COSMETIC"]
+        if category_id and str(category_id).upper() in valid_categories:
             classification_certainty = 10.0
-        else:
+        elif category_id and str(category_id).upper() != "UNKNOWN":
             classification_certainty = 5.0
+        else:
+            classification_certainty = 0.0
 
+        # Check Hard Gates
+        hard_gate_triggered = False
+        hard_gate_reason = None
+
+        if num_sources == 0:
+            hard_gate_triggered = True
+            hard_gate_reason = "Hard Gate Triggered: No statutory provisions or precedents found."
+        elif has_stale_source:
+            hard_gate_triggered = True
+            hard_gate_reason = "Hard Gate Triggered: Stale or superseded statutory provision detected."
+        elif has_contradiction:
+            hard_gate_triggered = True
+            hard_gate_reason = "Hard Gate Triggered: Statutory contradiction or conflicting therapeutic claims detected."
+        elif is_borderline:
+            hard_gate_triggered = True
+            hard_gate_reason = "Hard Gate Triggered: Borderline classification requiring empirical clinical verification."
+        
+        # Penalize score for missing categories even if no hard gate
         total_score = agreement_score + authority_score + currency_score + jurisdiction_score + classification_certainty
         
         # Apply Hard Gate Cap
@@ -119,9 +120,9 @@ class EvidenceStrengthEngine:
         total_score = round(max(0.0, min(100.0, total_score)), 1)
 
         # Confidence categorization
-        if total_score >= 75.0 and not hard_gate_triggered:
+        if total_score >= 80.0 and not hard_gate_triggered:
             confidence_level = ConfidenceLevel.HIGH
-        elif total_score >= 50.0 and not hard_gate_triggered:
+        elif total_score >= 55.0 and not hard_gate_triggered:
             confidence_level = ConfidenceLevel.MODERATE
         else:
             confidence_level = ConfidenceLevel.LOW

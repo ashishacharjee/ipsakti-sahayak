@@ -1,0 +1,16 @@
+bel-sm">
+<span class="font-medium">Impact: Section 3(p) Defense</span>
+<span class="text-secondary font-bold cursor-pointer group-hover:translate-x-1 transition-transform flex items-center gap-0.5">View Case Law →</span>
+</div>
+</div>
+<!-- Gazette Feed Item 3 -->
+<div class="card-hover-fx p-sp
+
+m text-label-sm">
+<span class="font-medium">Impact: ABS Exemption</span>
+<span class="text-primary font-bold cursor-pointer group-hover:translate-x-1 transition-transform flex items-center gap-0.5">Download Form →</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Historical Treatise Contextual Strip wi

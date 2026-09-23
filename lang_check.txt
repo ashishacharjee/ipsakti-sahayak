@@ -1,0 +1,12 @@
+ry_tech</span> IP-SAKTI Platform
+        </span>
+<span class="text-outline-variant hidden sm:inline">|</span>
+<div class="flex items-center gap-2">
+<button class="px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-bright transition-colors font-bold text-label-sm" onclick="switchLanguage('en')" data-lang-btn="en">EN</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface transition-colors font-medium text-label-sm" onclick="switchLanguage('hi')" data-lang-btn="hi">हिन्दी</button>
+</div>
+
+</div>
+</div>
+</div>
+<div id="hero-secti

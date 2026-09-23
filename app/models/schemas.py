@@ -145,6 +145,7 @@ class FullGuidanceRequest(BaseModel):
     abs_check: Optional[ABSCheckRequest] = None
     query: Optional[str] = None
     jurisdiction: str = "dual"
+    language: str = "en"
 
 
 class TKDLQueryRequest(BaseModel):

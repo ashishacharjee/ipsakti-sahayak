@@ -50,6 +50,40 @@
         .orbit-container { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 2rem; background-color: #f7f5ef; }
         .orbit-stage { position: relative; height: 470px; width: 100%; max-width: 980px; }
     </style>
+  <script src=
+<!-- Unified Top Bar -->
+<div class="bg-surface-container-high py-1 px-4 lg:px-margin hidden sm:block border-b border-border-subtle z-[60] relative w-full">
+  <div class="max-w-[1360px] mx-auto flex items-center justify-between font-label-sm text-label-sm text-text-secondary">
+    <div>
+      <span class="font-semibold text-primary" data-i18n="gov_title">GOVERNMENT OF INDIA</span> 
+      <span class="text-border-strong mx-2">|</span> 
+      <span data-i18n="ministry">Ministry of AYUSH • CSIR-TKDL Statutory Interface</span>
+    </div>
+    
+    <div class="flex items-center gap-space-md">
+      <div class="flex items-center gap-2">
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors" title="Screen Reader Access">
+            <span class="material-symbols-outlined text-[14px]">accessibility_new</span>
+            <span data-i18n="screen_reader">Screen Reader Access</span>
+        </a>
+        <span class="text-outline-variant mx-1">|</span>
+        <div class="flex items-center gap-1 font-medium">
+            <button class="px-1 hover:text-primary transition-colors text-[11px]" onclick="document.body.style.zoom='0.9'">A-</button>
+            <button class="px-1 hover:text-primary transition-colors text-[13px]" onclick="document.body.style.zoom='1.0'">A</button>
+            <button class="px-1 hover:text-primary transition-colors text-[15px]" onclick="document.body.style.zoom='1.1'">A+</button>
+        </div>
+      </div>
+
+      <span class="text-outline-variant hidden sm:inline">|</span>
+
+      <div class="flex items-center gap-2">
+        <button class="px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-bright transition-colors font-bold text-label-sm shadow-xs border border-border-subtle" onclick="switchLanguage('en')" data-lang-btn="en">EN</button>
+        <button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-medium text-label-sm border border-transparent" onclick="switchLanguage('hi')" data-lang-btn="hi">हिन्दी</button>
+      </div>
+    </div>
+  </div>
+</div>
+"/static/i18n.js"></script>
 </head>
 <body>
 
@@ -71,7 +105,7 @@
             <!-- Title -->
             <h1 class="text-[15vw] md:text-[12rem] font-normal leading-[0.85] tracking-tighter mb-20 text-center flex flex-col items-center" style="font-family: 'Instrument Serif', serif;">
                 <div class="wake-target">IP-SAKTI</div>
-                <div class="wake-target relative">Engine<span class="absolute right-[0.45em] top-[0.1em] w-[0.25em] h-[0.25em] bg-white rounded-full"></span></div>
+                <div class="wake-target relative">Engine</div>
             </h1>
             
             <div class="w-full max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start mt-8 px-4 md:px-8 gap-8 md:gap-4">

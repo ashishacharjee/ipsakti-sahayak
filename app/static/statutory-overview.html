@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | IP-SAKTI Sahayak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                vedic: {
+                  parchment: 'var(--color-bg)',
+                  surface: 'var(--color-surface)',
+                  dim: 'var(--color-dim)',
+                  border: 'var(--color-border)',
+                  borderLight: 'var(--color-border-light)',
+                  forest: 'var(--color-brand)',
+                  forestDark: 'var(--color-brand-dark)',
+                  textPrimary: 'var(--color-text-primary)',
+                  textSecondary: 'var(--color-text-secondary)',
+                  textMuted: 'var(--color-text-muted)'
+                }
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        :root {
+          --color-bg: #FFFFFF;
+          --color-surface: #F4F4F5;
+          --color-dim: #E4E4E7;
+          --color-border: #E5E7EB;
+          --color-border-light: #F3F4F6;
+          --color-brand: #18181B;
+          --color-brand-dark: #000000;
+          --color-text-primary: #09090B;
+          --color-text-secondary: #52525B;
+          --color-text-muted: #A1A1AA;
+        }
+        .dark-theme {
+          :root {
+            --color-bg: #121212;
+            --color-surface: #1E1E1E;
+            --color-dim: #2C2C2C;
+            --color-border: #3A3A3A;
+            --color-border-light: #2C2C2C;
+            --color-brand: #E0E0E0;
+            --color-brand-dark: #FFFFFF;
+            --color-text-primary: #F5F5F5;
+            --color-text-secondary: #A0A0A0;
+            --color-text-muted: #707070;
+          }
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark-theme');
+            const isDark = document.documentElement.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+    </script>
+  <script src="/static/i18n.js"></script>
+</head>
+
+<body class="bg-vedic-parchment text-vedic-textPrimary antialiased selection:bg-indigo-500/30">
+<!-- Unified Top Bar -->
+<div class="bg-surface-container-high py-1 px-4 lg:px-margin hidden sm:block border-b border-border-subtle z-[60] relative w-full">
+  <div class="max-w-[1360px] mx-auto flex items-center justify-between font-label-sm text-label-sm text-text-secondary">
+    <div>
+      <span class="font-semibold text-primary" data-i18n="gov_title">GOVERNMENT OF INDIA</span> 
+      <span class="text-border-strong mx-2">|</span> 
+      <span data-i18n="ministry">Ministry of AYUSH • CSIR-TKDL Statutory Interface</span>
+    </div>
+    
+    <div class="flex items-center gap-space-md">
+      <div class="flex items-center gap-2">
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors" title="Screen Reader Access">
+            <span class="material-symbols-outlined text-[14px]">accessibility_new</span>
+            <span data-i18n="screen_reader">Screen Reader Access</span>
+        </a>
+        <span class="text-outline-variant mx-1">|</span>
+        <div class="flex items-center gap-1 font-medium">
+            <button class="px-1 hover:text-primary transition-colors text-[11px]" onclick="document.body.style.zoom='0.9'">A-</button>
+            <button class="px-1 hover:text-primary transition-colors text-[13px]" onclick="document.body.style.zoom='1.0'">A</button>
+            <button class="px-1 hover:text-primary transition-colors text-[15px]" onclick="document.body.style.zoom='1.1'">A+</button>
+        </div>
+      </div>
+
+      <span class="text-outline-variant hidden sm:inline">|</span>
+
+      <div class="flex items-center gap-2">
+        <button class="px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-bright transition-colors font-bold text-label-sm shadow-xs border border-border-subtle" onclick="switchLanguage('en')" data-lang-btn="en">EN</button>
+        <button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-medium text-label-sm border border-transparent" onclick="switchLanguage('hi')" data-lang-btn="hi">हिन्दी</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Header -->
+    <header class="h-16 border-b border-vedic-border bg-vedic-surface/80 backdrop-blur-md sticky top-0 z-50 flex items-center px-6">
+        <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            <span class="font-bold tracking-wider text-vedic-forest">IP-SAKTI Sahayak</span>
+        </a>
+    
+        <div class="flex items-center ml-auto">
+            
+        </div>
+      </header>
+
+
+    <!-- Main Content -->
+    <main class="w-full pt-16 sm:pt-32 bg-surface min-h-[calc(100vh-280px)]"><div class="flex flex-col w-full"><div id="view-statutory" class="spa-view hidden"><div id="hero-section-wrapper" class="order-2">
+<!-- Hero Section (Unauthenticated Guest View) -->
+<section class="relative w-full px-4 lg:px-10 py-8 lg:py-16 overflow-hidden bg-gradient-to-b from-surface to-surface-container-lowest">
+<!-- Atmospheric Ambient Glows -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1360px] mx-auto flex flex-col items-center text-center relative z-10">
+<!-- Statutory Intelligence Badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-primary font-label-md text-label-md mb-6 shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">gavel</span>
+<span class="font-bold tracking-widest text-on-surface">STATUTORY INTELLIGENCE UNIT</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-semibold text-primary">AIR-GAPPED v2.4</span>
+</div>
+<!-- Main Headline with Typographic Gravitas -->
+<h1 class="font-headline-lg text-headline-sm sm:text-headline-lg lg:text-display-lg text-on-surface max-w-5xl leading-tight mb-4 sm:mb-6">
+        Sovereign AI for <span class="text-primary italic">Ayurvedic Intellectual Property</span> &amp; Statutory Licensing
+      </h1>
+<!-- Precise Subtitle -->
+<p class="font-body-md sm:font-body-lg text-body-md sm:text-body-lg text-on-surface-variant max-w-3xl mb-6 sm:mb-8 leading-relaxed">
+        Democratizing patent clearance under Section 3(p), traditional knowledge cross-examination with CSIR-TKDL (542,000+ Shlokas), and automated Form 25-D &amp; Rule 158-B licensing for bio-innovators, patent attorneys, and AYUSH manufacturers.
+      </p>
+<!-- Dual Call-to-Actions -->
+<div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full">
+<a class="inline-flex items-center gap-2.5 px-5 sm:px-6 py-3 sm:py-3.5 rounded bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-fixed transition-all shadow-md font-bold w-full sm:w-auto justify-center" href="#national-auth-gateway" onclick="document.getElementById('national-auth-gateway').scrollIntoView({behavior:'smooth'}); return false;">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+<span class="">Access Sovereign Portal (MeriPehchan)</span>
+</a>
+<a class="inline-flex items-center gap-2.5 px-5 sm:px-6 py-3 sm:py-3.5 rounded bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-bright transition-all shadow-sm font-semibold w-full sm:w-auto justify-center" href="/static/hub.html">
+<span class="material-symbols-outlined text-[20px] text-secondary">science</span>
+<span class="">Try Guest Sandbox (Instant Preview)</span>
+</a>
+</div>
+<!-- Live KPI Metrics Bar -->
+<div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+<div class="bg-surface-container p-5 rounded shadow-sm flex items-start gap-4">
+<div class="p-2.5 rounded bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[26px]">menu_book</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">542,898</div>
+<div class="font-title-md text-title-md text-primary">TKDL Canonical Shlokas</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Digitally indexed from 14 ancient Samhitas</div>
+</div>
+</div>
+<div class="bg-surface-container p-5 rounded shadow-sm flex items-start gap-4">
+<div class="p-2.5 rounded bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[26px]">balance</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">96.8%</div>
+<div class="font-title-md text-title-md text-secondary">Sec 3(p) Defense Concordance</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Obviousness &amp; traditional efficacy validation</div>
+</div>
+</div>
+<div class="bg-surface-container p-5 rounded shadow-sm flex items-start gap-4">
+<div class="p-2.5 rounded bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[26px]">speed</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">&lt; 3.5 Min</div>
+<div class="font-title-md text-title-md text-primary">Rule 158-B Docketing</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Form 25-D AYUSH dossier pre-assembly</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Codified Pillars of Ayurvedic Jurisprudence (4 Card Grid in Dark Theme) -->
+<section class="w-full px-4 lg:px-10 py-16 bg-surface-container-lowest">
+<div class="max-w-[1360px] mx-auto">
+<div class="mb-12">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Codified Jurisprudence</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1 mb-2">Four Sovereign Pillars of Traditional Knowledge Defense</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Engineered to prevent biopiracy, protect sovereign biological resources, and accelerate authentic AYUSH commercialization under Indian statute.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-success">verified</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">94% Clearance</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Patent Defense</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">Section 3(p) Patent Evaluation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Evaluate patentability constraints under Section 3(p) of the Indian Patents Act, 1970. Overcome traditional knowledge obviousness objections with codified synergistic bioavailability evidence.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">IPO Manual 2019 • Sec 3(e) Synergism</div>
+<div class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="localStorage.setItem('initial_query', 'Section 3(p) IPA 1970 patent evaluation and Sec 3(e) Synergism guidelines for Ayurvedic formulation'); window.location.href='/static/hub.html'">
+<span class="">Run Claim Audit</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">translate</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">menu_book</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">542K Shlokas</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">CSIR Corpus</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">TKDL Prior Art Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Cross-reference formulation components against Sanskrit, Unani, Siddha & Sowa-Rigpa canonical literature. Instantly detect shloka concordance in Charaka, Sushruta, and AFI-Vol I to IV.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">WIPO IPC A61K 36/00 Concurrence</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="localStorage.setItem('initial_query', 'Cross-reference formulation with TKDL prior art, check Charaka Samhita and WIPO IPC A61K 36/00'); window.location.href='/static/hub.html'">
+<span class="">Inspect Shlokas</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">location_on</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">NBA Form I</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">ABS Clearance</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">Geographical Indication (GI) & ABS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Analyze origin-based botanical IP protections, endemic habitat claims, and State Biodiversity Board (SBB) revenue sharing mandates under the Biological Diversity (Amendment) Act 2023.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">382 Registered Botanical GIs</div>
+<div class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="localStorage.setItem('initial_query', 'Evaluate Geographical Indication (GI) and ABS clearance mandates under NBA Form I'); window.location.href='/static/hub.html'">
+<span class="">Analyze Provenance</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">category</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-accent-gold">category</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">Form 25-D Wizard</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Statutory Map</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">Classify Your Ayurvedic Product</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Multi-step guided wizard to determine whether your item classifies as Shastric Classical, Patent & Proprietary (P&P), Nutraceutical (FSSAI AYUSH Aahar), or Topical Cosmetic.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">Drugs & Cosmetics Sec 3(a)</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="var q=document.getElementById('formulation-input').value; if(q) { localStorage.setItem('initial_query', q); } else { localStorage.setItem('initial_query', 'Classify my Ayurvedic product (Shastric, P&P, Aahar or Cosmetic)'); } window.location.href='/static/hub.html'">
+<span class="">Start Classifier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bio-Cultural Heritage & Anti-Biopiracy Case Studies -->
+<section class="w-full px-4 lg:px-10 py-16 bg-surface">
+<div class="max-w-[1360px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Historical Precedents</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1 mb-2">Preserving India's Bio-Heritage Against Biopiracy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Landmark international patent revocations driven by CSIR-TKDL statutory evidence, safeguarding ancient formulations from illicit commercial monopolies.
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">1,820+ Global Revocations</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Landmark Case 1: Curcuma Longa Turmeric Patent Revocation -->
+<div class="bg-surface-container rounded-lg overflow-hidden shadow-md flex flex-col sm:flex-row">
+<div class="sm:w-2/5 relative min-h-[220px]">
+<img class="w-full h-full object-cover" data-alt="Rich macro photography of vibrant raw Curcuma longa turmeric rhizomes and powdered golden spice on deep midnight emerald slate with warm gold lighting, representing authentic Indian traditional ayurvedic medicine botanical specimen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_liVzbnoVlFxdt3Shhe8vZeeaX_75m2FD4bKX6YqI5HH5lVeyTqmDghOtP7joR6-uRess4KuVMYtm509z7BB4g8RoP6cetN1GjKmgiiZkDxFMbbOVio44IpZ1I3Wb2xuX81kRBF0F34xDFuZ_2b_ccYzuF9iJM4hdfWXjnxvrGVrsgM7ymohrJCEUpVKNByg_tCQ1JJWiuBXUD7cLukAOD8RTLi1H-qPNvfTVCZxIOUgpsAj6eMhm">
+<div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-surface-container to-transparent opacity-60"></div>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-primary font-label-sm text-label-sm font-bold">
+              US Patent #5,401,504 Revoked
+            </div>
+</div>
+<div class="p-6 sm:w-3/5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary font-bold">USPTO Landmark Ruling</span>
+<span class="text-body-sm text-on-surface-variant font-mono">CSIR-1997</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-2">Turmeric (Curcuma longa) Wound Healing Doctrine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                The milestone defense demonstrating wound healing using Haridra had been documented for millennia in the Ayurvedic Pharmacopoeia of India, leading to total patent revocation in the United States.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<span class="text-on-surface font-semibold">Statutory Ground:</span>
+<span class="text-primary font-mono font-bold">35 U.S.C. § 102 Prior Art</span>
+</div>
+</div>
+</div>
+<!-- Landmark Case 2: Neem Fungicidal Patent Revocation at EPO -->
+<div class="bg-surface-container rounded-lg overflow-hidden shadow-md flex flex-col sm:flex-row">
+<div class="sm:w-2/5 relative min-h-[220px]">
+<img class="w-full h-full object-cover" data-alt="Detailed botanical close-up photograph of lush green Azadirachta indica neem leaves and seeds placed against dark moody forest background with rim lighting, highlighting Indian medicinal plant heritage and biological wealth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJQD_crQ3On4H_wI39IMDu1no1eFJE_whjyt8RAIgJ0rsXA3gO0801WMECAfxEPAzyI9IoA5ZyUNWTU_8IIguafNf8RAPuh1RZTISh7rGEYwv31FBrd09EkWS0WtcmEyykQ4007p2V-KTD0gO3_NjWOkRRm810cXGK4_BdxVLioB9zLUaggSTCGdAu9YmLPcRr3y2PJm5A70tri9C6Rd8gXEnsRd_no4nZOo59phog83FT5iccjbob">
+<div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-surface-container to-transparent opacity-60"></div>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-secondary font-label-sm text-label-sm font-bold">
+              EPO Patent #436,257 Revoked
+            </div>
+</div>
+<div class="p-6 sm:w-3/5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-primary font-bold">European Patent Office (EPO)</span>
+<span class="text-body-sm text-on-surface-variant font-mono">EPO-2000</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-2">Neem (Azadirachta indica) Fungicidal Properties</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Joint opposition by CSIR and RFSTE presented ancient Sanskrit references confirming hydrophobic neem extracts had protected crops across rural India for generations, defeating inventive step claims.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<span class="text-on-surface font-semibold">Statutory Ground:</span>
+<span class="text-secondary font-mono font-bold">Art. 56 EPC Lack of Inventive Step</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Treatise Concordance Authority Banner (Luminous Sanskrit Inscription) -->
+<section class="w-full px-4 lg:px-10 py-14 bg-surface-container-lowest border-y border-outline-variant/20 relative overflow-hidden">
+  <div class="max-w-5xl mx-auto relative z-10">
+    <div class="relative rounded-2xl border border-primary/25 p-8 lg:p-12 shadow-2xl overflow-hidden" style="background: radial-gradient(circle at left top, rgba(16, 185, 129, 0.08), transparent 70%), rgb(13, 31, 25);">
+      <!-- Ambient Vedic Aura Glows -->
+      <div class="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center">
+        <!-- Sacred Emblem Header -->
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-12 h-12 rounded-full bg-surface-container-high border border-primary/30 flex items-center justify-center text-primary shadow-md">
+            <span class="material-symbols-outlined text-[28px]">menu_book</span>
+          </div>
+        </div>
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container border border-primary/30 text-primary font-label-sm text-label-sm tracking-widest uppercase font-bold mb-4">
+          <span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+          <span class="">आयुर्वेद शास्त्र प्रमाण • STATUTORY CANONICAL AUTHORITY</span>
+        </div>
+
+        <!-- Sanskrit Shloka Inscription in Radiant Glowing Soft Gold -->
+        <div class="my-2 px-2 max-w-4xl">
+          <blockquote class="font-serif text-[26px] md:text-[32px] lg:text-[36px] text-secondary font-bold tracking-wide leading-relaxed drop-shadow-[0_2px_12px_rgba(245,158,11,0.35)]">
+            "यथा विषं यथा शस्त्रं यथाऽग्निरशनिर्यथा।<br class="hidden md:inline">
+            तथौषधमविज्ञातं विज्ञातममृतं यथा॥"
+          </blockquote>
+        </div>
+
+        <!-- Citation Header in Vibrant Mint / Emerald -->
+        <div class="mt-3 mb-4 inline-flex items-center gap-2 px-3.5 py-1 rounded bg-surface-container-lowest/80 border border-primary/20 text-primary font-label-md text-label-md font-semibold tracking-wider uppercase">
+          <span class="material-symbols-outlined text-[16px]">auto_stories</span>
+          <span class="">चरक संहिता • सूत्रस्थानम् १.१२४ (CHARAKA SAMHITA, SUTRASTHANA 1.124)</span>
+        </div>
+
+        <!-- English Statutory Foundation Translation in High-Contrast Crisp Mint-Slate Text -->
+        <p class="font-body-md text-[15px] md:text-[17px] text-[#e2e8f0] max-w-3xl leading-relaxed italic mb-6 text-center">
+          “The flora and botanical medicine indigenous to the native soil of the living being constitutes the most efficacious remedy.” — The codified constitutional basis for sovereign bio-heritage preservation under Article 39(b) and the Biological Diversity Act, 2002.
+        </p>
+
+        <!-- Interactive Action Strip with Dark Button and Live Badge -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a class="px-5 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary border border-primary/30 font-label-md text-label-md font-bold transition-all shadow-md flex items-center gap-2" href="/static/hub.html">
+            <span class="material-symbols-outlined text-[18px]">search</span>
+            <span class="">Search Shloka Lexicon</span>
+          </a>
+          <div class="px-4 py-2.5 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md font-semibold flex items-center gap-2 shadow-sm">
+            <span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+            <span class=""><span class="text-primary font-semibold">542,898</span> Shlokas Mapped • 100% CSIR Reconciled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /view-statutory --></div></main>
+
+    <script>
+        // Scroll Spy Logic
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.term-section');
+            const links = document.querySelectorAll('.term-link');
+            
+            let currentId = '';
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop <= 150) { 
+                    currentId = section.getAttribute('id');
+                }
+            });
+            
+            links.forEach(link => {
+                link.classList.remove('text-vedic-textPrimary', 'border-indigo-600', 'font-semibold');
+                link.classList.add('text-vedic-textSecondary', 'border-transparent', 'font-medium');
+                if (link.getAttribute('href') === `#${currentId}`) {
+                    link.classList.add('text-vedic-textPrimary', 'border-indigo-600', 'font-semibold');
+                    link.classList.remove('text-vedic-textSecondary', 'border-transparent', 'font-medium');
+                }
+            });
+        });
+
+        // Smooth scroll for links
+        document.querySelectorAll('.term-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+<script>
+class AsciiGlitchRipple {
+    constructor(el, options = {}) {
+        this.el = el;
+        this.origTxt = el.textContent;
+        this.origChars = this.origTxt.split("");
+        this.dur = options.dur || 1000;
+        this.chars = options.chars || '.,·-─~+:;=*π""┐┌┘┴┬╗╔╝╚╬╠╣╩╦║░▒▓█▄▀▌▐■!?&#$@0123456789*';
+        this.spread = options.spread || 1.2;
+        this.preserveSpaces = true;
+        
+        this.isAnim = false;
+        this.cursorPos = 0;
+        this.waves = [];
+        this.animId = null;
+        this.isHover = false;
+        this.origW = null;
+
+        this.WAVE_THRESH = 3;
+        this.CHAR_MULT = 3;
+        this.ANIM_STEP = 40;
+        this.WAVE_BUF = 5;
+
+        this.handleEnter = this.handleEnter.bind(this);
+        this.handleMove = this.handleMove.bind(this);
+        this.handleLeave = this.handleLeave.bind(this);
+        this.animate = this.animate.bind(this);
+
+        this.el.addEventListener('mouseenter', this.handleEnter);
+        this.el.addEventListener('mousemove', this.handleMove);
+        this.el.addEventListener('mouseleave', this.handleLeave);
+    }
+    
+    updateCursorPos(e) {
+        const rect = this.el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const len = this.origTxt.length;
+        const pos = Math.round((x / rect.width) * len);
+        this.cursorPos = Math.max(0, Math.min(pos, len - 1));
+    }
+    
+    stop() {
+        this.el.textContent = this.origTxt;
+        if (this.origW !== null) {
+            this.el.style.width = "";
+            this.origW = null;
+        }
+        this.isAnim = false;
+        if (this.animId) {
+            cancelAnimationFrame(this.animId);
+            this.animId = null;
+        }
+    }
+    
+    start() {
+        if (this.isAnim) return;
+        if (this.origW === null) {
+            this.origW = this.el.getBoundingClientRect().width;
+            this.el.style.width = this.origW + "px";
+        }
+        this.isAnim = true;
+        this.animId = requestAnimationFrame(this.animate);
+    }
+    
+    startWave() {
+        this.waves.push({
+            startPos: this.cursorPos,
+            startTime: Date.now(),
+            id: Math.random()
+        });
+        if (!this.isAnim) this.start();
+    }
+    
+    calcWaveEffect(charIdx, t) {
+        let shouldAnim = false;
+        let resultChar = this.origChars[charIdx];
+        
+        for (const w of this.waves) {
+            const age = t - w.startTime;
+            const prog = Math.min(age / this.dur, 1);
+            const dist = Math.abs(charIdx - w.startPos);
+            const maxDist = Math.max(w.startPos, this.origChars.length - w.startPos - 1);
+            const rad = (prog * (maxDist + this.WAVE_BUF)) / this.spread;
+            
+            if (dist <= rad) {
+                shouldAnim = true;
+                const intens = Math.max(0, rad - dist);
+                if (intens <= this.WAVE_THRESH && intens > 0) {
+                    const index = Math.floor(dist * this.CHAR_MULT + age / this.ANIM_STEP) % this.chars.length;
+                    resultChar = this.chars[index];
+                }
+            }
+        }
+        return { shouldAnim, char: resultChar };
+    }
+    
+    animate() {
+        const t = Date.now();
+        this.waves = this.waves.filter(w => (t - w.startTime) < this.dur);
+        if (this.waves.length === 0) {
+            this.stop();
+            return;
+        }
+        
+        let newTxt = "";
+        for (let i = 0; i < this.origChars.length; i++) {
+            const char = this.origChars[i];
+            if (this.preserveSpaces && char === " ") {
+                newTxt += " ";
+            } else {
+                const res = this.calcWaveEffect(i, t);
+                newTxt += res.shouldAnim ? res.char : char;
+            }
+        }
+        this.el.textContent = newTxt;
+        this.animId = requestAnimationFrame(this.animate);
+    }
+    
+    handleEnter(e) {
+        this.isHover = true;
+        this.updateCursorPos(e);
+        this.startWave();
+    }
+    
+    handleMove(e) {
+        if (!this.isHover) return;
+        const old = this.cursorPos;
+        this.updateCursorPos(e);
+        if (this.cursorPos !== old) this.startWave();
+    }
+    
+    handleLeave() {
+        this.isHover = false;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Only apply to the main H1 title. 
+    // Applying to paragraphs destroys their inner HTML (links, bold tags) and causes massive lag!
+    document.querySelectorAll('h1, h2').forEach(el => new AsciiGlitchRipple(el, { spread: 1.0, dur: 800 }));
+});
+</script>
+
+
+    
+
+</body>
+</html>

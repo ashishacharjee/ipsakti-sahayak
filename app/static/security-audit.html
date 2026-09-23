@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign Security Audit | IP-SAKTI Sahayak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                vedic: {
+                  parchment: 'var(--color-bg)',
+                  surface: 'var(--color-surface)',
+                  dim: 'var(--color-dim)',
+                  border: 'var(--color-border)',
+                  borderLight: 'var(--color-border-light)',
+                  forest: 'var(--color-brand)',
+                  forestDark: 'var(--color-brand-dark)',
+                  textPrimary: 'var(--color-text-primary)',
+                  textSecondary: 'var(--color-text-secondary)',
+                  textMuted: 'var(--color-text-muted)'
+                }
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        :root {
+          --color-bg: #FFFFFF;
+          --color-surface: #F4F4F5;
+          --color-dim: #E4E4E7;
+          --color-border: #E5E7EB;
+          --color-border-light: #F3F4F6;
+          --color-brand: #18181B;
+          --color-brand-dark: #000000;
+          --color-text-primary: #09090B;
+          --color-text-secondary: #52525B;
+          --color-text-muted: #A1A1AA;
+        }
+        .dark-theme {
+          :root {
+            --color-bg: #121212;
+            --color-surface: #1E1E1E;
+            --color-dim: #2C2C2C;
+            --color-border: #3A3A3A;
+            --color-border-light: #2C2C2C;
+            --color-brand: #E0E0E0;
+            --color-brand-dark: #FFFFFF;
+            --color-text-primary: #F5F5F5;
+            --color-text-secondary: #A0A0A0;
+            --color-text-muted: #707070;
+          }
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-theme');
+        }
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark-theme');
+            const isDark = document.documentElement.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+    </script>
+  <script src="/static/i18n.js"></script>
+</head>
+
+<body class="bg-vedic-parchment text-vedic-textPrimary antialiased selection:bg-indigo-500/30">
+<!-- Unified Top Bar -->
+<div class="bg-surface-container-high py-1 px-4 lg:px-margin hidden sm:block border-b border-border-subtle z-[60] relative w-full">
+  <div class="max-w-[1360px] mx-auto flex items-center justify-between font-label-sm text-label-sm text-text-secondary">
+    <div>
+      <span class="font-semibold text-primary" data-i18n="gov_title">GOVERNMENT OF INDIA</span> 
+      <span class="text-border-strong mx-2">|</span> 
+      <span data-i18n="ministry">Ministry of AYUSH • CSIR-TKDL Statutory Interface</span>
+    </div>
+    
+    <div class="flex items-center gap-space-md">
+      <div class="flex items-center gap-2">
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors" title="Screen Reader Access">
+            <span class="material-symbols-outlined text-[14px]">accessibility_new</span>
+            <span data-i18n="screen_reader">Screen Reader Access</span>
+        </a>
+        <span class="text-outline-variant mx-1">|</span>
+        <div class="flex items-center gap-1 font-medium">
+            <button class="px-1 hover:text-primary transition-colors text-[11px]" onclick="document.body.style.zoom='0.9'">A-</button>
+            <button class="px-1 hover:text-primary transition-colors text-[13px]" onclick="document.body.style.zoom='1.0'">A</button>
+            <button class="px-1 hover:text-primary transition-colors text-[15px]" onclick="document.body.style.zoom='1.1'">A+</button>
+        </div>
+      </div>
+
+      <span class="text-outline-variant hidden sm:inline">|</span>
+
+      <div class="flex items-center gap-2">
+        <button class="px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-bright transition-colors font-bold text-label-sm shadow-xs border border-border-subtle" onclick="switchLanguage('en')" data-lang-btn="en">EN</button>
+        <button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-medium text-label-sm border border-transparent" onclick="switchLanguage('hi')" data-lang-btn="hi">हिन्दी</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Header -->
+    <header class="h-16 border-b border-vedic-border bg-vedic-surface/80 backdrop-blur-md sticky top-0 z-50 flex items-center px-6">
+        <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <svg class="w-5 h-5 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            <span class="font-bold tracking-wider text-vedic-forest">IP-SAKTI Sahayak</span>
+        </a>
+    
+        <div class="flex items-center ml-auto">
+            
+        </div>
+      </header>
+
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col max-w-4xl mx-auto">
+        
+        <!-- Sidebar Navigation -->
+        
+        
+        <!-- Content -->
+        <article class="flex-1 flex flex-col gap-16 pb-32">
+<div class="border-b border-vedic-border pb-8">
+                <h1 class="text-4xl md:text-5xl font-bold text-vedic-forest tracking-tight mb-4">Sovereign Security Audit</h1>
+                <p class="text-vedic-textSecondary">Last updated: September 2026</p>
+            </div>
+            
+            <section class="term-section">
+                <div class="prose max-w-none text-base text-vedic-textSecondary leading-relaxed space-y-4">
+                    
+<h2 class="text-2xl font-bold text-vedic-forest mt-8 mb-4">Security Architecture</h2>
+<p>IP-SAKTI Sahayak operates within a highly secure framework mandated by the Government of India for managing sensitive Intellectual Property and Traditional Knowledge.</p>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+    <div class="p-6 border border-vedic-border rounded-lg bg-vedic-surface">
+        <h3 class="font-bold text-vedic-forest mb-2">SHA-256 Verification</h3>
+        <p class="text-sm">All backend transactions, classifications, and query logs are cryptographically signed using SHA-256 hashes to prevent tampering of regulatory records.</p>
+    </div>
+    <div class="p-6 border border-vedic-border rounded-lg bg-vedic-surface">
+        <h3 class="font-bold text-vedic-forest mb-2">Zero-Hallucination Engine</h3>
+        <p class="text-sm">The classification engine operates on a deterministic pipeline (Decision Tree) isolated from generative unpredictability, ensuring absolute statutory accuracy.</p>
+    </div>
+    <div class="p-6 border border-vedic-border rounded-lg bg-vedic-surface">
+        <h3 class="font-bold text-vedic-forest mb-2">National SSO (Jan Parichay)</h3>
+        <p class="text-sm">Identity management leverages MeriPehchan, the National Single Sign-On framework, bridging DigiLocker and Aadhar-based authentication.</p>
+    </div>
+    <div class="p-6 border border-vedic-border rounded-lg bg-vedic-surface">
+        <h3 class="font-bold text-vedic-forest mb-2">NIC Cloud Hosting</h3>
+        <p class="text-sm">The infrastructure is deployed entirely on the National Informatics Centre (NIC) sovereign cloud, maintaining data locality within Indian borders.</p>
+    </div>
+</div>
+
+                </div>
+            </section>
+</article>
+    </main>
+
+    <script>
+        // Scroll Spy Logic
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.term-section');
+            const links = document.querySelectorAll('.term-link');
+            
+            let currentId = '';
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop <= 150) { 
+                    currentId = section.getAttribute('id');
+                }
+            });
+            
+            links.forEach(link => {
+                link.classList.remove('text-vedic-textPrimary', 'border-indigo-600', 'font-semibold');
+                link.classList.add('text-vedic-textSecondary', 'border-transparent', 'font-medium');
+                if (link.getAttribute('href') === `#${currentId}`) {
+                    link.classList.add('text-vedic-textPrimary', 'border-indigo-600', 'font-semibold');
+                    link.classList.remove('text-vedic-textSecondary', 'border-transparent', 'font-medium');
+                }
+            });
+        });
+
+        // Smooth scroll for links
+        document.querySelectorAll('.term-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+<script>
+class AsciiGlitchRipple {
+    constructor(el, options = {}) {
+        this.el = el;
+        this.origTxt = el.textContent;
+        this.origChars = this.origTxt.split("");
+        this.dur = options.dur || 1000;
+        this.chars = options.chars || '.,·-─~+:;=*π""┐┌┘┴┬╗╔╝╚╬╠╣╩╦║░▒▓█▄▀▌▐■!?&#$@0123456789*';
+        this.spread = options.spread || 1.2;
+        this.preserveSpaces = true;
+        
+        this.isAnim = false;
+        this.cursorPos = 0;
+        this.waves = [];
+        this.animId = null;
+        this.isHover = false;
+        this.origW = null;
+
+        this.WAVE_THRESH = 3;
+        this.CHAR_MULT = 3;
+        this.ANIM_STEP = 40;
+        this.WAVE_BUF = 5;
+
+        this.handleEnter = this.handleEnter.bind(this);
+        this.handleMove = this.handleMove.bind(this);
+        this.handleLeave = this.handleLeave.bind(this);
+        this.animate = this.animate.bind(this);
+
+        this.el.addEventListener('mouseenter', this.handleEnter);
+        this.el.addEventListener('mousemove', this.handleMove);
+        this.el.addEventListener('mouseleave', this.handleLeave);
+    }
+    
+    updateCursorPos(e) {
+        const rect = this.el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const len = this.origTxt.length;
+        const pos = Math.round((x / rect.width) * len);
+        this.cursorPos = Math.max(0, Math.min(pos, len - 1));
+    }
+    
+    stop() {
+        this.el.textContent = this.origTxt;
+        if (this.origW !== null) {
+            this.el.style.width = "";
+            this.origW = null;
+        }
+        this.isAnim = false;
+        if (this.animId) {
+            cancelAnimationFrame(this.animId);
+            this.animId = null;
+        }
+    }
+    
+    start() {
+        if (this.isAnim) return;
+        if (this.origW === null) {
+            this.origW = this.el.getBoundingClientRect().width;
+            this.el.style.width = this.origW + "px";
+        }
+        this.isAnim = true;
+        this.animId = requestAnimationFrame(this.animate);
+    }
+    
+    startWave() {
+        this.waves.push({
+            startPos: this.cursorPos,
+            startTime: Date.now(),
+            id: Math.random()
+        });
+        if (!this.isAnim) this.start();
+    }
+    
+    calcWaveEffect(charIdx, t) {
+        let shouldAnim = false;
+        let resultChar = this.origChars[charIdx];
+        
+        for (const w of this.waves) {
+            const age = t - w.startTime;
+            const prog = Math.min(age / this.dur, 1);
+            const dist = Math.abs(charIdx - w.startPos);
+            const maxDist = Math.max(w.startPos, this.origChars.length - w.startPos - 1);
+            const rad = (prog * (maxDist + this.WAVE_BUF)) / this.spread;
+            
+            if (dist <= rad) {
+                shouldAnim = true;
+                const intens = Math.max(0, rad - dist);
+                if (intens <= this.WAVE_THRESH && intens > 0) {
+                    const index = Math.floor(dist * this.CHAR_MULT + age / this.ANIM_STEP) % this.chars.length;
+                    resultChar = this.chars[index];
+                }
+            }
+        }
+        return { shouldAnim, char: resultChar };
+    }
+    
+    animate() {
+        const t = Date.now();
+        this.waves = this.waves.filter(w => (t - w.startTime) < this.dur);
+        if (this.waves.length === 0) {
+            this.stop();
+            return;
+        }
+        
+        let newTxt = "";
+        for (let i = 0; i < this.origChars.length; i++) {
+            const char = this.origChars[i];
+            if (this.preserveSpaces && char === " ") {
+                newTxt += " ";
+            } else {
+                const res = this.calcWaveEffect(i, t);
+                newTxt += res.shouldAnim ? res.char : char;
+            }
+        }
+        this.el.textContent = newTxt;
+        this.animId = requestAnimationFrame(this.animate);
+    }
+    
+    handleEnter(e) {
+        this.isHover = true;
+        this.updateCursorPos(e);
+        this.startWave();
+    }
+    
+    handleMove(e) {
+        if (!this.isHover) return;
+        const old = this.cursorPos;
+        this.updateCursorPos(e);
+        if (this.cursorPos !== old) this.startWave();
+    }
+    
+    handleLeave() {
+        this.isHover = false;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Only apply to the main H1 title. 
+    // Applying to paragraphs destroys their inner HTML (links, bold tags) and causes massive lag!
+    document.querySelectorAll('h1, h2').forEach(el => new AsciiGlitchRipple(el, { spread: 1.0, dur: 800 }));
+});
+</script>
+
+
+    
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+ace/95 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.03)] border-b border-border-subtle/80"><!-- Unified Top Bar -->
+<div class="bg-surface-container-high py-1 px-4 lg:px-margin hidden sm:block border-b border-border-subtle z-[60] relative w-full">
+  <div class="max-w-[1360px] mx-auto flex items-center justify-between font-label-sm text-label-sm text-text-secondary">
+    <div>
+      <span class="font-semibold text-primary" data-i18n="gov_title">GOVERNMENT OF INDIA</span> 
+      <span class="text-border-strong mx-2">|</span> 
+      <span data-i18n="ministry">Ministry of AYUSH • CSIR-TKDL Statutory Interface</span>
+    </div>
+    
+    <div class="flex items-center gap-space-md">
+      <div class="flex items-center gap-2">
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors" title="Screen Reader Access">
+            <span class="material-symbols-outlined text-[14px]">accessibility_new</span>
+            <span data-i18n="screen_reader">Screen Reader Access</span>
+        </a>
+        <span class="text-outline-variant mx-1">|</span>
+        <div class="flex items-center gap-1 font-medium">
+            <button class="px-1 hover:text-primary transition-colors text-[11px]" onclick="document.body.style.zoom='0.9'">A-</button>
+            <button class="px-1 hover:text-primary transition-colors text-[13px]" onclick="document.body.style.zoom='1.0'">A</button>
+            <button class="px-1 hover:text-primary transition-colors text-[15px]" onclick="document.body.style.zoom='1.1'">A+</button>
+        </div>
+      </div>
+
+      <span class="text-outline-variant hidden sm:inline">|</span>
+
+      <div class="flex items-center gap-2">
+        <button class="px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-bright transition-colors font-bold text-label-sm shadow-xs border border-border-subtle" onclick="switchLanguage('en')" data-lang-btn="en">EN</button>
+        <button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-medium text-label-sm border border-transparent" onclick="switchLanguage('hi')" data-lang-btn="hi">हिन्दी</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="h-14 sm:h-16 w-full px-4 sm:px-margin flex items-center justify-between"><div class="flex items-center gap-2 sm:gap-space-lg"><button aria-label="Menu" class="lg:hidden p-2 rounded hover:bg-surface-container-high transition-colors mr-2" onclick="var sb=document.getElementById('hub-sidebar');sb.classList.toggle('hidden');sb.classList.toggle('flex')">
+<span class="material-symbols-outlined text-[24px] text-on-surface">menu</span>
+</button><div class="flex items-center gap-space-sm group cursor-pointer" onclick="window.location.href='/static/index.html'"><img alt="Brand logo. - Primary color: #0f3e36
+- Font: playfairDisplay
+- Mode: light
+- Roundness: rounded-sm
+" class="h-9 w-auto object-contain transition-transform group-hover:scale-105 duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1Wma2t8y-qpb7CyjPWkBM-Hek4qG14B4ddsx5hJ3ayOC2zcnYERZg_uNb5Xf7q_4RN9oWps1rWuDdmUCVu80lmxDdyYpaIwLyrCK3Sg094o3mwurlpYa9ofE6mMyetlIb8_dv4JCq6hlnUDDklofT3p8dk02b4VpOEbTwtvv2PmX4tsmTtM4EMWCz_XSZpZbzUxygMh5V_LA5WGWJh8iDB6Fht1NoQcOrJeBuhi5nKTqAcr0n7Nt_G4oQ"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">IP-SAKTI Sahayak</span><span class="font-label-sm text-label-sm text-secondary font-semibold tracking-wider uppercase flex items-center gap-1"><span class="w-1 h-1 rounded-full bg-accent-gold"></span>Vedic Jurisprudence AI</span></div></div><nav class="hidden xl:flex items-center gap-space-lg h-16" data-active-classes="text-primary font-semibold border-b-2 border-primary"><a aria-current="page" class="transition-all py-space-md text-primary font-bold border-b-2 border-primary relative flex items-center gap-1" data-path="intelligence-hub" href="#">
+<div class="w-10 h-10 rounded-full border border-border-subtle bg-surface-container-high flex items-center justify-center text-text-secondary cursor-pointer hover:bg-surface-bright hover:shadow-xs transition-all" id="clerk-mount-point">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+</a></nav></div></div>
+<!-- Realtime Sovereign Network Pulse Ticker -->
+<div class="w-full bg-surface-container-low px-4 lg:px-10 py-2 overflow-x-auto hidden sm:block border-b border-border-subtle">
+<div class="max-w-[1360px] mx-auto flex items-center justify-between gap-4 font-label-md text-label-md">
+<div class="flex items-center gap-3 shrink-0">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+</span>
+<span class="font-bold tracking-wider text-primary uppercase text-label-sm">SOVEREIGN NETWORK PULSE</span>
+</div>
+<div class="flex items-center gap-6 overflow-hidden whitespace-nowrap text-on-surface-variant text-body-sm">
+<span class="flex items-center gap-1.5"><span class="text-primary font-semibold">18,420+</span> Shlokas Parsed Today</span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1.5">CSIR-TKDL v2.4 Sync: <span class="text-primary font-semibold">NOMINAL (99.98%)</span></span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1.5">Gazette Rule 158-B Docketing: <span class="text-secondary font-semibold">ACTIVE</span></span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1.5">256-Bit Air-Gapped Sovereign Node: <span class="text-primary font-semibold">NIC MEITY VERIFIED</span></span>
+</div>
+<div class="hidden lg:flex items-center gap-2 shrink-0 text-label-sm text-secondary font-bold">
+<span class="material-symbols-outlined text-[16px]">lock</span> STATUTORY JURISDICTION: SEC 3(p) IPA 1970
+</div>
+</div>
+</div>
+</header><aside class="fixed left-0 top-28 bottom-0 w-72 bg-surface-container-low z-40 flex-col border-r border-border-subtle hidden lg:flex shadow-[2px_0_12px_rgba(0,0,0,0.02)]" id="hub-sidebar"><div class="p-space-md border-b border-border-subtle"><button class="w-full flex items-center justify-center gap-space-xs bg-primary text-on-primary py-space-sm px-space-md rounded-DEFAULT shadow-[0_2px_10px_rgba(0,50,28,0.22)] hover:bg-primary-container hover:text-on-primary-container transition-all ac

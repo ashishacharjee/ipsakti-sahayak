@@ -1,0 +1,227 @@
+div>
+</div>
+</section>
+</div><!-- /view-tkdl -->
+
+<!-- === VIEW: STATUTORY OVERVIEW === -->
+<div id="view-statutory" class="spa-view hidden">
+<!-- Codified Pillars of Ayurvedic Jurisprudence (4 Card Grid in Dark Theme) -->
+<section class="w-full px-4 lg:px-10 py-16 bg-surface-container-lowest">
+<div class="max-w-[1360px] mx-auto">
+<div class="mb-12">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Codified Jurisprudence</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1 mb-2">Four Sovereign Pillars of Traditional Knowledge Defense</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          Engineered to prevent biopiracy, protect sovereign biological resources, and accelerate authentic AYUSH commercialization under Indian statute.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">shield</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-success">verified</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">94% Clearance</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Patent Defense</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">Section 3(p) Patent Evaluation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Evaluate patentability constraints under Section 3(p) of the Indian Patents Act, 1970. Overcome traditional knowledge obviousness objections with codified synergistic bioavailability evidence.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">IPO Manual 2019 • Sec 3(e) Synergism</div>
+<div class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="localStorage.setItem('initial_query', 'Section 3(p) IPA 1970 patent evaluation and Sec 3(e) Synergism guidelines for Ayurvedic formulation'); window.location.href='/static/hub.html'">
+<span class="">Run Claim Audit</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">translate</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">menu_book</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">542K Shlokas</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">CSIR Corpus</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">TKDL Prior Art Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Cross-reference formulation components against Sanskrit, Unani, Siddha & Sowa-Rigpa canonical literature. Instantly detect shloka concordance in Charaka, Sushruta, and AFI-Vol I to IV.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">WIPO IPC A61K 36/00 Concurrence</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="localStorage.setItem('initial_query', 'Cross-reference formulation with TKDL prior art, check Charaka Samhita and WIPO IPC A61K 36/00'); window.location.href='/static/hub.html'">
+<span class="">Inspect Shlokas</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">location_on</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">NBA Form I</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">ABS Clearance</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">Geographical Indication (GI) & ABS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Analyze origin-based botanical IP protections, endemic habitat claims, and State Biodiversity Board (SBB) revenue sharing mandates under the Biological Diversity (Amendment) Act 2023.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">382 Registered Botanical GIs</div>
+<div class="font-label-sm text-label-sm text-primary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="localStorage.setItem('initial_query', 'Evaluate Geographical Indication (GI) and ABS clearance mandates under NBA Form I'); window.location.href='/static/hub.html'">
+<span class="">Analyze Provenance</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">category</span>
+</div>
+<div class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-accent-gold">category</span><span class="px-2 py-1 bg-surface-container-lowest text-text-primary text-[11px] font-bold rounded-sm border border-border-subtle">Form 25-D Wizard</span></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Statutory Map</span>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mt-1 mb-2">Classify Your Ayurvedic Product</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-4">
+Multi-step guided wizard to determine whether your item classifies as Shastric Classical, Patent & Proprietary (P&P), Nutraceutical (FSSAI AYUSH Aahar), or Topical Cosmetic.
+</p>
+<div class="font-label-sm text-[11px] text-text-tertiary mb-3 border-b border-border-subtle/50 pb-2">Drugs & Cosmetics Sec 3(a)</div>
+<div class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1 cursor-pointer hover:underline" onclick="var q=document.getElementById('formulation-input').value; if(q) { localStorage.setItem('initial_query', q); } else { localStorage.setItem('initial_query', 'Classify my Ayurvedic product (Shastric, P&P, Aahar or Cosmetic)'); } window.location.href='/static/hub.html'">
+<span class="">Start Classifier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bio-Cultural Heritage & Anti-Biopiracy Case Studies -->
+<section class="w-full px-4 lg:px-10 py-16 bg-surface">
+<div class="max-w-[1360px] mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold tracking-wider">Historical Precedents</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1 mb-2">Preserving India's Bio-Heritage Against Biopiracy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Landmark international patent revocations driven by CSIR-TKDL statutory evidence, safeguarding ancient formulations from illicit commercial monopolies.
+          </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-3 py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-bold">1,820+ Global Revocations</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Landmark Case 1: Curcuma Longa Turmeric Patent Revocation -->
+<div class="bg-surface-container rounded-lg overflow-hidden shadow-md flex flex-col sm:flex-row">
+<div class="sm:w-2/5 relative min-h-[220px]">
+<img class="w-full h-full object-cover" data-alt="Rich macro photography of vibrant raw Curcuma longa turmeric rhizomes and powdered golden spice on deep midnight emerald slate with warm gold lighting, representing authentic Indian traditional ayurvedic medicine botanical specimen." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_liVzbnoVlFxdt3Shhe8vZeeaX_75m2FD4bKX6YqI5HH5lVeyTqmDghOtP7joR6-uRess4KuVMYtm509z7BB4g8RoP6cetN1GjKmgiiZkDxFMbbOVio44IpZ1I3Wb2xuX81kRBF0F34xDFuZ_2b_ccYzuF9iJM4hdfWXjnxvrGVrsgM7ymohrJCEUpVKNByg_tCQ1JJWiuBXUD7cLukAOD8RTLi1H-qPNvfTVCZxIOUgpsAj6eMhm">
+<div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-surface-container to-transparent opacity-60"></div>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-primary font-label-sm text-label-sm font-bold">
+              US Patent #5,401,504 Revoked
+            </div>
+</div>
+<div class="p-6 sm:w-3/5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-secondary font-bold">USPTO Landmark Ruling</span>
+<span class="text-body-sm text-on-surface-variant font-mono">CSIR-1997</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-2">Turmeric (Curcuma longa) Wound Healing Doctrine</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                The milestone defense demonstrating wound healing using Haridra had been documented for millennia in the Ayurvedic Pharmacopoeia of India, leading to total patent revocation in the United States.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<span class="text-on-surface font-semibold">Statutory Ground:</span>
+<span class="text-primary font-mono font-bold">35 U.S.C. § 102 Prior Art</span>
+</div>
+</div>
+</div>
+<!-- Landmark Case 2: Neem Fungicidal Patent Revocation at EPO -->
+<div class="bg-surface-container rounded-lg overflow-hidden shadow-md flex flex-col sm:flex-row">
+<div class="sm:w-2/5 relative min-h-[220px]">
+<img class="w-full h-full object-cover" data-alt="Detailed botanical close-up photograph of lush green Azadirachta indica neem leaves and seeds placed against dark moody forest background with rim lighting, highlighting Indian medicinal plant heritage and biological wealth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJQD_crQ3On4H_wI39IMDu1no1eFJE_whjyt8RAIgJ0rsXA3gO0801WMECAfxEPAzyI9IoA5ZyUNWTU_8IIguafNf8RAPuh1RZTISh7rGEYwv31FBrd09EkWS0WtcmEyykQ4007p2V-KTD0gO3_NjWOkRRm810cXGK4_BdxVLioB9zLUaggSTCGdAu9YmLPcRr3y2PJm5A70tri9C6Rd8gXEnsRd_no4nZOo59phog83FT5iccjbob">
+<div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-surface-container to-transparent opacity-60"></div>
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-secondary font-label-sm text-label-sm font-bold">
+              EPO Patent #436,257 Revoked
+            </div>
+</div>
+<div class="p-6 sm:w-3/5 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-primary font-bold">European Patent Office (EPO)</span>
+<span class="text-body-sm text-on-surface-variant font-mono">EPO-2000</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold mb-2">Neem (Azadirachta indica) Fungicidal Properties</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Joint opposition by CSIR and RFSTE presented ancient Sanskrit references confirming hydrophobic neem extracts had protected crops across rural India for generations, defeating inventive step claims.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/20 flex items-center justify-between text-body-sm">
+<span class="text-on-surface font-semibold">Statutory Ground:</span>
+<span class="text-secondary font-mono font-bold">Art. 56 EPC Lack of Inventive Step</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Treatise Concordance Authority Banner (Luminous Sanskrit Inscription) -->
+<section class="w-full px-4 lg:px-10 py-14 bg-surface-container-lowest border-y border-outline-variant/20 relative overflow-hidden">
+  <div class="max-w-5xl mx-auto relative z-10">
+    <div class="relative rounded-2xl border border-primary/25 p-8 lg:p-12 shadow-2xl overflow-hidden" style="background: radial-gradient(circle at left top, rgba(16, 185, 129, 0.08), transparent 70%), rgb(13, 31, 25);">
+      <!-- Ambient Vedic Aura Glows -->
+      <div class="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center">
+        <!-- Sacred Emblem Header -->
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-12 h-12 rounded-full bg-surface-container-high border border-primary/30 flex items-center justify-center text-primary shadow-md">
+            <span class="material-symbols-outlined text-[28px]">menu_book</span>
+          </div>
+        </div>
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-surface-container border border-primary/30 text-primary font-label-sm text-label-sm tracking-widest uppercase font-bold mb-4">
+          <span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+          <span class="">आयुर्वेद शास्त्र प्रमाण • STATUTORY CANONICAL AUTHORITY</span>
+        </div>
+
+        <!-- Sanskrit Shloka Inscription in Radiant Glowing Soft Gold -->
+        <div class="my-2 px-2 max-w-4xl">
+          <blockquote class="font-serif text-[26px] md:text-[32px] lg:text-[36px] text-secondary font-bold tracking-wide leading-relaxed drop-shadow-[0_2px_12px_rgba(245,158,11,0.35)]">
+            "यथा विषं यथा शस्त्रं यथाऽग्निरशनिर्यथा।<br class="hidden md:inline">
+            तथौषधमविज्ञातं विज्ञातममृतं यथा॥"
+          </blockquote>
+        </div>
+
+        <!-- Citation Header in Vibrant Mint / Emerald -->
+        <div class="mt-3 mb-4 inline-flex items-center gap-2 px-3.5 py-1 rounded bg-surface-container-lowest/80 border border-primary/20 text-primary font-label-md text-label-md font-semibold tracking-wider uppercase">
+          <span class="material-symbols-outlined text-[16px]">auto_stories</span>
+          <span class="">चरक संहिता • सूत्रस्थानम् १.१२४ (CHARAKA SAMHITA, SUTRASTHANA 1.124)</span>
+        </div>
+
+        <!-- English Statutory Foundation Translation in High-Contrast Crisp Mint-Slate Text -->
+        <p class="font-body-md text-[15px] md:text-[17px] text-[#e2e8f0] max-w-3xl leading-relaxed italic mb-6 text-center">
+          “The flora and botanical medicine indigenous to the native soil of the living being constitutes the most efficacious remedy.” — The codified constitutional basis for sovereign bio-heritage preservation under Article 39(b) and the Biological Diversity Act, 2002.
+        </p>
+
+        <!-- Interactive Action Strip with Dark Button and Live Badge -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a class="px-5 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary border border-primary/30 font-label-md text-label-md font-bold transition-all shadow-md flex items-center gap-2" href="/static/hub.html">
+            <span class="material-symbols-outlined text-[18px]">search</span>
+            <span class="">Search Shloka Lexicon</span>
+          </a>
+          <div class="px-4 py-2.5 rounded-lg bg-surface-container-lowest/80 border border-outline-variant/30 text-on-surface-variant font-label-md text-label-md font-semibold flex items-center gap-2 shadow-sm">
+            <span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+            <span class=""><span class="text-primary font-semibold">542,898</span> Shlokas Mapped • 100% CSIR Reconciled</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- /view-statutory -->
+
+<!-- === VIEW: PRODUCT CLASSIFICATION === -->
+<div id="view-classify" clas

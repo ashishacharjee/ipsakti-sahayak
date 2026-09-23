@@ -81,18 +81,13 @@ class LocalizationService:
     def get_all(self, lang: str = "en") -> Dict[str, str]:
         return TRANSLATIONS.get(lang.lower(), TRANSLATIONS["en"])
 
-    def bhashini_translate(self, text: str, source_lang: str, target_lang: str) -> Dict[str, Any]:
+    def bhashini_translate(self, text: str, source_lang: str, target_lang: str) -> str:
         """
         Bhashini API integration stub.
         Can interface directly with Ulca / Bhashini NMT APIs when API credentials are provided.
         """
-        return {
-            "source_language": source_lang,
-            "target_language": target_lang,
-            "original_text": text,
-            "pipeline_type": "Bhashini_NMT_ASU_Domain",
-            "translated_text": text if source_lang == target_lang else f"[{target_lang.upper()}] {text}",
-            "status": "ready"
-        }
+        if source_lang == target_lang:
+            return text
+        return f"[{target_lang.upper()}] {text}"
 
 localization_service = LocalizationService()

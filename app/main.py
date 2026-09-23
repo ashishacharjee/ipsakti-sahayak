@@ -134,7 +134,8 @@ async def generate_guidance(payload: FullGuidanceRequest):
         classification_req=payload.classification,
         abs_req=abs_req,
         free_text_query=payload.query,
-        jurisdiction_mode=payload.jurisdiction
+        jurisdiction_mode=payload.jurisdiction,
+        language=payload.language
     )
 
 @app.post("/api/tkdl-query", response_model=TKDLQueryResponse)

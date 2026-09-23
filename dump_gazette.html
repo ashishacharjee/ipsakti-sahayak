@@ -1,0 +1,66 @@
+<div id="view-gazette" class="spa-view hidden">
+<!-- Guest Onboarding Pathway / Quick FAQ Strip -->
+<section class="w-full px-4 lg:px-10 py-14 bg-surface-container-lowest">
+<div class="max-w-[1360px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container p-6 rounded">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Who can access IP-SAKTI?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Public guest users have instant access to pre-check formulation obviousness. Full statutory drafting and export licensing is accessible via MeriPehchan SSO for citizens, researchers, attorneys, and manufacturers.
+          </p>
+</div>
+<div class="bg-surface-container p-6 rounded">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-secondary text-[24px]">lock_open</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Is TKDL Data Confidential?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            IP-SAKTI exposes public domain canonical formulations from published texts. Confidential prior art references are strictly air-gapped and audited per CSIR-TKDL non-disclosure treaties with international patent offices.
+          </p>
+</div>
+<div class="bg-surface-container p-6 rounded">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-primary text-[24px]">download</span>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">What is Form 25-D Docketing?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Under Rule 158-B of the Drugs and Cosmetics Rules, proprietary Ayurvedic medicines require citation evidence from First Schedule classical texts. IP-SAKTI automatically generates this compliance proof.
+          </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Interactive micro-interaction for the Sandbox Pre-Check
+  (function() {
+    const input = document.getElementById('sandbox-input');
+    const btn = document.getElementById('run-precheck-btn');
+    const resultTitle = document.getElementById('sandbox-result-title');
+    const samplePills = document.querySelectorAll('.sample-pill');
+
+    if (samplePills && input) {
+      samplePills.forEach(pill => {
+        pill.addEventListener('click', function() {
+          const val = this.getAttribute('data-val');
+          input.value = val;
+          localStorage.setItem('initial_query', val);
+          window.location.href = '/static/hub.html';
+        });
+      });
+    }
+
+    if (btn && input && resultTitle) {
+      btn.addEventListener('click', function() {
+        const val = input.value.trim();
+        if (val) {
+          resultTitle.textContent = val + ' — Prior Art Cross-Examination';
+        }
+      });
+    }
+  })();
+</script>
+</div>

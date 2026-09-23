@@ -1,0 +1,13 @@
+ext-on-surface-variant hover:text-on-surface transition-colors font-medium text-label-sm" onclick="switchLanguage('hi')" data-lang-btn="hi">हिन्दी</button>
+</div>
+
+</div>
+</div>
+</div>
+<div id="hero-section-wrapper" class="order-2">
+<!-- Hero Section (Unauthenticated Guest View) -->
+<section class="relative w-full px-4 lg:px-10 py-8 lg:py-16 overflow-hidden bg-gradient-to-b from-surface to-surface-container-lowest">
+<!-- Atmospheric Ambient Glows -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<div cl

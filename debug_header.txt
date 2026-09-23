@@ -1,0 +1,19 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.03)] border-b border-border-subtle/80"><div class="w-full bg-surface-container px-4 sm:px-margin py-1 items-center justify-between text-on-surface border-b border-border-subtle hidden sm:flex">
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center justify-center shrink-0">
+<svg class="w-5 h-3.5 rounded-xs shadow-xs border border-border-subtle/80 overflow-hidden" fill="none" viewbox="0 0 24 16" xmlns="http://www.w3.org/2000/svg"><rect fill="#FF9933" height="5.33" width="24"></rect><rect fill="#FFFFFF" height="5.34" width="24" y="5.33"></rect><rect fill="#138808" height="5.33" width="24" y="10.67"></rect><circle cx="12" cy="8" fill="none" r="2.2" stroke="#000080" stroke-width="0.6"></circle><circle cx="12" cy="8" fill="#000080" r="0.4"></circle><path d="M12 5.8v4.4M9.8 8h4.4M10.4 6.4l3.2 3.2M13.6 6.4l-3.2 3.2" stroke="#000080" stroke-width="0.35"></path></svg>
+</div>
+<span class="font-label-sm text-label-sm text-text-secondary tracking-wide uppercase font-semibold">Government of India | Ministry of AYUSH Regulatory &amp; Patent Intelligence Portal</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-low/90 px-space-sm py-0.5 rounded-DEFAULT border border-border-subtle/70 shadow-2xs">
+<span class="w-2 h-2 rounded-full bg-success beacon-dot-green inline-block"></span>
+<span class="font-code text-code text-on-surface-variant font-medium">FastAPI Live | v2.4 Sovereign</span>
+</div>
+<div class="flex items-center gap-1 ml-4 border-l border-border-subtle pl-4">
+<button class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors font-bold text-label-sm shadow-xs border border-border-subtle" onclick="switchLanguage('en')" data-lang-btn="en">EN</button>
+<button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-medium text-label-sm border border-transparent" onclick="switchLanguage('hi')" data-lang-btn="hi">हिन्दी</button>
+</div>
+</div>
+</div>
+<div class="h-14 sm:h-16 w-full px-4 sm:px-margin flex items-center justify-between"><div class="flex items-center gap-2 sm:gap-space-lg"><button aria-label="Menu" class="lg:hidden p-2 rounded hover:bg-surface-container-high transition-colors mr-2" onclick="var sb=document.getElementById('hub-side

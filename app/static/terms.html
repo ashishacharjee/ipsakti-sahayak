@@ -67,9 +67,43 @@
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
         }
     </script>
+  <script src="/static/i18n.js"></script>
 </head>
 
 <body class="bg-vedic-parchment text-vedic-textPrimary antialiased selection:bg-indigo-500/30">
+<!-- Unified Top Bar -->
+<div class="bg-surface-container-high py-1 px-4 lg:px-margin hidden sm:block border-b border-border-subtle z-[60] relative w-full">
+  <div class="max-w-[1360px] mx-auto flex items-center justify-between font-label-sm text-label-sm text-text-secondary">
+    <div>
+      <span class="font-semibold text-primary" data-i18n="gov_title">GOVERNMENT OF INDIA</span> 
+      <span class="text-border-strong mx-2">|</span> 
+      <span data-i18n="ministry">Ministry of AYUSH • CSIR-TKDL Statutory Interface</span>
+    </div>
+    
+    <div class="flex items-center gap-space-md">
+      <div class="flex items-center gap-2">
+        <a href="#" class="flex items-center gap-1 hover:text-primary transition-colors" title="Screen Reader Access">
+            <span class="material-symbols-outlined text-[14px]">accessibility_new</span>
+            <span data-i18n="screen_reader">Screen Reader Access</span>
+        </a>
+        <span class="text-outline-variant mx-1">|</span>
+        <div class="flex items-center gap-1 font-medium">
+            <button class="px-1 hover:text-primary transition-colors text-[11px]" onclick="document.body.style.zoom='0.9'">A-</button>
+            <button class="px-1 hover:text-primary transition-colors text-[13px]" onclick="document.body.style.zoom='1.0'">A</button>
+            <button class="px-1 hover:text-primary transition-colors text-[15px]" onclick="document.body.style.zoom='1.1'">A+</button>
+        </div>
+      </div>
+
+      <span class="text-outline-variant hidden sm:inline">|</span>
+
+      <div class="flex items-center gap-2">
+        <button class="px-2 py-0.5 rounded bg-surface-container text-on-surface hover:bg-surface-bright transition-colors font-bold text-label-sm shadow-xs border border-border-subtle" onclick="switchLanguage('en')" data-lang-btn="en">EN</button>
+        <button class="px-2 py-0.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-medium text-label-sm border border-transparent" onclick="switchLanguage('hi')" data-lang-btn="hi">हिन्दी</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <!-- Header -->
     <header class="h-16 border-b border-vedic-border bg-vedic-surface/80 backdrop-blur-md sticky top-0 z-50 flex items-center px-6">
@@ -79,11 +113,7 @@
         </a>
     
         <div class="flex items-center ml-auto">
-            <button aria-label="Toggle Theme Mode" class="p-2 text-vedic-textMuted hover:text-vedic-forest rounded-lg hover:bg-vedic-dim transition-colors" onclick="toggleDarkMode()">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                </svg>
-            </button>
+            
         </div>
       </header>
 
@@ -100,6 +130,84 @@
                 <a href="#term-privacy" class="term-link text-sm font-medium text-vedic-textSecondary hover:text-vedic-textPrimary border-l-2 border-transparent -ml-[17px] pl-4 py-2 transition-colors">Data & Privacy</a>
                 <a href="#term-liability" class="term-link text-sm font-medium text-vedic-textSecondary hover:text-vedic-textPrimary border-l-2 border-transparent -ml-[17px] pl-4 py-2 transition-colors">Limitation of Liability</a>
             </div>
+        <!-- FAQ Section -->
+    <div class="w-full w-full py-8 border-t border-vedic-border mt-8 pt-8 relative font-sans">
+      <h2 class="text-center font-bold text-sm font-bold text-vedic-textMuted uppercase tracking-widest mb-4 text-vedic-forest">
+        FAQs
+      </h2>
+      <ul class="w-full mx-auto list-none p-0 flex flex-col" id="faq-list">
+        <!-- FAQ 1 -->
+        <li class="w-full relative transition-all duration-300 ease-in border-b-2 border-vedic-border/50 faq-item">
+          <button class="flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface" onclick="toggleFaq(this)">
+            <span class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon">+</span>
+            <span class="pr-8 font-semibold">What is IP-SAKTI Sahayak?</span>
+            <span class="absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron"></span>
+          </button>
+          <div class="grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content">
+            <div class="overflow-hidden">
+              <div class="flex flex-row items-start justify-start w-full px-4 pl-14 pb-6 pt-2 text-base font-normal text-vedic-textSecondary">
+                <span class="opacity-90">IP-SAKTI Sahayak is an advanced AI assistant designed to navigate the complex AYUSH regulatory compliance frameworks, Traditional Knowledge Digital Library (TKDL) cross-referencing, and Indian Patents Act IP strategy.</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- FAQ 2 -->
+        <li class="w-full relative transition-all duration-300 ease-in border-b-2 border-vedic-border/50 faq-item">
+          <button class="flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface" onclick="toggleFaq(this)">
+            <span class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon">+</span>
+            <span class="pr-8 font-semibold">Is my proprietary formulation data safe?</span>
+            <span class="absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron"></span>
+          </button>
+          <div class="grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content">
+            <div class="overflow-hidden">
+              <div class="flex flex-row items-start justify-start w-full px-4 pl-14 pb-6 pt-2 text-base font-normal text-vedic-textSecondary">
+                <span class="opacity-90">Yes! We employ strict enterprise-grade encryption. Your proprietary formulations and trade secrets are securely sandboxed, never used to train the base model, and immediately wiped post-session.</span>
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- FAQ 3 -->
+        <li class="w-full relative transition-all duration-300 ease-in border-b-2 border-vedic-border/50 faq-item">
+          <button class="flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface" onclick="toggleFaq(this)">
+            <span class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon">+</span>
+            <span class="pr-8 font-semibold">Does it replace my legal counsel?</span>
+            <span class="absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron"></span>
+          </button>
+          <div class="grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content">
+            <div class="overflow-hidden">
+              <div class="flex flex-row items-start justify-start w-full px-4 pl-14 pb-6 pt-2 text-base font-normal text-vedic-textSecondary">
+                <span class="opacity-90">No. IP-SAKTI Sahayak provides data-driven regulatory intelligence and automated form drafting, but it does not constitute binding legal advice. Always consult with a registered IP attorney before filing patents or clinical trials.</span>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function toggleFaq(btn) {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active-faq');
+        
+        // Reset all
+        document.querySelectorAll('.faq-item').forEach(li => {
+          li.classList.remove('active-faq');
+          li.querySelector('button').className = "flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface";
+          li.querySelector('.faq-content').className = "grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content";
+          li.querySelector('.faq-icon').innerText = "+";
+          li.querySelector('.faq-icon').className = "absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon";
+          li.querySelector('.faq-chevron').className = "absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron";
+        });
+
+        if (!isActive) {
+          item.classList.add('active-faq');
+          btn.className = "flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-forest bg-vedic-forest/5 text-vedic-forest font-semibold";
+          item.querySelector('.faq-content').className = "grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[1fr] border-l-vedic-forest bg-vedic-forest/5 faq-content";
+          item.querySelector('.faq-icon').innerText = "-";
+          item.querySelector('.faq-icon').className = "absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[32px] md:text-[40px] font-normal text-vedic-forest faq-icon";
+          item.querySelector('.faq-chevron').className = "absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[-44deg] border-vedic-forest faq-chevron";
+        }
+      }
+    </script>
         </aside>
         
         <!-- Content -->
@@ -324,92 +432,12 @@ class AsciiGlitchRipple {
 document.addEventListener("DOMContentLoaded", () => {
     // Only apply to the main H1 title. 
     // Applying to paragraphs destroys their inner HTML (links, bold tags) and causes massive lag!
-    const mainTitle = document.querySelector('h1');
-    if (mainTitle) {
-        new AsciiGlitchRipple(mainTitle, { spread: 1.0, dur: 800 });
-    }
+    document.querySelectorAll('h1, h2').forEach(el => new AsciiGlitchRipple(el, { spread: 1.0, dur: 800 }));
 });
 </script>
 
 
-    <!-- FAQ Section -->
-    <div class="w-full max-w-3xl mx-auto py-16 relative font-sans">
-      <h2 class="text-center font-bold text-2xl md:text-3xl mb-10 text-vedic-forest">
-        IP-SAKTI Sahayak FAQs
-      </h2>
-      <ul class="w-full mx-auto list-none p-0 flex flex-col" id="faq-list">
-        <!-- FAQ 1 -->
-        <li class="w-full relative transition-all duration-300 ease-in border-b-2 border-vedic-border/50 faq-item">
-          <button class="flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface" onclick="toggleFaq(this)">
-            <span class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon">+</span>
-            <span class="pr-8 font-semibold">What is IP-SAKTI Sahayak?</span>
-            <span class="absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron"></span>
-          </button>
-          <div class="grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content">
-            <div class="overflow-hidden">
-              <div class="flex flex-row items-start justify-start w-full px-4 pl-14 pb-6 pt-2 text-base font-normal text-vedic-textSecondary">
-                <span class="opacity-90">IP-SAKTI Sahayak is an advanced AI assistant designed to navigate the complex AYUSH regulatory compliance frameworks, Traditional Knowledge Digital Library (TKDL) cross-referencing, and Indian Patents Act IP strategy.</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- FAQ 2 -->
-        <li class="w-full relative transition-all duration-300 ease-in border-b-2 border-vedic-border/50 faq-item">
-          <button class="flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface" onclick="toggleFaq(this)">
-            <span class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon">+</span>
-            <span class="pr-8 font-semibold">Is my proprietary formulation data safe?</span>
-            <span class="absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron"></span>
-          </button>
-          <div class="grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content">
-            <div class="overflow-hidden">
-              <div class="flex flex-row items-start justify-start w-full px-4 pl-14 pb-6 pt-2 text-base font-normal text-vedic-textSecondary">
-                <span class="opacity-90">Yes! We employ strict enterprise-grade encryption. Your proprietary formulations and trade secrets are securely sandboxed, never used to train the base model, and immediately wiped post-session.</span>
-              </div>
-            </div>
-          </div>
-        </li>
-        <!-- FAQ 3 -->
-        <li class="w-full relative transition-all duration-300 ease-in border-b-2 border-vedic-border/50 faq-item">
-          <button class="flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface" onclick="toggleFaq(this)">
-            <span class="absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon">+</span>
-            <span class="pr-8 font-semibold">Does it replace my legal counsel?</span>
-            <span class="absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron"></span>
-          </button>
-          <div class="grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content">
-            <div class="overflow-hidden">
-              <div class="flex flex-row items-start justify-start w-full px-4 pl-14 pb-6 pt-2 text-base font-normal text-vedic-textSecondary">
-                <span class="opacity-90">No. IP-SAKTI Sahayak provides data-driven regulatory intelligence and automated form drafting, but it does not constitute binding legal advice. Always consult with a registered IP attorney before filing patents or clinical trials.</span>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <script>
-      function toggleFaq(btn) {
-        const item = btn.closest('.faq-item');
-        const isActive = item.classList.contains('active-faq');
-        
-        // Reset all
-        document.querySelectorAll('.faq-item').forEach(li => {
-          li.classList.remove('active-faq');
-          li.querySelector('button').className = "flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-border bg-transparent text-vedic-textPrimary hover:border-l-vedic-forest hover:bg-vedic-surface";
-          li.querySelector('.faq-content').className = "grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[0fr] border-l-vedic-border bg-transparent faq-content";
-          li.querySelector('.faq-icon').innerText = "+";
-          li.querySelector('.faq-icon').className = "absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[24px] md:text-[30px] font-normal text-vedic-textSecondary faq-icon";
-          li.querySelector('.faq-chevron').className = "absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[133deg] border-vedic-textSecondary faq-chevron";
-        });
-
-        if (!isActive) {
-          item.classList.add('active-faq');
-          btn.className = "flex flex-row items-center justify-start w-full min-h-[60px] py-4 relative m-0 px-4 pl-14 cursor-pointer border-l-[6px] md:border-l-[10px] transition-colors duration-200 text-left outline-none text-base md:text-lg border-l-vedic-forest bg-vedic-forest/5 text-vedic-forest font-semibold";
-          item.querySelector('.faq-content').className = "grid transition-all duration-300 ease-in-out w-full border-l-[6px] md:border-l-[10px] grid-rows-[1fr] border-l-vedic-forest bg-vedic-forest/5 faq-content";
-          item.querySelector('.faq-icon').innerText = "-";
-          item.querySelector('.faq-icon').className = "absolute left-4 md:left-5 top-1/2 -translate-y-1/2 transition-all duration-200 leading-none text-[32px] md:text-[40px] font-normal text-vedic-forest faq-icon";
-          item.querySelector('.faq-chevron').className = "absolute right-6 block w-2 h-2 border-t-[3px] border-r-[3px] transition-transform duration-200 ease-in-out rotate-[-44deg] border-vedic-forest faq-chevron";
-        }
-      }
-    </script>
+    
 
 </body>
 </html>
